@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currículo - Lucas Bueno Cesario</title>
+    <title>LINKEDIN_RESUME_2026_07_LUCAS_BUENO_CESARIO</title>
     <style>
         @page {
             size: letter portrait;
             margin: 0.45in 0.5in;
         }
 
-        /* Estilo global - Amigável ao ATS */
         body {
             font-family: Arial, Helvetica, sans-serif;
             line-height: 1.28;
@@ -21,7 +20,6 @@
             font-size: 9.5pt;
         }
 
-        /* Cabeçalho simplificado para ATS */
         .header {
             text-align: left;
             margin-bottom: 12px;
@@ -37,7 +35,7 @@
         .header h2 {
             color: #000;
             margin: 0 0 6px 0;
-            font-size: 12pt;
+            font-size: 13pt;
             font-weight: normal;
         }
 
@@ -46,7 +44,6 @@
             line-height: 1.4;
         }
 
-        /* Títulos de seção em maiúsculo para melhor reconhecimento ATS */
         h3 {
             color: #000;
             margin: 11px 0 6px 0;
@@ -61,7 +58,6 @@
             margin-bottom: 9px;
         }
 
-        /* Experiência profissional */
         .job {
             margin-bottom: 9px;
         }
@@ -69,12 +65,6 @@
         .job-title {
             font-weight: bold;
             font-size: 11pt;
-            margin: 0;
-        }
-
-        .job-company {
-            font-weight: bold;
-            font-size: 10pt;
             margin: 0;
         }
 
@@ -87,7 +77,6 @@
             font-style: italic;
         }
 
-        /* Listas otimizadas para ATS */
         ul {
             padding-left: 18px;
             margin: 5px 0;
@@ -98,24 +87,78 @@
             line-height: 1.3;
         }
 
-        /* Links simples */
         a {
             color: #000;
             text-decoration: underline;
         }
 
-        /* Seção de habilidades em lista simples para ATS */
-        .skills-category {
-            margin-bottom: 5px;
-        }
-
-        /* Formatação simples para melhor leitura ATS */
         p {
             margin: 6px 0;
             text-align: left;
         }
 
-        /* Seletor de idioma (não-imprimível) */
+        .lang-block {
+            margin-bottom: 8px;
+        }
+
+        .lang-label {
+            font-size: 10pt;
+            font-weight: bold;
+            margin: 0 0 3px 0;
+        }
+
+        .stack-line {
+            font-size: 9pt;
+            color: #333;
+            margin: 4px 0 0 0;
+        }
+
+        .lang-divider {
+            border: none;
+            border-top: 1px dashed #bbb;
+            margin: 8px 0;
+        }
+
+        .notes-box {
+            background: #fafafa;
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            font-size: 9pt;
+            color: #555;
+        }
+
+        .notes-box ul {
+            margin: 4px 0;
+        }
+
+        /* ── Títulos de seção bilíngues ── */
+        /* Em modo PT: esconde .title-en e .title-sep */
+        body.view-pt .title-en,
+        body.view-pt .title-sep { display: none; }
+
+        /* Em modo EN: esconde .title-pt e .title-sep */
+        body.view-en .title-pt,
+        body.view-en .title-sep { display: none; }
+
+        /* ── Ícones de bandeira ── */
+        /* Em modo único, esconde o 🇧🇷 dentro do bloco PT e o 🇺🇸 dentro do bloco EN */
+        body.view-pt .pt-block .lang-label,
+        body.view-en .en-block .lang-label { display: none; }
+
+        /* ── Blocos de idioma ── */
+        body.view-pt .en-block { display: none; }
+        body.view-pt .lang-divider { display: none; }
+        body.view-en .pt-block { display: none; }
+        body.view-en .lang-divider { display: none; }
+
+        /* ── Seções de idioma único (Hard/Soft Skills) ──
+           Mostra só PT no modo bilíngue e PT; só EN no modo EN. */
+        .single-lang-section .en-block { display: none; }
+        .single-lang-section .lang-divider { display: none; }
+        body.view-en .single-lang-section .pt-block { display: none; }
+        body.view-en .single-lang-section .en-block { display: block; }
+
+        /* ── Seletor de modo ── */
         .lang-switch {
             position: fixed;
             top: 10px;
@@ -139,10 +182,7 @@
         }
 
         .lang-btn:hover,
-        .lang-btn:focus-visible {
-            opacity: 1;
-            outline: none;
-        }
+        .lang-btn:focus-visible { opacity: 1; outline: none; }
 
         .lang-btn[aria-pressed="true"] {
             opacity: 1;
@@ -156,25 +196,45 @@
             border: 1px solid #ccc;
         }
 
-        .lang-sep {
+        .lang-btn-both {
+            background: none;
+            border: 1px solid transparent;
+            padding: 2px 6px;
+            margin: 0;
+            cursor: pointer;
+            border-radius: 3px;
+            opacity: 0.45;
+            font-size: 9pt;
+            font-weight: bold;
+            transition: opacity 0.15s ease, border-color 0.15s ease;
+            color: #333;
+        }
+
+        .lang-btn-both:hover,
+        .lang-btn-both:focus-visible { opacity: 1; outline: none; }
+
+        .lang-btn-both[aria-pressed="true"] {
+            opacity: 1;
+            border-color: #888;
+        }
+
+        .lang-sep-btn {
             color: #999;
             font-weight: bold;
             font-size: 13pt;
             user-select: none;
         }
 
-        /* O seletor nunca aparece na impressão / exportação para PDF */
         @media print {
-            .lang-switch {
-                display: none !important;
-            }
+            .lang-switch { display: none !important; }
         }
     </style>
 </head>
 <body>
-    <!-- Seletor de idioma: campo não-imprimível -->
-    <div class="lang-switch" role="group" aria-label="Selecionar idioma / Select language">
-        <button id="btn-pt" type="button" class="lang-btn" aria-pressed="true"
+
+    <!-- Seletor de modo -->
+    <div class="lang-switch" role="group" aria-label="Modo de exibição / Display mode">
+        <button id="btn-pt" type="button" class="lang-btn" aria-pressed="false"
                 title="Português" aria-label="Português">
             <svg viewBox="0 0 28 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <rect width="28" height="20" fill="#009b3a"/>
@@ -182,7 +242,10 @@
                 <circle cx="14" cy="10" r="4.6" fill="#002776"/>
             </svg>
         </button>
-        <span class="lang-sep" aria-hidden="true">|</span>
+        <span class="lang-sep-btn" aria-hidden="true">|</span>
+        <button id="btn-both" type="button" class="lang-btn-both" aria-pressed="true"
+                title="Bilíngue / Bilingual" aria-label="Bilíngue">🇧🇷🇺🇸</button>
+        <span class="lang-sep-btn" aria-hidden="true">|</span>
         <button id="btn-en" type="button" class="lang-btn" aria-pressed="false"
                 title="English" aria-label="English">
             <svg viewBox="0 0 28 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -207,356 +270,395 @@
         </button>
     </div>
 
-    <!-- ============================ VERSÃO EM PORTUGUÊS ============================ -->
-    <div id="content-pt">
-        <!-- Cabeçalho com informações de contato -->
-        <div class="header">
-            <h1>LUCAS BUENO CESARIO</h1>
-            <h2>Desenvolvedor Java Full Stack | Spring Framework | React</h2>
+    <!-- Cabeçalho -->
+    <div class="header">
+        <h1>LUCAS BUENO CESARIO</h1>
+        <h2>Full Stack Java Developer | Spring Boot · React · Microservices · AWS/GCP · AI-Assisted Development</h2>
+        <div class="contact-info">
+            <strong>LinkedIn:</strong> linkedin.com/in/lucasbc92 &nbsp;|&nbsp;
+            <strong>GitHub:</strong> github.com/lucasbc92 &nbsp;|&nbsp;
+            <strong>Email:</strong> lbc92@hotmail.com
+        </div>
+    </div>
 
-            <div class="contact-info">
-                <strong>Localização:</strong> Araruama, Rio de Janeiro &nbsp;|&nbsp;
-                <strong>Telefone:</strong> 48991224064 &nbsp;|&nbsp;
-                <strong>Email:</strong> lbc92@hotmail.com<br>
-                <strong>LinkedIn:</strong> linkedin.com/in/lucasbc92 &nbsp;|&nbsp;
-                <strong>GitHub:</strong> github.com/lucasbc92
-            </div>
+    <!-- ==================== ABOUT / SOBRE ==================== -->
+    <div class="section">
+        <h3>
+            <span class="title-pt">Sobre</span><span class="title-sep"> / </span><span class="title-en">About</span>
+        </h3>
+
+        <div class="lang-block pt-block">
+            <p class="lang-label">🇧🇷</p>
+            <p>Desenvolvedor Java Full Stack com 6,5 anos de experiência; desde 2022 no back-end com Spring Boot e full stack com React e Angular (JS/TS). Projetei e entreguei arquiteturas de microsserviços e monolíticas, atuando com bancos SQL e NoSQL e nuvem (AWS — EC2, S3, RDS —, GCP e Azure). Adoto desenvolvimento assistido por IA com Spec Driven Development e agentes de IA como Cursor e Claude Code.</p>
         </div>
 
-        <!-- Seção de resumo profissional -->
-        <div class="section">
-            <h3>RESUMO PROFISSIONAL</h3>
-            <p>Desenvolvedor Java Full Stack com mais de 7 anos de experiência construindo aplicações de alta performance com Java Spring e React. Especialista em arquiteturas de microsserviços e monolíticas, bancos SQL/NoSQL e serviços em nuvem (AWS, GCP). Adota desenvolvimento assistido por Inteligência Artificial com Spec Driven Development e agentes de IA (Cursor e Claude Code). Histórico comprovado em sistemas financeiros, agronegócio e segurança pública, com forte atuação em manutenção de sistemas críticos e foco em Clean Code e princípios SOLID. Graduado em Ciência da Computação pela UFSC.</p>
+        <hr class="lang-divider">
+
+        <div class="lang-block en-block">
+            <p class="lang-label">🇺🇸</p>
+            <p>Full Stack Java Developer with 6.5 years of experience; since 2022 I've focused on back-end with Spring Boot and full-stack with React and Angular (JS/TS), designing and delivering microservices and monolithic architectures across SQL and NoSQL databases and cloud platforms (AWS — EC2, S3, RDS —, GCP and Azure). I embrace AI-assisted development with Spec Driven Development and AI agents such as Cursor and Claude Code.</p>
         </div>
+    </div>
 
-        <!-- Seção de habilidades técnicas -->
-        <div class="section">
-            <h3>HABILIDADES TÉCNICAS</h3>
+    <!-- ==================== HARD SKILLS / HABILIDADES TÉCNICAS ==================== -->
+    <div class="section single-lang-section">
+        <h3>
+            <span class="title-pt">Hard Skills</span><span class="title-sep"> / </span><span class="title-en">Hard Skills</span>
+        </h3>
 
-            <div class="skills-category">
-                <strong>Linguagens:</strong> Java, JavaScript, TypeScript, Python, PHP, SQL, PL/SQL, HTML5, CSS3
-            </div>
-            <div class="skills-category">
-                <strong>Backend:</strong> Spring Boot, Spring MVC, Spring Security, Hibernate, JPA, JDBC, jOOQ, Node.js, Nest.js, Laravel, Maven
-            </div>
-            <div class="skills-category">
-                <strong>Frontend:</strong> React.js, React Native, React Hooks, Redux, Angular, AngularJS, Ionic, Bootstrap, Webpack, Leaflet
-            </div>
-            <div class="skills-category">
-                <strong>Bancos de Dados:</strong> PostgreSQL, MySQL, MongoDB, Oracle Database, Elasticsearch, Cassandra, Redis, Neo4J, Data Lake, ETL
-            </div>
-            <div class="skills-category">
-                <strong>Cloud e DevOps:</strong> AWS (EC2, S3, RDS), GCP (Secrets Manager), Magalu Cloud, Docker, Kubernetes, GitLab CI/CD, Jenkins, ArgoCD, Git, Linux
-            </div>
-            <div class="skills-category">
-                <strong>Arquitetura e APIs:</strong> Microsserviços, Arquitetura Monolítica, BFF (Backend for Frontend), Micro Front-ends, APIs RESTful, API Gateway, Apigee, Swagger/OpenAPI, JWT, Keycloak, LDAP, RabbitMQ
-            </div>
-            <div class="skills-category">
-                <strong>Testes, Metodologias e Dados:</strong> JUnit, Mockito, Jest, RTL, Selenium, TDD, SonarQube, Grafana, Agile, Scrum, Kanban, OOP, SOLID, Clean Code, Apache Airflow, Apache Spark, Machine Learning
-            </div>
-            <div class="skills-category">
-                <strong>Inteligência Artificial (IA / AI):</strong> Desenvolvimento Assistido por IA (AI-Assisted Development), Spec Driven Development, Agentes de IA (AI Agents), Cursor, Claude Code, ChatGPT, Gemini, Claude, LLMs, IA Generativa (GenAI), Prompt Engineering
-            </div>
-        </div>
-
-        <!-- Experiência Profissional -->
-        <div class="section">
-            <h3>EXPERIÊNCIA PROFISSIONAL</h3>
-
-            <div class="job">
-                <p class="job-title">Desenvolvedor Java Full Stack</p>
-                <p class="job-meta"><strong>Zukk Tecnologia</strong> | <span class="job-location">Remoto</span> | Novembro 2025 - Atual</p>
-                <ul>
-                    <li>Refatorou o sistema web de administração do Vivo Valoriza (programa de benefícios do app da Vivo), modernizando uma arquitetura distribuída com microsserviços em Java, camada de BFF (Backend for Frontend) em Nest.js e micro front-ends em React</li>
-                    <li>Adotou Spec Driven Development com agentes de IA (Cursor e Claude Code) e o plugin Superpowers, aplicando fluxos de brainstorming, escrita de planos (writing-plans) e execução de planos (executing-plans) para aumentar previsibilidade e qualidade das entregas</li>
-                    <li>Stack: Java, Microsserviços, Nest.js, BFF, React, Micro Front-ends, TypeScript, Spec Driven Development, Cursor, Claude Code, APIs RESTful, Git</li>
-                </ul>
-            </div>
-
-            <div class="job">
-                <p class="job-title">Desenvolvedor Java Full Stack</p>
-                <p class="job-meta"><strong>Cast Group</strong> | <span class="job-location">Remoto</span> | Agosto 2025 - Novembro 2025 (3 meses)</p>
-                <ul>
-                    <li>Atuou no desenvolvimento do InvoiceCon, solução de notas fiscais eletrônicas, com Java Spring no back-end e Angular no front-end, contribuindo para a migração do sistema às novas regras da Reforma Tributária brasileira</li>
-                    <li>Stack: Java, Spring, Angular, TypeScript, APIs RESTful, SQL, Git</li>
-                </ul>
-            </div>
-
-            <div class="job">
-                <p class="job-title">Desenvolvedor Full Stack</p>
-                <p class="job-meta"><strong>Luizalabs (Magazine Luiza)</strong> | <span class="job-location">São Paulo, SP</span> | Julho 2024 - Abril 2025 (10 meses)</p>
-                <ul>
-                    <li>Desenvolveu microsserviços financeiros em Java Spring Boot/MVC com autenticação JWT e Keycloak, processando milhões de transações diárias, e interfaces em React/TypeScript para declarações de pagamento (CPF, CNPJ)</li>
-                    <li>Atuou como "bombeiro da semana" resolvendo cards de suporte N3 e bugs críticos de produção; alcançou 100% de cobertura de código com JUnit, Mockito e SonarQube</li>
-                    <li>Construiu APIs RESTful com Apigee/API Gateway (OpenAPI) e executou manutenção de pipelines de dados com Python, Apache Spark e Apache Airflow, incluindo repopulação de data lake a partir do Oracle EBS</li>
-                    <li>Stack: Java, Spring Boot, Spring MVC, Hibernate, Oracle DB, React, TypeScript, Jest, JWT, Keycloak, Microsserviços, Docker, Kubernetes, ArgoCD, Grafana, Airflow, Spark, Python, Apigee, GCP, Magalu Cloud</li>
-                </ul>
-            </div>
-
-            <div class="job">
-                <p class="job-title">Desenvolvedor Full Stack</p>
-                <p class="job-meta"><strong>PariPassu</strong> | <span class="job-location">Florianópolis, SC</span> | Agosto 2022 - Abril 2024 (1 ano e 9 meses)</p>
-                <ul>
-                    <li>Arquitetou e desenvolveu o CLICQ, sistema de inspeção de qualidade alimentar para toda a cadeia (produtores ao varejo), com backend Spring Boot e frontend React/Redux/TypeScript, além de versões legadas em AngularJS, Angular 8/Ionic e mobile em React Native</li>
-                    <li>Construiu ferramenta de predição de churn com Machine Learning (Python), acessível via bot Discord, reduzindo o churn de clientes em 18%</li>
-                    <li>Atuou como "bombeiro da semana" na prevenção e correção de bugs com apoio ao suporte N2 e monitoramento via Grafana; manteve testes automatizados (Jest, Mockito) com 90% de cobertura</li>
-                    <li>Stack: Java, Spring Boot, React, Redux, TypeScript, PostgreSQL, AWS (EC2, S3, RDS), React Native, Angular, Ionic, Jenkins, Machine Learning, Jira, jOOQ, Python, Swagger, Grafana</li>
-                </ul>
-            </div>
-
-            <div class="job">
-                <p class="job-title">Desenvolvedor Full Stack</p>
-                <p class="job-meta"><strong>Secretaria de Segurança Pública</strong> | <span class="job-location">Florianópolis, SC</span> | Outubro 2020 - Julho 2022 (1 ano e 10 meses)</p>
-                <ul>
-                    <li>Desenvolveu o PWA Bem-Te-Vi App em React e Leaflet, com mapa interativo de quase cinco mil câmeras de segurança de Santa Catarina, visualização ao vivo e download de gravações para policiais do estado</li>
-                    <li>Manteve sistemas legados de segurança (Bem-Te-Vi e BRAVO) em PHP com autenticação LDAP; integrou Elasticsearch para busca de texto completo e RabbitMQ para processamento assíncrono de SMS de ocorrências de placas monitoradas</li>
-                    <li>Stack: PHP, Laravel, React, JavaScript, Leaflet, PostgreSQL, Elasticsearch, RabbitMQ, LDAP, Selenium, APIs REST, Git, PWA</li>
-                </ul>
-            </div>
-
-            <div class="job">
-                <p class="job-title">Desenvolvedor Full Stack Júnior</p>
-                <p class="job-meta"><strong>Canal Telecom</strong> | <span class="job-location">São José, SC</span> | Fevereiro 2018 - Novembro 2018 (10 meses)</p>
-                <ul>
-                    <li>Desenvolveu interfaces de relatórios em PHP/JavaScript e automatizou cálculos de tarifas com triggers SQL no PostgreSQL (-60% no tempo de processamento de faturas); participou de migração NoSQL de SQL para MongoDB. Stack: PHP, PostgreSQL, MySQL, MongoDB, JavaScript, Linux, Zend, SVN</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Habilidades comportamentais (compacto) -->
-        <div class="section">
-            <h3>HABILIDADES COMPORTAMENTAIS</h3>
+        <div class="lang-block pt-block">
+            <p class="lang-label">🇧🇷</p>
             <ul>
-                <li><strong>Resolução de Problemas:</strong> atuação como "bombeiro da semana" resolvendo incidentes críticos de produção</li>
-                <li><strong>Adaptabilidade e Adoção de IA:</strong> transição eficaz entre tecnologias e domínios; incorporou rapidamente agentes de IA (Cursor, Claude Code) ao fluxo de desenvolvimento</li>
+                <li><strong>Impacto mensurável:</strong> microsserviços financeiros processando milhões de transações diárias na Magalu; ferramenta de predição de churn (Machine Learning) que reduziu o churn da PariPassu em 18%; automação que cortou 60% do tempo de processamento de faturas da Magalu; e 90–100% de cobertura de testes em serviços críticos.</li>
+                <li><strong>Desenvolvimento assistido por IA:</strong> Spec Driven Development com agentes de IA (Cursor, Claude Code) aplicando fluxos de brainstorming, escrita e execução de planos para aumentar previsibilidade e qualidade das entregas.</li>
+                <li><strong>Domínios de atuação:</strong> programa de fidelidade (Vivo Valoriza), sistemas financeiros (InvoiceCon; reforma tributária), agronegócio (inspeção de qualidade de alimentos) e segurança pública (monitoramento web).</li>
+            </ul>
+        </div>
+
+        <hr class="lang-divider">
+
+        <div class="lang-block en-block">
+            <p class="lang-label">🇺🇸</p>
+            <ul>
+                <li><strong>Measurable impact:</strong> financial microservices processing millions of daily transactions at Magalu; churn prediction tool (Machine Learning) that reduced churn at PariPassu by 18%; automation that cut Magalu's invoice processing time by 60%; and 90–100% test coverage for critical services.</li>
+                <li><strong>AI-assisted development:</strong> Spec Driven Development with AI agents (Cursor, Claude Code), applying brainstorming, plan-writing, and plan-execution workflows to increase delivery predictability and quality.</li>
+                <li><strong>Domain coverage:</strong> loyalty programs (Vivo Valoriza), financial systems (InvoiceCon; tax reform), agribusiness (food quality inspection), and public safety (web monitoring).</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ==================== SOFT SKILLS ==================== -->
+    <div class="section single-lang-section">
+        <h3>
+            <span class="title-pt">Soft Skills</span><span class="title-sep"> / </span><span class="title-en">Soft Skills</span>
+        </h3>
+
+        <div class="lang-block pt-block">
+            <p class="lang-label">🇧🇷</p>
+            <ul>
+                <li><strong>Resolução de Problemas sob Pressão:</strong> atuação rotativa como suporte N3 e "bombeiro da semana", resolvendo incidentes críticos para manter a estabilidade de sistemas em produção</li>
+                <li><strong>Adaptabilidade:</strong> transição eficaz entre tecnologias e domínios; incorporação rápida de novas ferramentas ao fluxo de trabalho, incluindo agentes de IA</li>
                 <li><strong>Aprendizado Rápido e Proatividade:</strong> domínio acelerado de novas stacks e antecipação de problemas</li>
                 <li><strong>Trabalho em Equipe e Comunicação:</strong> colaboração ágil, mentoria de colegas e documentação ativa</li>
             </ul>
         </div>
 
-        <!-- Educação -->
-        <div class="section">
-            <h3>FORMAÇÃO</h3>
-            <div class="job">
-                <p class="job-title">Bacharelado em Ciência da Computação</p>
-                <p class="job-meta"><strong>Universidade Federal de Santa Catarina (UFSC)</strong> | Janeiro 2011 - Dezembro 2025</p>
-                <ul>
-                    <li>Projeto acadêmico "Polyglot Import CSV": ferramenta para importar dados de CSV para múltiplos bancos via configuração JSON, construída com Python, Docker, PostgreSQL, MongoDB, Cassandra, Redis e Neo4J</li>
-                </ul>
-            </div>
-        </div>
+        <hr class="lang-divider">
 
-        <!-- Certificações -->
-        <div class="section">
-            <h3>CERTIFICAÇÕES</h3>
+        <div class="lang-block en-block">
+            <p class="lang-label">🇺🇸</p>
             <ul>
-                <li><strong>DEVinHouse - Desenvolvedor Full Stack React e Java</strong> - SENAI/SC (900 horas), 2022 - HTML5, CSS3, JavaScript, React, Redux, Jest/RTL, Java, Spring Boot/MVC/Security, JPA/Hibernate, TDD/JUnit, Docker, CI/CD, AWS, RabbitMQ, APIs REST, JWT</li>
-                <li><strong>Competências Profissionais, Emocionais e Tecnológicas para Tempos de Mudança</strong> - PUC/RS (2023)</li>
-            </ul>
-        </div>
-
-        <!-- Idiomas -->
-        <div class="section">
-            <h3>IDIOMAS</h3>
-            <ul>
-                <li><strong>Português:</strong> Nativo &nbsp;|&nbsp; <strong>Inglês:</strong> Avançado (leitura, escrita e conversação fluentes) &nbsp;|&nbsp; <strong>Espanhol:</strong> Intermediário</li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- ============================ ENGLISH VERSION ============================ -->
-    <div id="content-en" hidden>
-        <!-- Header with contact information -->
-        <div class="header">
-            <h1>LUCAS BUENO CESARIO</h1>
-            <h2>Full Stack Java Developer | Spring Framework | React</h2>
-
-            <div class="contact-info">
-                <strong>Location:</strong> Araruama, Rio de Janeiro, Brazil &nbsp;|&nbsp;
-                <strong>Phone:</strong> +55 48991224064 &nbsp;|&nbsp;
-                <strong>Email:</strong> lbc92@hotmail.com<br>
-                <strong>LinkedIn:</strong> linkedin.com/in/lucasbc92 &nbsp;|&nbsp;
-                <strong>GitHub:</strong> github.com/lucasbc92
-            </div>
-        </div>
-
-        <!-- Professional summary -->
-        <div class="section">
-            <h3>PROFESSIONAL SUMMARY</h3>
-            <p>Full Stack Java Developer with over 7 years of experience building high-performance applications with Java Spring and React. Specialist in microservices and monolithic architectures, SQL/NoSQL databases, and cloud services (AWS, GCP). Embraces AI-assisted development with Spec Driven Development and AI agents (Cursor and Claude Code). Proven track record across financial systems, agribusiness, and public safety, with strong experience maintaining critical systems and a focus on Clean Code and SOLID principles. Bachelor's degree in Computer Science from UFSC.</p>
-        </div>
-
-        <!-- Technical skills -->
-        <div class="section">
-            <h3>TECHNICAL SKILLS</h3>
-
-            <div class="skills-category">
-                <strong>Languages:</strong> Java, JavaScript, TypeScript, Python, PHP, SQL, PL/SQL, HTML5, CSS3
-            </div>
-            <div class="skills-category">
-                <strong>Backend:</strong> Spring Boot, Spring MVC, Spring Security, Hibernate, JPA, JDBC, jOOQ, Node.js, Nest.js, Laravel, Maven
-            </div>
-            <div class="skills-category">
-                <strong>Frontend:</strong> React.js, React Native, React Hooks, Redux, Angular, AngularJS, Ionic, Bootstrap, Webpack, Leaflet
-            </div>
-            <div class="skills-category">
-                <strong>Databases:</strong> PostgreSQL, MySQL, MongoDB, Oracle Database, Elasticsearch, Cassandra, Redis, Neo4J, Data Lake, ETL
-            </div>
-            <div class="skills-category">
-                <strong>Cloud &amp; DevOps:</strong> AWS (EC2, S3, RDS), GCP (Secrets Manager), Magalu Cloud, Docker, Kubernetes, GitLab CI/CD, Jenkins, ArgoCD, Git, Linux
-            </div>
-            <div class="skills-category">
-                <strong>Architecture &amp; APIs:</strong> Microservices, Monolithic Architecture, BFF (Backend for Frontend), Micro Front-ends, RESTful APIs, API Gateway, Apigee, Swagger/OpenAPI, JWT, Keycloak, LDAP, RabbitMQ
-            </div>
-            <div class="skills-category">
-                <strong>Testing, Methodologies &amp; Data:</strong> JUnit, Mockito, Jest, RTL, Selenium, TDD, SonarQube, Grafana, Agile, Scrum, Kanban, OOP, SOLID, Clean Code, Apache Airflow, Apache Spark, Machine Learning
-            </div>
-            <div class="skills-category">
-                <strong>Artificial Intelligence (AI):</strong> AI-Assisted Development, Spec Driven Development, AI Agents, Cursor, Claude Code, ChatGPT, Gemini, Claude, LLMs, Generative AI (GenAI), Prompt Engineering
-            </div>
-        </div>
-
-        <!-- Professional experience -->
-        <div class="section">
-            <h3>PROFESSIONAL EXPERIENCE</h3>
-
-            <div class="job">
-                <p class="job-title">Full Stack Java Developer</p>
-                <p class="job-meta"><strong>Zukk Tecnologia</strong> | <span class="job-location">Remote</span> | November 2025 - Present</p>
-                <ul>
-                    <li>Refactored the Vivo Valoriza web administration system (the benefits program within Vivo's app), modernizing a distributed architecture with Java microservices, a BFF (Backend for Frontend) layer in Nest.js, and React micro front-ends</li>
-                    <li>Adopted Spec Driven Development with AI agents (Cursor and Claude Code) and the Superpowers plugin, applying brainstorming, writing-plans, and executing-plans workflows to increase delivery predictability and quality</li>
-                    <li>Stack: Java, Microservices, Nest.js, BFF, React, Micro Front-ends, TypeScript, Spec Driven Development, Cursor, Claude Code, RESTful APIs, Git</li>
-                </ul>
-            </div>
-
-            <div class="job">
-                <p class="job-title">Full Stack Java Developer</p>
-                <p class="job-meta"><strong>Cast Group</strong> | <span class="job-location">Remote</span> | August 2025 - November 2025 (3 months)</p>
-                <ul>
-                    <li>Worked on the development of InvoiceCon, an electronic invoicing (NF-e) solution, with Java Spring on the back-end and Angular on the front-end, contributing to the system's migration to the new rules of the Brazilian Tax Reform</li>
-                    <li>Stack: Java, Spring, Angular, TypeScript, RESTful APIs, SQL, Git</li>
-                </ul>
-            </div>
-
-            <div class="job">
-                <p class="job-title">Full Stack Developer</p>
-                <p class="job-meta"><strong>Luizalabs (Magazine Luiza)</strong> | <span class="job-location">São Paulo, Brazil</span> | July 2024 - April 2025 (10 months)</p>
-                <ul>
-                    <li>Developed financial microservices in Java Spring Boot/MVC with JWT and Keycloak authentication, processing millions of daily transactions, and React/TypeScript interfaces for payment declarations (CPF, CNPJ)</li>
-                    <li>Acted as "firefighter of the week" resolving N3 support tickets and critical production bugs; achieved 100% code coverage with JUnit, Mockito, and SonarQube</li>
-                    <li>Built RESTful APIs with Apigee/API Gateway (OpenAPI) and maintained data pipelines with Python, Apache Spark, and Apache Airflow, including repopulating the data lake from Oracle EBS</li>
-                    <li>Stack: Java, Spring Boot, Spring MVC, Hibernate, Oracle DB, React, TypeScript, Jest, JWT, Keycloak, Microservices, Docker, Kubernetes, ArgoCD, Grafana, Airflow, Spark, Python, Apigee, GCP, Magalu Cloud</li>
-                </ul>
-            </div>
-
-            <div class="job">
-                <p class="job-title">Full Stack Developer</p>
-                <p class="job-meta"><strong>PariPassu</strong> | <span class="job-location">Florianópolis, Brazil</span> | August 2022 - April 2024 (1 year and 9 months)</p>
-                <ul>
-                    <li>Architected and developed CLICQ, a food quality inspection system covering the entire supply chain (from producers to retail), with a Spring Boot backend and a React/Redux/TypeScript frontend, plus legacy versions in AngularJS, Angular 8/Ionic, and mobile in React Native</li>
-                    <li>Built a churn prediction tool with Machine Learning (Python), accessible via a Discord bot, reducing customer churn by 18%</li>
-                    <li>Acted as "firefighter of the week" preventing and fixing bugs with N2 support and Grafana monitoring; maintained automated tests (Jest, Mockito) with 90% coverage</li>
-                    <li>Stack: Java, Spring Boot, React, Redux, TypeScript, PostgreSQL, AWS (EC2, S3, RDS), React Native, Angular, Ionic, Jenkins, Machine Learning, Jira, jOOQ, Python, Swagger, Grafana</li>
-                </ul>
-            </div>
-
-            <div class="job">
-                <p class="job-title">Full Stack Developer</p>
-                <p class="job-meta"><strong>Department of Public Safety (Secretaria de Segurança Pública)</strong> | <span class="job-location">Florianópolis, Brazil</span> | October 2020 - July 2022 (1 year and 10 months)</p>
-                <ul>
-                    <li>Developed the Bem-Te-Vi App PWA in React and Leaflet, featuring an interactive map of nearly five thousand security cameras across Santa Catarina, with live viewing and recording downloads for state police officers</li>
-                    <li>Maintained legacy public safety systems (Bem-Te-Vi and BRAVO) in PHP with LDAP authentication; integrated Elasticsearch for full-text search and RabbitMQ for asynchronous SMS processing of monitored license-plate events</li>
-                    <li>Stack: PHP, Laravel, React, JavaScript, Leaflet, PostgreSQL, Elasticsearch, RabbitMQ, LDAP, Selenium, REST APIs, Git, PWA</li>
-                </ul>
-            </div>
-
-            <div class="job">
-                <p class="job-title">Junior Full Stack Developer</p>
-                <p class="job-meta"><strong>Canal Telecom</strong> | <span class="job-location">São José, Brazil</span> | February 2018 - November 2018 (10 months)</p>
-                <ul>
-                    <li>Developed reporting interfaces in PHP/JavaScript and automated tariff calculations with SQL triggers in PostgreSQL (-60% in invoice processing time); took part in a NoSQL migration from SQL to MongoDB. Stack: PHP, PostgreSQL, MySQL, MongoDB, JavaScript, Linux, Zend, SVN</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Soft skills (compact) -->
-        <div class="section">
-            <h3>SOFT SKILLS</h3>
-            <ul>
-                <li><strong>Problem Solving:</strong> acting as "firefighter of the week" resolving critical production incidents</li>
-                <li><strong>Adaptability and AI Adoption:</strong> effective transition across technologies and domains; quickly incorporated AI agents (Cursor, Claude Code) into the development workflow</li>
+                <li><strong>Problem Solving Under Pressure:</strong> rotating N3 support and "firefighter of the week" roles, resolving critical incidents to maintain production system stability</li>
+                <li><strong>Adaptability:</strong> effective transition across technologies and domains; quick adoption of new tools into the workflow, including AI agents</li>
                 <li><strong>Fast Learning and Proactivity:</strong> accelerated mastery of new stacks and anticipation of problems</li>
                 <li><strong>Teamwork and Communication:</strong> agile collaboration, mentoring peers, and active documentation</li>
             </ul>
         </div>
+    </div>
 
-        <!-- Education -->
-        <div class="section">
-            <h3>EDUCATION</h3>
-            <div class="job">
-                <p class="job-title">Bachelor's Degree in Computer Science</p>
-                <p class="job-meta"><strong>Federal University of Santa Catarina (UFSC)</strong> | January 2011 - December 2025</p>
+    <!-- ==================== EXPERIENCE ==================== -->
+    <div class="section">
+        <h3>
+            <span class="title-pt">Experiência Profissional</span><span class="title-sep"> / </span><span class="title-en">Professional Experience</span>
+        </h3>
+
+        <!-- Zukk -->
+        <div class="job">
+            <p class="job-title"><span class="title-pt">Desenvolvedor Java Full Stack</span><span class="title-sep"> / </span><span class="title-en">Full Stack Java Developer</span></p>
+            <p class="job-meta"><strong>Zukk Tecnologia</strong> | <span class="job-location"><span class="title-pt">Remoto</span><span class="title-sep"> / </span><span class="title-en">Remote</span></span> | Nov 2025 – <span class="title-pt">Atual</span><span class="title-sep"> / </span><span class="title-en">Present</span></p>
+
+            <div class="lang-block pt-block">
+                <p class="lang-label">🇧🇷</p>
                 <ul>
-                    <li>Academic project "Polyglot Import CSV": a tool to import data from CSV into multiple databases via JSON configuration, built with Python, Docker, PostgreSQL, MongoDB, Cassandra, Redis, and Neo4J</li>
+                    <li>Refatorei o sistema web de administração do Vivo Valoriza (programa de benefícios do app da Vivo), modernizando uma arquitetura distribuída com microsserviços em Java, camada de BFF (Backend for Frontend) em Nest.js e micro front-ends em React.</li>
+                    <li>Adotei Spec Driven Development com agentes de IA (Cursor e Claude Code) e o plugin Superpowers, aplicando fluxos de brainstorming, escrita e execução de planos para aumentar a previsibilidade e a qualidade das entregas.</li>
                 </ul>
+                <p class="stack-line"><strong>Stack:</strong> Java, Microsserviços, Nest.js, BFF, React, Micro Front-ends, TypeScript, Spec Driven Development, Cursor, Claude Code, APIs RESTful, Git</p>
+            </div>
+
+            <hr class="lang-divider">
+
+            <div class="lang-block en-block">
+                <p class="lang-label">🇺🇸</p>
+                <ul>
+                    <li>Refactored the Vivo Valoriza web administration system (the benefits program within Vivo's app), modernizing a distributed architecture with Java microservices, a BFF (Backend for Frontend) layer in Nest.js, and React micro front-ends.</li>
+                    <li>Adopted Spec Driven Development with AI agents (Cursor and Claude Code) and the Superpowers plugin, applying brainstorming, plan-writing, and plan-execution workflows to increase delivery predictability and quality.</li>
+                </ul>
+                <p class="stack-line"><strong>Stack:</strong> Java, Microservices, Nest.js, BFF, React, Micro Front-ends, TypeScript, Spec Driven Development, Cursor, Claude Code, RESTful APIs, Git</p>
             </div>
         </div>
 
-        <!-- Certifications -->
-        <div class="section">
-            <h3>CERTIFICATIONS</h3>
+        <!-- Cast Group -->
+        <div class="job">
+            <p class="job-title"><span class="title-pt">Desenvolvedor Java Full Stack</span><span class="title-sep"> / </span><span class="title-en">Full Stack Java Developer</span></p>
+            <p class="job-meta"><strong>Cast Group</strong> | <span class="job-location"><span class="title-pt">Remoto</span><span class="title-sep"> / </span><span class="title-en">Remote</span></span> | <span class="title-pt">Ago</span><span class="title-sep"> / </span><span class="title-en">Aug</span> 2025 – Nov 2025 (3 <span class="title-pt">meses</span><span class="title-sep"> / </span><span class="title-en">months</span>)</p>
+
+            <div class="lang-block pt-block">
+                <p class="lang-label">🇧🇷</p>
+                <ul>
+                    <li>Atuei no desenvolvimento do InvoiceCon, solução de notas fiscais eletrônicas (NF-e), com Java Spring no back-end e Angular no front-end, contribuindo para a migração do sistema às novas regras da Reforma Tributária brasileira.</li>
+                </ul>
+                <p class="stack-line"><strong>Stack:</strong> Java, Spring, Angular, TypeScript, APIs RESTful, SQL, Git</p>
+            </div>
+
+            <hr class="lang-divider">
+
+            <div class="lang-block en-block">
+                <p class="lang-label">🇺🇸</p>
+                <ul>
+                    <li>Worked on InvoiceCon, an electronic invoicing (NF-e) solution, with Java Spring on the back-end and Angular on the front-end, contributing to the system's migration to the new rules of the Brazilian Tax Reform.</li>
+                </ul>
+                <p class="stack-line"><strong>Stack:</strong> Java, Spring, Angular, TypeScript, RESTful APIs, SQL, Git</p>
+            </div>
+        </div>
+
+        <!-- Luizalabs -->
+        <div class="job">
+            <p class="job-title"><span class="title-pt">Desenvolvedor Full Stack</span><span class="title-sep"> / </span><span class="title-en">Full Stack Developer</span></p>
+            <p class="job-meta"><strong>Luizalabs (Magazine Luiza)</strong> | <span class="job-location">São Paulo, SP</span> | Jul 2024 – <span class="title-pt">Abr</span><span class="title-sep"> / </span><span class="title-en">Apr</span> 2025 (10 <span class="title-pt">meses</span><span class="title-sep"> / </span><span class="title-en">months</span>)</p>
+
+            <div class="lang-block pt-block">
+                <p class="lang-label">🇧🇷</p>
+                <ul>
+                    <li>Desenvolvi microsserviços financeiros em Java Spring Boot/MVC com autenticação JWT e Keycloak, processando milhões de transações diárias, e interfaces em React/TypeScript para declarações de pagamento (CPF, CNPJ).</li>
+                    <li>Atuei como "bombeiro da semana", resolvendo cards de suporte N3 e bugs críticos de produção; alcancei 100% de cobertura de código com JUnit, Mockito e SonarQube.</li>
+                    <li>Construí APIs RESTful com Apigee/API Gateway (OpenAPI) e mantive pipelines de dados com Python, Apache Spark e Apache Airflow, incluindo a repopulação do data lake a partir do Oracle EBS.</li>
+                </ul>
+                <p class="stack-line"><strong>Stack:</strong> Java, Spring Boot, Spring MVC, Hibernate, Oracle DB, React, TypeScript, Jest, JWT, Keycloak, Microsserviços, Docker, Kubernetes, ArgoCD, Grafana, Airflow, Spark, Python, Apigee, GCP, Magalu Cloud</p>
+            </div>
+
+            <hr class="lang-divider">
+
+            <div class="lang-block en-block">
+                <p class="lang-label">🇺🇸</p>
+                <ul>
+                    <li>Developed financial microservices in Java Spring Boot/MVC with JWT and Keycloak authentication, processing millions of daily transactions, and React/TypeScript interfaces for payment declarations (CPF, CNPJ).</li>
+                    <li>Acted as "firefighter of the week", resolving N3 support tickets and critical production bugs; achieved 100% code coverage with JUnit, Mockito, and SonarQube.</li>
+                    <li>Built RESTful APIs with Apigee/API Gateway (OpenAPI) and maintained data pipelines with Python, Apache Spark, and Apache Airflow, including repopulating the data lake from Oracle EBS.</li>
+                </ul>
+                <p class="stack-line"><strong>Stack:</strong> Java, Spring Boot, Spring MVC, Hibernate, Oracle DB, React, TypeScript, Jest, JWT, Keycloak, Microservices, Docker, Kubernetes, ArgoCD, Grafana, Airflow, Spark, Python, Apigee, GCP, Magalu Cloud</p>
+            </div>
+        </div>
+
+        <!-- PariPassu -->
+        <div class="job">
+            <p class="job-title"><span class="title-pt">Desenvolvedor Full Stack</span><span class="title-sep"> / </span><span class="title-en">Full Stack Developer</span></p>
+            <p class="job-meta"><strong>PariPassu</strong> | <span class="job-location">Florianópolis, SC</span> | <span class="title-pt">Ago</span><span class="title-sep"> / </span><span class="title-en">Aug</span> 2022 – <span class="title-pt">Abr</span><span class="title-sep"> / </span><span class="title-en">Apr</span> 2024 (<span class="title-pt">1 ano e 9 meses</span><span class="title-sep"> / </span><span class="title-en">1 year and 9 months</span>)</p>
+
+            <div class="lang-block pt-block">
+                <p class="lang-label">🇧🇷</p>
+                <ul>
+                    <li>Arquitetei e desenvolvi o CLICQ, sistema de inspeção de qualidade alimentar para toda a cadeia (do produtor ao varejo), com backend Spring Boot e frontend React/Redux/TypeScript, além de versões legadas em AngularJS, Angular 8/Ionic e mobile em React Native.</li>
+                    <li>Construí uma ferramenta de predição de churn com Machine Learning (Python), acessível via bot do Discord, reduzindo o churn de clientes em 18%.</li>
+                    <li>Atuei como "bombeiro da semana" na prevenção e correção de bugs, com apoio ao suporte N2 e monitoramento via Grafana; mantive testes automatizados (Jest, Mockito) com 90% de cobertura.</li>
+                </ul>
+                <p class="stack-line"><strong>Stack:</strong> Java, Spring Boot, React, Redux, TypeScript, PostgreSQL, AWS (EC2, S3, RDS), React Native, Angular, Ionic, Jenkins, Machine Learning, Jira, jOOQ, Python, Swagger, Grafana</p>
+            </div>
+
+            <hr class="lang-divider">
+
+            <div class="lang-block en-block">
+                <p class="lang-label">🇺🇸</p>
+                <ul>
+                    <li>Architected and developed CLICQ, a food quality inspection system covering the entire supply chain (from producers to retail), with a Spring Boot backend and a React/Redux/TypeScript frontend, plus legacy versions in AngularJS, Angular 8/Ionic, and mobile in React Native.</li>
+                    <li>Built a churn prediction tool with Machine Learning (Python), accessible via a Discord bot, reducing customer churn by 18%.</li>
+                    <li>Acted as "firefighter of the week" preventing and fixing bugs with N2 support and Grafana monitoring; maintained automated tests (Jest, Mockito) with 90% coverage.</li>
+                </ul>
+                <p class="stack-line"><strong>Stack:</strong> Java, Spring Boot, React, Redux, TypeScript, PostgreSQL, AWS (EC2, S3, RDS), React Native, Angular, Ionic, Jenkins, Machine Learning, Jira, jOOQ, Python, Swagger, Grafana</p>
+            </div>
+        </div>
+
+        <!-- Secretaria de Segurança Pública -->
+        <div class="job">
+            <p class="job-title"><span class="title-pt">Desenvolvedor Full Stack</span><span class="title-sep"> / </span><span class="title-en">Full Stack Developer</span></p>
+            <p class="job-meta"><strong><span class="title-pt">Secretaria de Segurança Pública</span><span class="title-sep"> / </span><span class="title-en">Department of Public Safety</span></strong> | <span class="job-location">Florianópolis, SC</span> | <span class="title-pt">Out</span><span class="title-sep"> / </span><span class="title-en">Oct</span> 2020 – Jul 2022 (<span class="title-pt">1 ano e 10 meses</span><span class="title-sep"> / </span><span class="title-en">1 year and 10 months</span>)</p>
+
+            <div class="lang-block pt-block">
+                <p class="lang-label">🇧🇷</p>
+                <ul>
+                    <li>Desenvolvi o PWA Bem-Te-Vi App em React e Leaflet, com mapa interativo de quase cinco mil câmeras de segurança de Santa Catarina, visualização ao vivo e download de gravações para policiais do estado.</li>
+                    <li>Mantive sistemas legados de segurança (Bem-Te-Vi e BRAVO) em PHP com autenticação LDAP; integrei Elasticsearch para busca de texto completo e RabbitMQ para processamento assíncrono de SMS de ocorrências de placas monitoradas.</li>
+                </ul>
+                <p class="stack-line"><strong>Stack:</strong> PHP, Laravel, React, JavaScript, Leaflet, PostgreSQL, Elasticsearch, RabbitMQ, LDAP, Selenium, APIs REST, Git, PWA</p>
+            </div>
+
+            <hr class="lang-divider">
+
+            <div class="lang-block en-block">
+                <p class="lang-label">🇺🇸</p>
+                <ul>
+                    <li>Developed the Bem-Te-Vi App PWA in React and Leaflet, featuring an interactive map of nearly five thousand security cameras across Santa Catarina, with live viewing and recording downloads for state police officers.</li>
+                    <li>Maintained legacy public safety systems (Bem-Te-Vi and BRAVO) in PHP with LDAP authentication; integrated Elasticsearch for full-text search and RabbitMQ for asynchronous SMS processing of monitored license-plate events.</li>
+                </ul>
+                <p class="stack-line"><strong>Stack:</strong> PHP, Laravel, React, JavaScript, Leaflet, PostgreSQL, Elasticsearch, RabbitMQ, LDAP, Selenium, REST APIs, Git, PWA</p>
+            </div>
+        </div>
+
+        <!-- Canal Telecom -->
+        <div class="job">
+            <p class="job-title"><span class="title-pt">Desenvolvedor Full Stack Júnior</span><span class="title-sep"> / </span><span class="title-en">Junior Full Stack Developer</span></p>
+            <p class="job-meta"><strong>Canal Telecom</strong> | <span class="job-location">São José, SC</span> | <span class="title-pt">Fev</span><span class="title-sep"> / </span><span class="title-en">Feb</span> 2018 – Nov 2018 (10 <span class="title-pt">meses</span><span class="title-sep"> / </span><span class="title-en">months</span>)</p>
+
+            <div class="lang-block pt-block">
+                <p class="lang-label">🇧🇷</p>
+                <ul>
+                    <li>Desenvolvi interfaces de relatórios em PHP/JavaScript e automatizei cálculos de tarifas com triggers SQL no PostgreSQL (-60% no tempo de processamento de faturas); participei de migração NoSQL de SQL para MongoDB.</li>
+                </ul>
+                <p class="stack-line"><strong>Stack:</strong> PHP, PostgreSQL, MySQL, MongoDB, JavaScript, Linux, Zend, SVN</p>
+            </div>
+
+            <hr class="lang-divider">
+
+            <div class="lang-block en-block">
+                <p class="lang-label">🇺🇸</p>
+                <ul>
+                    <li>Developed reporting interfaces in PHP/JavaScript and automated tariff calculations with SQL triggers in PostgreSQL (-60% in invoice processing time); took part in a NoSQL migration from SQL to MongoDB.</li>
+                </ul>
+                <p class="stack-line"><strong>Stack:</strong> PHP, PostgreSQL, MySQL, MongoDB, JavaScript, Linux, Zend, SVN</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== EDUCATION / FORMAÇÃO ==================== -->
+    <div class="section">
+        <h3>
+            <span class="title-pt">Formação</span><span class="title-sep"> / </span><span class="title-en">Education</span>
+        </h3>
+        <div class="job">
+            <p class="job-title"><span class="title-pt">Bacharelado em Ciência da Computação</span><span class="title-sep"> / </span><span class="title-en">Bachelor's Degree in Computer Science</span></p>
+            <p class="job-meta"><strong>Universidade Federal de Santa Catarina (UFSC)</strong> | Jan 2011 – Dez / Dec 2026 <em>(em andamento / in progress)</em></p>
+
+            <div class="lang-block pt-block">
+                <p class="lang-label">🇧🇷</p>
+                <p><strong>Disciplinas relevantes:</strong> Banco de Dados, Programação Orientada a Objetos, Estruturas de Dados e Algoritmos, Engenharia de Software, Redes de Computadores, Linguagens Formais, Sistemas Operacionais/Distribuídos, Inteligência Artificial, Computação Gráfica</p>
+                <ul>
+                    <li>Projeto acadêmico "Polyglot Import CSV": ferramenta para importar dados de CSV para múltiplos bancos via configuração JSON, construída com Python, Docker, PostgreSQL, MongoDB, Cassandra, Redis e Neo4J. Pesquisa acadêmica sobre importação de dados em ambientes de persistência poliglota.</li>
+                </ul>
+            </div>
+
+            <hr class="lang-divider">
+
+            <div class="lang-block en-block">
+                <p class="lang-label">🇺🇸</p>
+                <p><strong>Relevant courses:</strong> Database Architecture, Object-Oriented Programming, Data Structures and Algorithms, Software Engineering, Computer Networks, Formal Languages, Distributed/Operating Systems, Artificial Intelligence, Computer Graphics</p>
+                <ul>
+                    <li>Academic project "Polyglot Import CSV": a tool to import data from CSV into multiple databases via JSON configuration, built with Python, Docker, PostgreSQL, MongoDB, Cassandra, Redis, and Neo4J. Academic research on data importation in polyglot-persistence environments.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== CERTIFICATIONS / CERTIFICAÇÕES ==================== -->
+    <div class="section">
+        <h3>
+            <span class="title-pt">Certificações</span><span class="title-sep"> / </span><span class="title-en">Certifications</span>
+        </h3>
+
+        <div class="job">
+            <p class="job-title">DEVinHouse — Desenvolvedor Full Stack React e Java (SENAI/SC, 2022)</p>
+
+            <div class="lang-block pt-block">
+                <p class="lang-label">🇧🇷</p>
+                <p>Formação Full Stack de 900 horas — SENAI/SC.<br>
+                HTML5, CSS3, JavaScript, React, Redux, Jest/RTL, Java, Spring Boot/MVC/Security, JPA/Hibernate, TDD/JUnit, Docker, CI/CD, AWS, RabbitMQ, APIs REST, JWT.</p>
+            </div>
+
+            <hr class="lang-divider">
+
+            <div class="lang-block en-block">
+                <p class="lang-label">🇺🇸</p>
+                <p>900-hour Full Stack program — SENAI/SC.<br>
+                HTML5, CSS3, JavaScript, React, Redux, Jest/RTL, Java, Spring Boot/MVC/Security, JPA/Hibernate, TDD/JUnit, Docker, CI/CD, AWS, RabbitMQ, REST APIs, JWT.</p>
+            </div>
+        </div>
+
+        <div class="job">
+            <p class="job-title">PUC/RS (2023)</p>
+
+            <div class="lang-block pt-block">
+                <p class="lang-label">🇧🇷</p>
+                <p>Competências Profissionais, Emocionais e Tecnológicas para Tempos de Mudança — PUC/RS.</p>
+            </div>
+
+            <hr class="lang-divider">
+
+            <div class="lang-block en-block">
+                <p class="lang-label">🇺🇸</p>
+                <p>Professional, Emotional, and Technological Skills for Times of Change — PUC/RS.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== LANGUAGES / IDIOMAS ==================== -->
+    <div class="section">
+        <h3>
+            <span class="title-pt">Idiomas</span><span class="title-sep"> / </span><span class="title-en">Languages</span>
+        </h3>
+
+        <div class="lang-block pt-block">
+            <p class="lang-label">🇧🇷</p>
             <ul>
-                <li><strong>DEVinHouse - Full Stack React and Java Developer</strong> - SENAI/SC (900 hours), 2022 - HTML5, CSS3, JavaScript, React, Redux, Jest/RTL, Java, Spring Boot/MVC/Security, JPA/Hibernate, TDD/JUnit, Docker, CI/CD, AWS, RabbitMQ, REST APIs, JWT</li>
-                <li><strong>Professional, Emotional, and Technological Skills for Times of Change</strong> - PUC/RS (2023)</li>
+                <li><strong>Português:</strong> Nativo &nbsp;|&nbsp; <strong>Inglês:</strong> Avançado (leitura e escrita fluentes, conversação proficiente) &nbsp;|&nbsp; <strong>Espanhol:</strong> Intermediário</li>
             </ul>
         </div>
 
-        <!-- Languages -->
-        <div class="section">
-            <h3>LANGUAGES</h3>
+        <hr class="lang-divider">
+
+        <div class="lang-block en-block">
+            <p class="lang-label">🇺🇸</p>
             <ul>
-                <li><strong>Portuguese:</strong> Native &nbsp;|&nbsp; <strong>English:</strong> Advanced (fluent reading, writing, and speaking) &nbsp;|&nbsp; <strong>Spanish:</strong> Intermediate</li>
+                <li><strong>Portuguese:</strong> Native &nbsp;|&nbsp; <strong>English:</strong> Advanced (fluent reading and writing, proficient speaking) &nbsp;|&nbsp; <strong>Spanish:</strong> Intermediate</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ==================== NOTES ==================== -->
+    <div class="section" hidden>
+        <h3><span class="title-pt">Notas</span><span class="title-sep"> / </span><span class="title-en">Notes</span></h3>
+        <div class="notes-box">
+            <ul>
+                <li><span class="pt-block"><strong>Skills (tags):</strong> o LinkedIn usa tags individuais — adicione cada tecnologia como entrada separada a partir de "Habilidades Técnicas" do currículo.</span><span class="en-block"> / LinkedIn uses individual skill tags — add each technology separately from the "Technical Skills" section of your résumé.</span></li>
+                <li><strong>Datas Zukk × Cast Group / Zukk × Cast Group dates:</strong> Zukk começa em Nov 2025 e Cast Group vai até Nov 2025 — sobreposição comum em transições/contratos. / Starts Nov 2025 and ends Nov 2025 — overlap is normal for contract transitions.</li>
+                <li><strong>About:</strong> ~2.490 caracteres / characters (limite / limit: 2.600).</li>
             </ul>
         </div>
     </div>
 
     <script>
-        // Troca de idioma performática: ambas as versões já estão no DOM; alternamos
-        // apenas o atributo `hidden` de cada contêiner (uma única mudança de estilo,
-        // sem recriar conteúdo). Padrão na primeira visita = Português; depois disso
-        // a última escolha é lembrada via localStorage.
         (function () {
-            var STORAGE_KEY = 'resume-lang';
-            var contentPt = document.getElementById('content-pt');
-            var contentEn = document.getElementById('content-en');
-            var btnPt = document.getElementById('btn-pt');
-            var btnEn = document.getElementById('btn-en');
+            var STORAGE_KEY = 'linkedin-preview-mode';
+            var btnPt   = document.getElementById('btn-pt');
+            var btnBoth = document.getElementById('btn-both');
+            var btnEn   = document.getElementById('btn-en');
 
-            function setLang(lang, persist) {
-                var isEn = lang === 'en';
-                contentPt.hidden = isEn;
-                contentEn.hidden = !isEn;
-                btnPt.setAttribute('aria-pressed', String(!isEn));
-                btnEn.setAttribute('aria-pressed', String(isEn));
-                document.documentElement.lang = isEn ? 'en' : 'pt-BR';
-                document.title = isEn
-                    ? 'Resume - Lucas Bueno Cesario'
-                    : 'Currículo - Lucas Bueno Cesario';
+            function setMode(mode, persist) {
+                document.body.classList.remove('view-pt', 'view-en');
+                if (mode === 'pt') document.body.classList.add('view-pt');
+                if (mode === 'en') document.body.classList.add('view-en');
+
+                btnPt.setAttribute('aria-pressed',   String(mode === 'pt'));
+                btnBoth.setAttribute('aria-pressed', String(mode === 'both'));
+                btnEn.setAttribute('aria-pressed',   String(mode === 'en'));
+
+                document.documentElement.lang = mode === 'en' ? 'en' : 'pt-BR';
+                document.title = mode === 'en'
+                    ? 'LinkedIn Preview — Lucas Bueno Cesario (EN)'
+                    : mode === 'pt'
+                        ? 'LinkedIn Preview — Lucas Bueno Cesario (PT)'
+                        : 'LinkedIn Preview — Lucas Bueno Cesario';
+
                 if (persist) {
-                    try { localStorage.setItem(STORAGE_KEY, isEn ? 'en' : 'pt'); } catch (e) {}
+                    try { localStorage.setItem(STORAGE_KEY, mode); } catch (e) {}
                 }
             }
 
-            btnPt.addEventListener('click', function () { setLang('pt', true); });
-            btnEn.addEventListener('click', function () { setLang('en', true); });
+            btnPt.addEventListener('click',   function () { setMode('pt',   true); });
+            btnBoth.addEventListener('click', function () { setMode('both', true); });
+            btnEn.addEventListener('click',   function () { setMode('en',   true); });
 
-            // Restaura a última escolha; ausência de valor = Português (padrão).
             var saved;
             try { saved = localStorage.getItem(STORAGE_KEY); } catch (e) {}
-            if (saved === 'en') {
-                setLang('en', false);
-            }
+            setMode(saved || 'both', false);
         })();
     </script>
 </body>
