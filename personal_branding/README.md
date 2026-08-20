@@ -14,12 +14,8 @@ que atrai recrutador antes de existir vaga.
 | `whatsapp_business_profile.txt` | **Fonte única** da config do WhatsApp Business: perfil, automáticas, respostas rápidas | Pronto para colar |
 | `copiar.ps1` | Utilitário: copia um bloco do post pro clipboard | — |
 
-> **Material de freela (preços, escopo, propostas) não vive aqui.** Este
-> repositório é público. Piso de hora, multiplicador de buffer e scripts de
-> negociação estão em `freela/` no repositório privado
-> [`lucasbc92/job-search-private`](https://github.com/lucasbc92/job-search-private),
-> junto com a preparação de entrevistas. Cliente que leia sua tabela antes de
-> negociar sabe exatamente onde apertar.
+> Este repositório é público. Material de negociação e preparação de processo
+> seletivo não é versionado aqui — ver `.gitignore`.
 
 O `whatsapp_business_profile.txt` é o **destino de todo texto que vai para um
 campo de configuração** do WhatsApp — os arquivos de post apenas apontam para
