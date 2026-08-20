@@ -1,5 +1,19 @@
-# Interview preparation notes (private — not for the public repo)
+# ATENCAO: as regras abaixo nao sao arrumacao - sao contencao de vazamento.
+# Este repositorio e PUBLICO. Nada que sirva a um recrutador ou cliente como
+# vantagem em negociacao pode entrar aqui.
+#
+# O material correspondente vive em github.com/lucasbc92/job-search-private
+# (privado). Se precisar versionar algo dessas categorias, e la, nunca aqui.
+#
+# Estas regras ja foram removidas uma vez por parecerem arrumacao, e o material
+# privado acabou publicado. Nao remova sem checar o repo privado antes.
+
+# Preparacao de entrevista e transcricoes - PRIVADO
 interview_prep/
+interview_done/
+
+# Precificacao e taticas de negociacao de freela - PRIVADO
+personal_branding/freela_*.md
 
 # Generated knowledge-graph output
 graphify-out/

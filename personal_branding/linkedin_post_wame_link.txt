@@ -1,0 +1,306 @@
+================================================================================
+POST LINKEDIN - DICA RÁPIDA: wa.me
+Autor: Lucas Bueno Cesario
+Objetivo: engajamento + captação de recrutador + primeiros leads de freela
+Status: PRONTO PARA PUBLICAR. Link curto gerado e preenchido no bloco [4].
+
+NOTA DE FORMATO: nos blocos [2] a [5], cada parágrafo ocupa UMA linha só, por
+mais longa que fique. É proposital: o LinkedIn preserva as quebras que você
+cola, e texto quebrado em 78 colunas sai picotado no meio das frases. Não
+reformate esses blocos. As quebras que existem ali são todas intencionais.
+================================================================================
+
+
+--------------------------------------------------------------------------------
+[1] ANTES DE PUBLICAR - CHECKLIST
+--------------------------------------------------------------------------------
+
+[x] Gerar o link curto: Configurações > Ferramentas comerciais > Link curto
+    Resultado: https://wa.me/message/6W4JHDQIKRYJJ1
+[ ] Configurar o perfil e as mensagens automáticas seguindo
+    whatsapp_business_profile.txt (descrição, link curto, saudação, ausência,
+    respostas rápidas). A saudação vai para "Todos que não estão na agenda".
+[ ] Ativar Verificação em duas etapas (PIN)
+    Configurações > Conta > Verificação em duas etapas
+    OBRIGATÓRIO. Número público sem PIN = alvo de roubo de conta.
+[ ] "Quem pode me adicionar a grupos" > Meus contatos
+    Maior alavanca anti-spam. Sem isso você entra em grupo de "vagas" sozinho.
+[ ] Foto / Visto por último / Status > Meus contatos
+[x] Substituir o placeholder no bloco [4] pelo link real
+[ ] Testar o fluxo INTEIRO de um número que não é seu: clicar > mensagem
+    predefinida aparece > enviar > saudação automática chega
+[ ] Testar no CELULAR e no DESKTOP
+[ ] Colar no editor do LinkedIn e conferir o preview ANTES de publicar:
+    caber em 3.000 caracteres, nenhum wa.me virar link azul, e o corte do
+    "ver mais" acontecer depois da linha "Essa é a dica inteira..."
+[ ] Publicar o post e, em seguida, postar e FIXAR o primeiro comentário
+
+
+--------------------------------------------------------------------------------
+[2] CORPO DO POST (copiar daqui até a linha de fechamento)
+--------------------------------------------------------------------------------
+
+DICA RÁPIDA -> seu WhatsApp vira link oficial e clicável:
+
+wa.me/<DDI><DDD><numero>
+
+Essa é a dica inteira. Mas tem TRÊS usos que quase ninguém conhece.
+
+O encurtador é do próprio WhatsApp: wa.me + barra + o seu número em formato internacional, só dígitos. Por exemplo: wa.me/5511999999999
+
+55 = Brasil | 11 = DDD | 999999999 = o número de celular.
+Sem "+", sem espaço, sem parênteses, sem traço, sem o zero do DDD. Simples.
+
+
+OS TRÊS USOS EXTRAS:
+
+1) MENSAGEM PRONTA
+
+wa.me/5511998765432?text=Oi%2C%20Fulano%21%0A%0AVim%20pelo%20LinkedIn
+
+A conversa abre com o texto já digitado, assim:
+
+"Oi, Fulano!
+
+Vim pelo LinkedIn"
+
+O texto vai URL-encoded: espaço = %20, vírgula = %2C, exclamação = %21, quebra de linha = %0A (duas seguidas = linha em branco).
+
+O uso esperto não é a conveniência — é atribuição. Um link por canal (LinkedIn, currículo, site) e você descobre de onde a pessoa veio. Analytics de pobre, e funciona.
+
+2) LINK SEM NÚMERO
+
+wa.me/?text=Recomendo%20esse%20post
+
+Abre o WhatsApp com a mensagem pronta e deixa a PESSOA escolher pra quem mandar. É aquele botão "compartilhar no WhatsApp" de site — em uma linha de HTML, sem JS.
+
+3) LINK CURTO DO BUSINESS
+
+No WhatsApp Business, em Configurações > Ferramentas comerciais > Link curto:
+
+wa.me/message/ABCDEFGHIJKLM
+
+Link + QR code, com mensagem padrão configurada no app — e sem o número escrito por extenso em lugar nenhum.
+
+Ou seja: pro WhatsApp, esqueça encurtador de terceiro. Domínio oficial não morre, não cai em filtro de spam, não mete tracker na conversa — e ninguém precisa salvar contato pra começar.
+
+
+DOIS AVISOS HONESTOS:
+- Seu número fica público na dica rápida. Se for divulgar, ative a verificação em duas etapas e mude "Quem pode me adicionar a grupos" para "Meus contatos". 2 minutos, evita 90% da dor de cabeça.
+- No desktop o link passa por uma tela intermediária com botão "Continuar para o chat". Não é 100% sem atrito.
+
+E sim, vou usar o post pra praticar o que ensinei.
+
+Migrei meu número pro WhatsApp Business agora mesmo — é grátis — e o link do item 3 já está no ar, com saudação automática configurada. Clicar nele É o teste.
+
+Duas portas abertas:
+
+RECOLOCAÇÃO — Java Backend Engineer, 6 anos. Spring Boot, microsserviços, APIs REST, Azure. CLT ou PJ, remoto.
+
+FREELAS — comecei a pegar projeto pontual, de escopo fechado:
+- API REST ou integração entre sistemas em Spring Boot
+- aquele bug em Java legado que ninguém resolve (fui "bombeiro de plantão" em produção na Luizalabs e na PariPassu, N2/N3)
+- automação de processo manual em Python/SQL
+- performance: derrubei uma importação de ~100 mil faturas de vários minutos pra ~1 (Java 21, Virtual Threads)
+
+Diagnóstico do seu problema na primeira conversa, sem custo. Se eu não for a pessoa certa pro caso, eu digo na hora.
+
+Link no primeiro comentário.
+
+Você já usava wa.me com mensagem pronta, ou só o link simples?
+
+#WhatsApp #DicaRapida #Java #Freelancer #Remoto
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+[3] MENSAGENS DO WHATSAPP BUSINESS
+--------------------------------------------------------------------------------
+
+A configuração do WhatsApp Business NÃO vive aqui. Fonte única da verdade:
+
+    whatsapp_business_profile.txt
+
+Lá estão, já com os limites de cada campo e as variantes descartadas:
+
+    [5B] mensagem predefinida do link curto (o que a PESSOA envia)
+    [6]  mensagem de saudação automática    (o que VOCÊ responde)
+    [7]  mensagem de ausência
+    [9]  respostas rápidas (/cv, /stack, /valores...)
+    [1]  descrição do perfil
+    [4]  nome, categoria, sites, horário
+
+MOTIVO DE NÃO DUPLICAR AQUI: as duas versões já divergiram uma vez. A saudação
+tinha sido escrita antes de o post anunciar freela e mandava só quem falava de
+vaga - o lead de freela ficava sem destino. Texto de configuração em dois
+lugares sempre vira isso.
+
+ETIQUETAS PARA ORGANIZAR (criar no app, se ainda não existirem):
+
+Vaga | Freela - lead | Freela - proposta enviada | Freela - fechado | Teste
+
+
+--------------------------------------------------------------------------------
+[4] PRIMEIRO COMENTÁRIO (postar logo após publicar e FIXAR)
+--------------------------------------------------------------------------------
+
+Como prometido, o link pra testar — no formato do item 3:
+
+https://wa.me/message/6W4JHDQIKRYJJ1
+
+Ele abre com uma mensagem já digitada e você recebe uma saudação automática na sequência. Os dois recursos do post funcionando de verdade.
+
+Vaga de Java/Spring ou freela de backend: é por aí também.
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+[5] VERSÃO EM INGLÊS (opcional)
+--------------------------------------------------------------------------------
+
+Use apenas se quiser o post bilíngue. Nesse caso: publique o PT completo,
+depois uma linha separadora, depois o EN completo.
+NUNCA alterne idioma frase a frase - atrapalha a leitura dos dois públicos.
+
+- - - - -
+
+QUICK TIP: turn your WhatsApp into a clickable link.
+
+wa.me/5511999999999
+
+That is the whole tip. But there are 3 uses almost nobody knows about.
+
+The tool is official, built by WhatsApp itself: slash + your number in international format, digits only.
+
+No "+", no spaces, no parentheses, no dashes, no leading zero.
+
+The 3 uses:
+
+
+1) PRE-FILLED MESSAGE
+
+wa.me/5511999999999?text=Hi!%20I%20came%20from%20LinkedIn
+
+The chat opens with the text already typed. It must be URL-encoded (space = %20, line break = %0A). The smart use is not convenience — it is attribution: one link per channel and you know where people came from.
+
+
+2) LINK WITHOUT A NUMBER
+
+wa.me/?text=Check%20out%20this%20post
+
+Opens WhatsApp with the message ready and lets the PERSON pick who to send it to. That is the "share on WhatsApp" button — one line of HTML, no JS.
+
+
+3) BUSINESS SHORT LINK
+
+Settings > Business tools > Short link generates wa.me/message/ABCDEFGHIJKLM — link plus QR code, with a default message, and your number never written out.
+
+Why not bit.ly: official domain (will not die, will not get spam-filtered), no third-party tracker in your conversation, nobody needs to save a contact, works on mobile and Web/Desktop, fits in a QR code, email signature, Instagram bio or GitHub README.
+
+Honest caveats: your number becomes public — turn on two-step verification and set "Who can add me to groups" to "My contacts". And on desktop there is an intermediate "Continue to Chat" screen, so it is not fully frictionless.
+
+And yes, I am using this post to practice what I just taught.
+
+I moved my number to WhatsApp Business this week, and the item 3 link is live, greeting message and all. Clicking it IS the test.
+
+Two doors open:
+
+NEW ROLE — Java Backend Engineer, 6 years. Spring Boot, microservices, REST APIs, Azure. Remote.
+
+FREELANCE — I started taking on small, fixed-scope projects:
+
+- REST API or system-to-system integration in Spring Boot
+- that legacy Java bug nobody can crack (I was the on-call firefighter for production at Luizalabs and PariPassu)
+- automating a manual process in Python/SQL
+- performance: cut a ~100k invoice import from several minutes to about one (Java 21, Virtual Threads)
+
+Free diagnosis on the first call. If I am not the right person for your case, I will say so upfront.
+
+Link in the first comment.
+
+Were you already using wa.me with a pre-filled message, or just the plain link?
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+[6] NOTAS DE ESTRATÉGIA (não publicar)
+--------------------------------------------------------------------------------
+
+POR QUE O HOOK É "RÓTULO + VALOR IMEDIATO + TENSÃO"
+Rótulo em CAPS ("DICA RÁPIDA") é marcador de gênero: sinaliza em meio segundo
+que o post é curto e útil, e para o scroll. Entregar o wa.me/<numero> já na
+linha 1 compra confiança com público técnico, que rejeita pergunta retórica
+de abertura (soa a broetry) - e não queima o post, porque o valor real está
+nos 3 usos avançados, que continuam atrás do "ver mais". A linha "essa é a
+dica inteira, mas tem 3 usos" fecha o loop pequeno e abre o grande.
+Sem "https://" no hook: o LinkedIn auto-linka e cria uma porta de saída
+clicável logo na primeira linha, além de derrubar a entrega.
+Número concreto em vez de <ddi><telefone> no hook: placeholder é sintaxe de
+documentação, exige decodificar. A notação com <ddi> fica no corpo, onde o
+post está de fato ensinando.
+Orçamento do hook: ~140 caracteres no mobile antes do "ver mais".
+
+POR QUE O BLOCO DE FREELA NÃO DIZ "NUNCA FIZ FREELA"
+É verdade que a experiência é nova, mas a frase que o comprador ouve é "posso
+não entregar". O que ele está comprando é engenharia, não freelancing - e aí
+são 6 anos, Luizalabs, PariPassu, milhões de transações por dia. "Comecei a
+pegar projeto pontual" diz a mesma coisa sem plantar dúvida sobre a entrega.
+Pelo mesmo motivo, "preciso muito gerar renda" fica FORA do post: destrói
+poder de precificação e atrai proposta de esmola.
+
+POR QUE OFERTA ESPECÍFICA, E NÃO "ACEITO FREELAS"
+Disponibilidade genérica não gera lead: ninguém consegue mapear o próprio
+problema no seu perfil. Os 4 itens são deliberadamente problemas que o
+cliente já sabe que tem ("meu sistema quebrou", "essa planilha me toma 3
+horas por dia"). Escopo fechado e curto também é o que reduz o risco de
+contratar alguém sem histórico de freela.
+
+POR QUE DIAGNÓSTICO GRÁTIS E NÃO "PREÇO DE PORTFÓLIO"
+Desconto de entrada ancora o seu valor lá embaixo e é difícil subir depois.
+Diagnóstico gratuito na primeira conversa gera o mesmo volume de contato sem
+mexer no preço - e a frase "se eu não for a pessoa certa, eu digo na hora"
+compra confiança justamente de quem está inseguro em contratar um iniciante.
+
+POR QUE A TRIAGEM VIVE NA SAUDAÇÃO, E NÃO NO POST
+Três CTAs no corpo (testar o link / vaga / freela) diluiriam o post. No corpo
+ficam duas portas em uma frase cada; o menu 1/2/3 fica na mensagem automática,
+onde não custa espaço nem atenção - e ainda demonstra o recurso ensinado.
+
+POR QUE NÚMERO FICTÍCIO NA PARTE DIDÁTICA
+Mantém o tutorial limpo e reutilizável, evita que alguém escreva sem querer
+para um número real e separa o ensino do CTA. Post de dica em que o número do
+autor aparece no meio da explicação vira anúncio disfarçado e perde
+credibilidade de tutorial.
+
+POR QUE NÃO USAR O NÚMERO DA VIVO OU DE OUTRA EMPRESA
+O número de atendimento de uma operadora cai num bot de suporte: quem clicar
+sai irritado com você, não com a marca. E o time que poderia te notar não é o
+que atende esse número. Piggyback em marca só funciona quando você ANALISA
+algo que a empresa fez e marca a empresa - isso seria outro post, e exigiria
+verificar antes o que a empresa realmente usa.
+
+POR QUE O LINK VAI NO PRIMEIRO COMENTÁRIO
+O LinkedIn reduz a entrega de posts com link clicável no corpo. No corpo os
+links aparecem como texto puro (sem https://), então funcionam como tutorial
+sem tirar ninguém da plataforma. O link real e clicável fica no primeiro
+comentário - prática padrão: preserva alcance sem perder a conversão.
+
+POR QUE O CTA NÃO SOA FORÇADO
+A pessoa clicar não é você pedindo favor: é ela testando a dica. O link curto
+do Business vira demonstração ao vivo da própria técnica avançada ensinada no
+item 3.
+
+CORREÇÃO TÉCNICA EM RELAÇÃO AO RASCUNHO ORIGINAL
+A documentação oficial pede o número só com dígitos, sem "+". Na prática o
+"+" costuma funcionar por redirect, mas não vale ensinar formato
+não-documentado num post de dica - é o tipo de coisa que aparece nos
+comentários.
+
+MELHOR HORÁRIO
+Terça a quinta, 8h-10h ou 12h-13h (horário de Brasília). Responder TODOS os
+comentários na primeira hora - é o que mais impulsiona a entrega.
+
+================================================================================

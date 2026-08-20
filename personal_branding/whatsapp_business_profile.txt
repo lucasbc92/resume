@@ -1,0 +1,272 @@
+================================================================================
+PERFIL WHATSAPP BUSINESS - Lucas Bueno Cesario
+Objetivo: receber recrutadores vindos do post do wa.me (ver linkedin_post_wame_link.txt)
+Status: versao ESCOLHIDA = recrutador-primeiro (bloco [1]). Pronto para colar.
+
+NOTA DE FORMATO: todo texto que vai para um campo do WhatsApp esta em UMA linha
+por paragrafo, por mais longa que fique. E proposital - o campo preserva a
+quebra que voce colar, e texto quebrado em 78 colunas chega ao destinatario
+picotado no meio da frase. Nao reformate esses textos. As linhas em branco entre
+paragrafos sao intencionais e devem ficar.
+================================================================================
+
+LIMITES DOS CAMPOS (WhatsApp Business)
+  Nome da empresa .... 25 caracteres (mudanca limitada - escolha com calma)
+  Descricao .......... 512 caracteres
+  Recado / "Sobre" ... 139 caracteres
+  Site ............... 2 campos, estes sim clicaveis
+  Categoria .......... lista fechada
+
+--------------------------------------------------------------------------------
+[1] DESCRICAO - ESCOLHIDA (recrutador-primeiro) - 379 caracteres
+--------------------------------------------------------------------------------
+
+Java Backend Engineer com 6 anos de experiência: Spring Boot, microsserviços, APIs REST e nuvem (Azure, AWS, GCP), com atuação full stack em React e Angular. Sistemas em produção processando milhões de transações por dia.
+
+Em busca de recolocação (CLT ou PJ) e disponível para projetos pontuais como autônomo.
+
+Remoto, UTC-3 - sobreposição total com os EUA, parcial com a Europa.
+
+  Variante da ultima linha, caso NAO va preencher os campos de Site (369 chars):
+  "Remoto, UTC-3. Currículo e portfólio: github.com/lucasbc92"
+
+--------------------------------------------------------------------------------
+[2] DESCRICAO - ALTERNATIVA: hibrida (guardada) - 412 caracteres
+--------------------------------------------------------------------------------
+
+Engenheiro de software com 6 anos de experiência em back-end Java/Spring Boot e front-end React/Angular. Microsserviços e APIs REST em produção processando milhões de transações diárias, em Azure, AWS e GCP.
+
+Atuo como desenvolvedor autônomo em projetos sob demanda e estou aberto a recolocação como Java Backend Engineer (CLT ou PJ).
+
+Remoto - UTC-3 - sobreposição total com os EUA.
+GitHub: github.com/lucasbc92
+
+--------------------------------------------------------------------------------
+[3] DESCRICAO - ALTERNATIVA: cliente/freela primeiro (guardada) - 363 caracteres
+--------------------------------------------------------------------------------
+
+Desenvolvimento de software sob demanda: APIs e back-end em Java/Spring Boot, front-end em React e Angular, integrações, microsserviços e deploy em nuvem (Azure, AWS, GCP).
+
+6 anos de experiência, incluindo sistemas com milhões de transações diárias em telecom, varejo e fiscal (NF-e).
+
+Atendimento remoto, UTC-3. Também avalio propostas de contratação CLT ou PJ.
+
+--------------------------------------------------------------------------------
+[4] DEMAIS CAMPOS DO PERFIL
+--------------------------------------------------------------------------------
+
+Nome da empresa (25):   Lucas Bueno | Dev Java        (22 caracteres)
+Categoria:              Servico de ciencia e tecnologia
+                        (ou "Servico profissional" - nao existe categoria de
+                        desenvolvedor; nenhuma das duas aparece pro recrutador
+                        com destaque, entao nao perca tempo aqui)
+Recado / Sobre (101):   >>> valor na linha abaixo, em uma linha so <<<
+Java Backend Engineer | Spring Boot e microsservicos | Aberto a recolocacao e projetos | Remoto UTC-3
+Site 1:                 https://www.linkedin.com/in/lucasbc92
+Site 2:                 https://github.com/lucasbc92
+Endereco:               DEIXAR VAZIO (numero publico + endereco = exposicao
+                        desnecessaria; "Araruama, RJ" ja esta no curriculo)
+Horario:                Seg-Sex, 09:00-18:00 - sinaliza profissional, nao 24/7
+
+--------------------------------------------------------------------------------
+[5] NOTAS
+--------------------------------------------------------------------------------
+
+- Link na descricao NAO e clicavel: vira texto puro. Os dois campos "Site" sao
+  os clicaveis. Por isso a versao escolhida usa a ultima linha para
+  disponibilidade/fuso em vez de repetir a URL.
+- Evitar "buscando oportunidade", "aberto a novos desafios", "apaixonado por
+  tecnologia": frase de banco de talentos, nao de perfil comercial.
+- Numeros do curriculo que sustentam a descricao (caso perguntem no chat):
+  Vivo Valoriza (Zukk), InvoiceCon/NF-e (Cast Group), Luizalabs (microsservicos
+  financeiros, ~95% de cobertura, Virtual Threads Java 21).
+- A descricao pode ser trocada quando a recolocacao acontecer - nao e assinatura
+  de contrato. Revisar quando mudar o status.
+
+--------------------------------------------------------------------------------
+[5B] MENSAGEM PREDEFINIDA DO LINK CURTO
+--------------------------------------------------------------------------------
+
+Onde configurar: Ferramentas comerciais > Link curto
+O que e: o texto que a PESSOA envia ao clicar em wa.me/message/XXX. Ela pode
+editar antes de mandar. Nao confundir com a saudacao [6], que e a sua resposta.
+
+>>> ESCOLHIDA - neutra:
+
+Oi, Lucas! Vim pelo post do wa.me no LinkedIn.
+
+  Neutra de proposito: quem clica pode ser recrutador com vaga seria, e ninguem
+  quer enviar piadinha nesse momento. O tom descontraido fica na saudacao [6],
+  que e onde VOCE controla.
+
+>>> VARIANTE mais solta (so se o publico do post for bem tecnico):
+
+Oi, Lucas! Vim testar a dica do post - e aqui esta a prova de que funciona.
+
+
+--------------------------------------------------------------------------------
+[6] MENSAGEM DE SAUDACAO (limite ~200 caracteres)
+--------------------------------------------------------------------------------
+
+Quando dispara: na PRIMEIRA mensagem de um contato, ou depois de 14 dias sem
+conversa. Nao e enviada a cada mensagem.
+Destinatarios: escolher "Todos que nao estao na minha agenda" - assim amigo e
+familia nao levam resposta de robo.
+
+>>> ESCOLHIDA enquanto o post do wa.me estiver circulando (185 caracteres):
+
+Olá! Aqui é o Lucas. Se você veio do post: sim, o link funcionou. Respondo em horário comercial (seg-sex, 9h-18h, UTC-3). Vaga de Java/Spring ou freela de backend? Já manda os detalhes.
+
+  ATUALIZADA em 20/08/2026: o post passou a anunciar DUAS portas (recolocacao e
+  freela). A versao anterior so roteava vaga e deixava o lead de freela sem
+  destino. Se um dia a porta de freela fechar, volte para a linha abaixo:
+
+Olá! Aqui é o Lucas. Se você veio do post do LinkedIn: sim, o link funcionou. Respondo em horário comercial (seg a sex, 9h-18h, UTC-3). Se for sobre vaga de Java/Spring, já mande os detalhes.
+
+>>> PERENE - trocar por esta quando o post sair de circulação (184 caracteres):
+
+Olá! Aqui é o Lucas Bueno, Java Backend Engineer. Respondo em horário comercial (seg a sex, 9h-18h, UTC-3). Se for sobre vaga, mande empresa, stack e modelo (CLT ou PJ) que já adianto.
+
+>>> MINIMALISTA, se as de cima parecerem longas (157 caracteres):
+
+Olá! Aqui é o Lucas Bueno, Java Backend Engineer. Respondo em horário comercial (seg a sex, 9h-18h, UTC-3). Se for sobre vaga, pode já mandar os detalhes.
+
+--------------------------------------------------------------------------------
+[7] MENSAGEM DE AUSENCIA (par da saudacao - o horario do perfil so vale se esta existir)
+--------------------------------------------------------------------------------
+
+Configurar em: Ferramentas comerciais > Mensagem de ausencia
+Programacao: "Fora do horario comercial" (usa o horario do bloco [4])
+
+(185 caracteres)
+
+Olá! Sua mensagem chegou fora do horário comercial (seg a sex, 9h-18h, UTC-3). Retorno no próximo dia útil. Se for sobre vaga, pode deixar os detalhes aqui que já adianto a resposta.
+
+--------------------------------------------------------------------------------
+[8] NOTAS DAS AUTOMATICAS
+--------------------------------------------------------------------------------
+
+- Nao confundir com a mensagem do link curto (wa.me/message/XXX): aquela e o
+  texto que a PESSOA envia pra voce. A saudacao e o que VOCE responde. As duas
+  aparecem na tela em sequencia - por isso a saudacao nao repete "ola, vi que
+  voce quer falar comigo".
+- A saudacao dispara antes de voce ler qualquer coisa. Por isso ela nao promete
+  prazo curto nem diz "vou analisar sua vaga": so define expectativa e pede o
+  que falta (empresa, stack, modelo).
+- Pedir stack e modelo (CLT/PJ) na saudacao filtra recrutador de vaga generica
+  sem voce gastar mensagem.
+- Se responder rapido de fato, a mensagem de ausencia vale mais que a saudacao:
+  ela protege a noite e o fim de semana sem parecer indisponivel.
+
+--------------------------------------------------------------------------------
+[9] RESPOSTAS RAPIDAS
+--------------------------------------------------------------------------------
+
+DIFERENCA QUE MUDA TUDO: resposta rapida NAO e automatica. E atalho de teclado.
+Voce digita "/" + o atalho, o texto aparece no campo de digitacao, e VOCE decide
+enviar (e pode editar antes). Quem automatiza sao a saudacao [6] e a ausencia
+[7]. Ou seja: o risco de parecer desumano nao vem do recurso - vem do texto.
+
+REGRA DE USO: a resposta rapida e o CORPO da mensagem, nunca a mensagem inteira.
+Mande uma linha pessoal antes ("Oi, Ana! Sobre a vaga da <empresa>:") e cole o
+bloco depois. Isso e o que separa "organizado" de "robo".
+
+Onde configurar: Ferramentas comerciais > Respostas rapidas
+Limite: 50 respostas. Atalho e uma palavra so, sem espaco. Nao existe variavel
+nem preenchimento automatico - por isso nenhum texto abaixo tem lacuna pra
+preencher. Cada texto foi mantido em ~200 caracteres.
+
+/cv (181) - pode anexar o PDF na propria resposta rapida
+Segue meu currículo. Ele também está no LinkedIn (linkedin.com/in/lucasbc92) e os projetos no github.com/lucasbc92. Se precisar de alguma versão específica pro processo, é só pedir.
+
+/stack (196)
+Stack principal: Java 8-21, Spring Boot/MVC, microsserviços, APIs REST, Hibernate/JPA, JUnit e Mockito. Front-end em React e Angular (TypeScript). Nuvem: Azure, AWS e GCP, com Docker e Kubernetes.
+
+/exp (200)
+6 anos de experiência. Recentes: Vivo Valoriza (microsserviços Java, BFF Nest.js, React, Azure), InvoiceCon/NF-e (Spring + Angular) e Luizalabs (microsserviços financeiros, milhões de transações/dia).
+
+/valores (190)
+Sobre remuneração: qual a faixa prevista para a vaga? Assim eu já digo se conversa com a minha expectativa e ninguém perde tempo. Considero CLT e PJ, com valores diferentes para cada modelo.
+
+/disp (183)
+Disponibilidade: remoto, UTC-3, com sobreposição total com os EUA e parcial com a Europa. Posso iniciar rapidamente. Para entrevista, consigo encaixar no mesmo dia ou no dia seguinte.
+
+/dados (187)
+Dados para cadastro: Lucas Bueno Cesario | Araruama, RJ | lbc92@hotmail.com | linkedin.com/in/lucasbc92 | github.com/lucasbc92. Documentos (CPF/RG) eu envio pelo canal oficial da empresa.
+
+/call (181)
+Podemos fazer por telefone ou vídeo, o que for melhor pra você. Consigo em horário comercial e também no início da noite, se ajudar. Me manda duas opções de horário que eu confirmo.
+
+/nao (192)
+Obrigado por pensar em mim! Essa vaga não encaixa no que busco agora, mas fico à disposição para as próximas - meu foco é back-end Java/Spring. Pode me chamar quando aparecer algo nessa linha.
+
+/obg (86) - ver ressalva no bloco [10]
+Obrigado pelo retorno! Fico à disposição se precisar de qualquer informação adicional.
+
+--- LEAD DE FREELA (ver freela_precos_e_escopo.md) ---
+
+/freela (195)
+Pego projetos pontuais de escopo fechado: APIs REST e integrações em Spring Boot, bug em Java legado que ninguém resolve, automação de processo em Python/SQL e performance. Diagnóstico sem custo.
+
+/orcamento (196)
+Depende do escopo: o mesmo problema pode ser 2 horas ou 2 semanas. Me conta o que está acontecendo? Se fizer sentido, marco 30 min sem custo pra entender e já digo se consigo ajudar e quanto fica.
+
+/triagem (185)
+Antes de eu falar em valor, três perguntas: isso já está em produção ou ainda é desenvolvimento? Alguém consegue reproduzir o problema de forma confiável? E tem prazo apertado por trás?
+
+--------------------------------------------------------------------------------
+[10] NOTAS DAS RESPOSTAS RAPIDAS
+--------------------------------------------------------------------------------
+
+SOBRE O "/obg" ESPECIFICAMENTE
+E a que menos compensa automatizar. "Obrigado" e curto de digitar e e o momento
+em que a personalizacao vale mais - agradecer citando o que a pessoa fez ("valeu
+pelo encaminhamento pro time de dados") rende muito mais que um bloco pronto.
+Deixei cadastrada porque serve de fecho em dia de muita mensagem, mas se for pra
+usar so uma, use /valores.
+
+O QUE VALE AUTOMATIZAR: mensagem longa, repetitiva e sempre igual (dados de
+cadastro, stack, disponibilidade). O que NAO vale: mensagem curta, emocional ou
+que responde a algo especifico da conversa.
+
+CUIDADO COM DOIS BLOCOS SEGUIDOS
+Se a saudacao automatica [6] acabou de disparar, a sua primeira resposta manual
+NAO deve ser um bloco pronto. Duas mensagens enlatadas em sequencia e exatamente
+a sensacao de "falei com um bot".
+
+/dados NAO LEVA CPF NEM RG
+Numero publico + documento colado no chat e risco desnecessario. A resposta ja
+direciona pro canal oficial da empresa - isso passa cuidado com dado, o que pega
+bem justamente numa conversa tecnica.
+
+/valores DEVOLVE A PERGUNTA
+De proposito. Dar numero primeiro, sem saber o modelo (CLT ou PJ) nem o escopo,
+so tira poder da negociacao. A pergunta de volta e educada e padrao de mercado.
+
+/orcamento E O /valores DO LADO CLIENTE - E NUNCA LEVA NUMERO
+Mesma logica, publico diferente. /valores pergunta a faixa da vaga; /orcamento
+recusa dar preco antes do diagnostico. Numero no vacuo sai alto demais (o
+cliente some) ou baixo demais (voce se prende ao proprio chute). A troca honesta
+e sempre a mesma: em vez do numero, os 30 minutos de graca.
+
+QUANDO USAR /triagem
+Depois do /orcamento, na mesma conversa ou na chamada. As tres respostas definem
+preco e risco: "producao + nao reproduz + urgente" e o cenario mais caro que
+existe - e e exatamente o que voce sabe fazer. Nao baixe preco nesse caso.
+
+NUNCA CADASTRAR UMA RESPOSTA RAPIDA COM PRECO
+Preco depende de escopo e o escopo muda a cada cliente. Texto pronto com valor
+vira ancora que voce nao consegue tirar depois. Valor sai na proposta escrita
+(ver freela_propostas_exemplo.md), nunca no chat.
+
+QUEBRA DE LINHA NOS TEXTOS DESTE ARQUIVO
+O campo de resposta rapida preserva as quebras que voce colar. Os textos antigos
+deste bloco estao quebrados em ~78 colunas para caber no editor, e vao chegar ao
+destinatario picotados no meio da frase. Os tres textos de freela acima foram
+escritos em uma linha so por causa disso. Vale normalizar o resto.
+
+ANEXO
+A resposta rapida aceita um anexo. Vale cadastrar /cv com o PDF
+(resume_ptbr_2026_08_ago_REVISADO.pdf) e, se quiser, /cven com o em ingles
+(resume_en_2026_08_aug_REVIEWED.pdf). Reanexar sempre que o curriculo for
+atualizado - resposta rapida guarda o arquivo, nao um link pro arquivo.
