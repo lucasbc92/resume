@@ -107,6 +107,17 @@ clicável na primeira linha. Exemplo concreto (`wa.me/5511999999999`) em vez de
 placeholder (`wa.me/<ddi><telefone>`): placeholder é sintaxe de documentação e
 exige decodificar. A notação com `<...>` fica no corpo, onde se está ensinando.
 
+**URL que o leitor precisa LER vai escapada: `wa[.]me`, `bit[.]ly`.**
+Tirar o `https://` não basta — o LinkedIn detecta domínio nu com TLD válido e
+converte tudo em `lnkd.in`. Num post que ensina estrutura de URL isso é fatal:
+some exatamente o que o post mostra. Colchetes são convenção conhecida do
+público técnico e continuam legíveis; espaço zero-width e caractere Unicode
+parecido resolvem também, mas quebram o copiar-e-colar do leitor em silêncio.
+
+Acrescente uma linha curta avisando dos colchetes, senão alguém copia literal.
+O link que existe para ser clicado — o do primeiro comentário — vai inteiro,
+sem escape.
+
 **Link clicável vai no primeiro comentário.**
 Link no corpo derruba a entrega. No corpo, escrever URL como texto puro (sem
 `https://`) — funciona como tutorial e não tira ninguém da plataforma.

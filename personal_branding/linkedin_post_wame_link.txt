@@ -31,8 +31,11 @@ reformate esses blocos. As quebras que existem ali são todas intencionais.
     predefinida aparece > enviar > saudação automática chega
 [ ] Testar no CELULAR e no DESKTOP
 [ ] Colar no editor do LinkedIn e conferir o preview ANTES de publicar:
-    caber em 3.000 caracteres, nenhum wa.me virar link azul, e o corte do
-    "ver mais" acontecer depois da linha "Essa é a dica inteira..."
+    - cabe em 3.000 caracteres
+    - o corte do "ver mais" cai depois de "Essa é a dica inteira..."
+    - NENHUM wa[.]me virou link azul / lnkd.in. Se virou, o LinkedIn mudou
+      a detecção e o escape precisa de outra forma - NAO publique assim,
+      porque encurtar os exemplos apaga justamente o que o post ensina.
 [x] Escolher a imagem: linkedin_post_wame_image.jpeg (ver bloco [6])
     UMA imagem só - multi-imagem vira colagem e enfraquece
 [ ] Publicar o post e, em seguida, postar e FIXAR o primeiro comentário
@@ -44,21 +47,23 @@ reformate esses blocos. As quebras que existem ali são todas intencionais.
 
 DICA RÁPIDA -> seu WhatsApp vira link oficial e clicável:
 
-wa.me/<DDI><DDD><numero>
+wa[.]me/<DDI><DDD><numero>
 
 Essa é a dica inteira. Mas tem TRÊS usos que quase ninguém conhece.
 
-O encurtador é do próprio WhatsApp: wa.me + barra + o seu número em formato internacional, só dígitos. Por exemplo: wa.me/5511999999999
+O encurtador é do próprio WhatsApp: wa[.]me + barra + o seu número em formato internacional, só dígitos. Por exemplo: wa[.]me/5511999999999
 
 55 = Brasil | 11 = DDD | 999999999 = o número de celular.
 Sem "+", sem espaço, sem parênteses, sem traço, sem o zero do DDD. Simples.
+
+(Escrevo wa[.]me nos exemplos pro LinkedIn não encurtar. Use sem os colchetes.)
 
 
 OS TRÊS USOS EXTRAS:
 
 1) MENSAGEM PRONTA
 
-wa.me/5511998765432?text=Oi%2C%20Fulano%21%0A%0AVim%20pelo%20LinkedIn
+wa[.]me/5511998765432?text=Oi%2C%20Fulano%21%0A%0AVim%20pelo%20LinkedIn
 
 A conversa abre com o texto já digitado, assim:
 
@@ -72,7 +77,7 @@ O uso esperto não é a conveniência — é atribuição. Um link por canal (Li
 
 2) LINK SEM NÚMERO
 
-wa.me/?text=Recomendo%20esse%20post
+wa[.]me/?text=Recomendo%20esse%20post
 
 Abre o WhatsApp com a mensagem pronta e deixa a PESSOA escolher pra quem mandar. É aquele botão "compartilhar no WhatsApp" de site — em uma linha de HTML, sem JS.
 
@@ -80,15 +85,15 @@ Abre o WhatsApp com a mensagem pronta e deixa a PESSOA escolher pra quem mandar.
 
 No WhatsApp Business, em Configurações > Ferramentas comerciais > Link curto:
 
-wa.me/message/ABCDEFGHIJKLM
+wa[.]me/message/ABCDEFGHIJKLM
 
-Link + QR code, com mensagem padrão configurada no app — e sem o número escrito por extenso em lugar nenhum.
+Link + QR code, com mensagem padrão configurada no app — e sem o número escrito por extenso.
 
-Ou seja: pro WhatsApp, esqueça encurtador de terceiro. Domínio oficial não morre, não cai em filtro de spam, não mete tracker na conversa — e ninguém precisa salvar contato pra começar.
+Ou seja: pro WhatsApp, esqueça encurtador de terceiro. Domínio oficial não morre, não cai em filtro de spam, não mete tracker — e ninguém precisa salvar contato pra começar.
 
 
 DOIS AVISOS HONESTOS:
-- Seu número fica público na dica rápida. Se for divulgar, ative a verificação em duas etapas e mude "Quem pode me adicionar a grupos" para "Meus contatos". 2 minutos, evita 90% da dor de cabeça.
+- Seu número fica público na dica rápida. Se for divulgar, ative a verificação em duas etapas e mude "Quem pode me adicionar a grupos" para "Meus contatos". Evita 90% da dor de cabeça.
 - No desktop o link passa por uma tela intermediária com botão "Continuar para o chat". Não é 100% sem atrito.
 
 E sim, vou usar o post pra praticar o que ensinei.
@@ -109,7 +114,7 @@ Diagnóstico do seu problema na primeira conversa, sem custo. Se eu não for a p
 
 Link no primeiro comentário.
 
-Você já usava wa.me com mensagem pronta, ou só o link simples?
+Você já usava wa[.]me com mensagem pronta, ou só o link simples?
 
 #WhatsApp #DicaRapida #Java #Freelancer #Remoto
 
@@ -153,6 +158,8 @@ https://wa.me/message/6W4JHDQIKRYJJ1
 
 Ele abre com uma mensagem já digitada e você recebe uma saudação automática na sequência. Os dois recursos do post funcionando de verdade.
 
+E sim, no post escrevi wa[.]me com colchetes de propósito: o LinkedIn transforma qualquer link do corpo em lnkd.in, e encurtar os exemplos apagaria exatamente o formato que a dica ensina. Aqui no comentário o link vai inteiro, porque aqui ele existe pra ser clicado.
+
 Vaga de Java/Spring ou freela de backend: é por aí também.
 
 --------------------------------------------------------------------------------
@@ -170,7 +177,7 @@ NUNCA alterne idioma frase a frase - atrapalha a leitura dos dois públicos.
 
 QUICK TIP: turn your WhatsApp into a clickable link.
 
-wa.me/5511999999999
+wa[.]me/5511999999999
 
 That is the whole tip. But there are 3 uses almost nobody knows about.
 
@@ -183,21 +190,21 @@ The 3 uses:
 
 1) PRE-FILLED MESSAGE
 
-wa.me/5511999999999?text=Hi!%20I%20came%20from%20LinkedIn
+wa[.]me/5511999999999?text=Hi!%20I%20came%20from%20LinkedIn
 
 The chat opens with the text already typed. It must be URL-encoded (space = %20, line break = %0A). The smart use is not convenience — it is attribution: one link per channel and you know where people came from.
 
 
 2) LINK WITHOUT A NUMBER
 
-wa.me/?text=Check%20out%20this%20post
+wa[.]me/?text=Check%20out%20this%20post
 
 Opens WhatsApp with the message ready and lets the PERSON pick who to send it to. That is the "share on WhatsApp" button — one line of HTML, no JS.
 
 
 3) BUSINESS SHORT LINK
 
-Settings > Business tools > Short link generates wa.me/message/ABCDEFGHIJKLM — link plus QR code, with a default message, and your number never written out.
+Settings > Business tools > Short link generates wa[.]me/message/ABCDEFGHIJKLM — link plus QR code, with a default message, and your number never written out.
 
 Why not bit.ly: official domain (will not die, will not get spam-filtered), no third-party tracker in your conversation, nobody needs to save a contact, works on mobile and Web/Desktop, fits in a QR code, email signature, Instagram bio or GitHub README.
 
@@ -222,7 +229,7 @@ Free diagnosis on the first call. If I am not the right person for your case, I 
 
 Link in the first comment.
 
-Were you already using wa.me with a pre-filled message, or just the plain link?
+Were you already using wa[.]me with a pre-filled message, or just the plain link?
 
 --------------------------------------------------------------------------------
 
@@ -300,6 +307,32 @@ A documentação oficial pede o número só com dígitos, sem "+". Na prática o
 "+" costuma funcionar por redirect, mas não vale ensinar formato
 não-documentado num post de dica - é o tipo de coisa que aparece nos
 comentários.
+
+POR QUE OS EXEMPLOS USAM wa[.]me COM COLCHETES
+Descoberto na primeira colagem real no editor: tirar o "https://" NÃO impede o
+LinkedIn de linkar. Ele detecta domínio nu com TLD válido e converte tudo para
+lnkd.in. Num post que ensina a ESTRUTURA da URL, isso é fatal - o leitor deixa
+de ver justamente aquilo que o post existe para mostrar, e o encoding do item 1
+(%2C, %21, %0A%0A) desaparece por completo. Ainda leva o baque de alcance de
+link no corpo.
+Solução: wa[.]me nos exemplos. Convenção conhecida do público técnico, derrota
+a detecção de forma confiável e continua legível.
+
+Descartadas, e por quê:
+- espaço zero-width dentro do domínio: invisível, mas quebra o copiar-e-colar
+  do leitor em silêncio. Num post sobre link copiável, é o pior defeito
+  possível.
+- caractere Unicode parecido com ponto: mesma quebra, e ainda encosta em
+  homógrafo.
+- só imagem, sem exemplos no texto: perde a precisão que sustenta o post.
+
+Custo: +14 caracteres, mais uma linha explicando os colchetes, para ninguém
+copiar literal e reclamar que não funciona. A explicação completa vive no
+primeiro comentário [4], onde não há pressão de caracteres - e lá ela vira
+demonstração de que você conhece o comportamento da plataforma.
+
+IMPORTANTE: o escape vale só nos blocos [2] e [5]. No bloco [4] o link vai
+inteiro e clicável de propósito, porque ali ele existe para ser clicado.
 
 POR QUE A IMAGEM ESCOLHIDA É O INFOGRÁFICO
 Arquivo: linkedin_post_wame_image.jpeg. Uma imagem só - post multi-imagem no
