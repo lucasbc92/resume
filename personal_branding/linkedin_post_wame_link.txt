@@ -33,6 +33,8 @@ reformate esses blocos. As quebras que existem ali são todas intencionais.
 [ ] Colar no editor do LinkedIn e conferir o preview ANTES de publicar:
     caber em 3.000 caracteres, nenhum wa.me virar link azul, e o corte do
     "ver mais" acontecer depois da linha "Essa é a dica inteira..."
+[x] Escolher a imagem: linkedin_post_wame_image.jpeg (ver bloco [6])
+    UMA imagem só - multi-imagem vira colagem e enfraquece
 [ ] Publicar o post e, em seguida, postar e FIXAR o primeiro comentário
 
 
@@ -298,6 +300,41 @@ A documentação oficial pede o número só com dígitos, sem "+". Na prática o
 "+" costuma funcionar por redirect, mas não vale ensinar formato
 não-documentado num post de dica - é o tipo de coisa que aparece nos
 comentários.
+
+POR QUE A IMAGEM ESCOLHIDA É O INFOGRÁFICO
+Arquivo: linkedin_post_wame_image.jpeg. Uma imagem só - post multi-imagem no
+LinkedIn vira colagem e enfraquece cada peça.
+
+A alternativa descartada era um render 3D de uma pessoa segurando o celular com
+a conversa do WhatsApp. O conteúdo do chat era ótimo: a saudação automática
+idêntica à configurada e as duas portas (vaga e freela) funcionando. Foi
+descartada mesmo assim, por dois motivos:
+
+1. Os livros ao fundo tinham títulos gerados por IA - "Java Microtopervitum
+   Mad", "MICROSERVICESST OF MICROSERVICES", "Lavyset Interna Dushweon" - e o
+   teclado do notebook, letras aleatórias. O público do post é dev: alguém
+   amplia, lê o título inventado, e a conversa nos comentários deixa de ser
+   sobre o wa.me. Num post cuja proposta de valor inteira é precisão, artefato
+   de IA visível desmonta o argumento sozinho.
+2. Os balões de "Recrutador" e "Cliente" apareciam em verde à direita, que é o
+   lado de quem envia - se o celular é do Lucas, as verdes deveriam ser as
+   dele. E nome em cima de cada balão só existe em conversa de grupo. Não passa
+   como screenshot real.
+
+O infográfico ganha por: foto real (vale mais que avatar 3D para quem está em
+recolocação), "DOMÍNIO OFICIAL. SEM TERCEIROS." como diferencial em quatro
+palavras, "TESTE AGORA NO LINK DO COMENTÁRIO" apontando para a estratégia do
+bloco [4], e três blocos que espelham a estrutura do post.
+
+REGRA QUE FICA: imagem com texto gerado por IA não entra em post técnico.
+Ampliar e ler é grátis, e o custo é a credibilidade do post inteiro.
+
+PENDÊNCIA MENOR NA IMAGEM
+No celular do meio lê-se "Canal (LinkedIn, CV, Sits)"; no de baixo, "Site". Se
+for regerar por outro motivo, corrigir. Sozinho não justifica nova rodada.
+A saudação mostrada na imagem ("Olá! Obrigado pelo contato. Como posso
+ajudar?") é genérica e não é a que está configurada de verdade - quem clicar no
+link recebe outra. Como o mockup é ilustrativo, não vale trocar.
 
 MELHOR HORÁRIO
 Terça a quinta, 8h-10h ou 12h-13h (horário de Brasília). Responder TODOS os
