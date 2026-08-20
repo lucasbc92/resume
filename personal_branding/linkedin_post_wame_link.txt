@@ -2,7 +2,8 @@
 POST LINKEDIN - DICA RÁPIDA: wa.me
 Autor: Lucas Bueno Cesario
 Objetivo: engajamento + captação de recrutador + primeiros leads de freela
-Status: PRONTO PARA PUBLICAR. Link curto gerado e preenchido no bloco [4].
+Status: PT publicado em 20/08/2026. EN agendado para 25/08/2026 13h - ver [7].
+        O EN precisa de imagem propria: mapa de traducao no bloco [5].
 
 NOTA DE FORMATO: nos blocos [2] a [5], cada parágrafo ocupa UMA linha só, por
 mais longa que fique. É proposital: o LinkedIn preserva as quebras que você
@@ -166,26 +167,24 @@ Vaga de Java/Spring ou freela de backend: é por aí também.
 
 
 --------------------------------------------------------------------------------
-[5] VERSÃO EM INGLÊS (opcional)
+[5] POST EM INGLÊS (copiar daqui até a linha de fechamento)
 --------------------------------------------------------------------------------
 
-Use apenas se quiser o post bilíngue. Nesse caso: publique o PT completo,
-depois uma linha separadora, depois o EN completo.
-NUNCA alterne idioma frase a frase - atrapalha a leitura dos dois públicos.
+QUICK TIP -> turn your WhatsApp into an official, clickable link:
 
-- - - - -
+wa[.]me/<CC><AREA><NUMBER>
 
-QUICK TIP: turn your WhatsApp into a clickable link.
+That is the whole tip. But there are THREE uses almost nobody knows about.
 
-wa[.]me/5511999999999
+The shortener is WhatsApp's own: wa[.]me + slash + your number in international format, digits only. Example: wa[.]me/5511999999999
 
-That is the whole tip. But there are 3 uses almost nobody knows about.
+55 = Brazil | 11 = area code | 999999999 = the mobile number
+No "+", no spaces, no parentheses, no dashes, no leading zero. Simple.
 
-The tool is official, built by WhatsApp itself: slash + your number in international format, digits only.
+(I write wa[.]me in the examples so LinkedIn will not shorten them. Use it without the brackets.)
 
-No "+", no spaces, no parentheses, no dashes, no leading zero.
 
-The 3 uses:
+THE THREE EXTRA USES:
 
 
 1) PRE-FILLED MESSAGE
@@ -212,7 +211,7 @@ Honest caveats: your number becomes public — turn on two-step verification and
 
 And yes, I am using this post to practice what I just taught.
 
-I moved my number to WhatsApp Business this week, and the item 3 link is live, greeting message and all. Clicking it IS the test.
+I moved my number to WhatsApp Business just now — it is free — and the item 3 link is live, greeting message and all. Clicking it IS the test.
 
 Two doors open:
 
@@ -369,8 +368,106 @@ A saudação mostrada na imagem ("Olá! Obrigado pelo contato. Como posso
 ajudar?") é genérica e não é a que está configurada de verdade - quem clicar no
 link recebe outra. Como o mockup é ilustrativo, não vale trocar.
 
-MELHOR HORÁRIO
-Terça a quinta, 8h-10h ou 12h-13h (horário de Brasília). Responder TODOS os
-comentários na primeira hora - é o que mais impulsiona a entrega.
+================================================================================
+
+
+--------------------------------------------------------------------------------
+[7] AGENDA DE PUBLICAÇÃO
+--------------------------------------------------------------------------------
+
+POST PT - bloco [2]
+Publicado em 20/08/2026 (quinta) por volta das 3h30 da manhã.
+
+  ERRO A NÃO REPETIR: 3h30 é a pior hora possível para público brasileiro. O
+  LinkedIn pesa muito a engajamento da PRIMEIRA HORA para decidir distribuição,
+  e nessa hora o Brasil dorme. O post começa frio e a entrega fica capada o dia
+  inteiro. Como ele tinha minutos de vida e engajamento zero, apagar e
+  republicar às 9h custava quase nada. A regra: se o post tem menos de uma hora
+  E nenhuma reação, republicar em horário bom é quase de graça. Depois disso,
+  apagar joga fora sinal real e não compensa.
+
+POST EN - bloco [5]
+Agendado para TERÇA, 25/08/2026, às 13h00 (horário de Brasília).
+
+  NÃO vai bilíngue no mesmo post: sai como post separado, em outro dia e
+  horário. Se um dia for publicar os dois juntos, é PT completo, linha
+  separadora, EN completo - nunca alternando idioma frase a frase.
+
+  PRECISA DE IMAGEM PRÓPRIA. A atual está toda em português. Mapa de tradução:
+
+    CABEÇALHO
+    DICA RÁPIDA:                    -> QUICK TIP:
+    WHATSAPP / PROFISSIONAL         -> PROFESSIONAL / WHATSAPP
+                                       (inverte a ordem: mantém duas linhas
+                                       de peso parecido)
+    Encurtador Oficial e Clicável   -> Official, Clickable Shortener
+    FREELAS & RECOLOCAÇÃO           -> FREELANCE & OPEN TO WORK
+
+    CORPO
+    DOMINE O LINK WA.ME             -> MASTER THE WA.ME LINK
+    MENSAGEM PRÉ-PREENCHIDA:        -> PRE-FILLED MESSAGE:
+    Atribuição por Canal            -> Attribution by Channel
+    LINK CURTO DO BUSINESS:         -> BUSINESS SHORT LINK:
+    QR Code & Saudação Automática   -> QR Code & Auto-Greeting
+    USO PROFISSIONAL:               -> PROFESSIONAL USE:
+    Triagem & Contato Direto        -> Screening & Direct Contact
+
+    RODAPÉ
+    DOMÍNIO OFICIAL. SEM TERCEIROS. -> OFFICIAL DOMAIN. NO THIRD PARTIES.
+    TESTE AGORA NO LINK
+    DO COMENTÁRIO.                  -> TEST IT NOW - LINK IN THE COMMENTS.
+
+    DENTRO DOS CELULARES
+    Mensagem pré-preenchida:
+    Atribuição por Canal
+    (LinkedIn, CV, Sits)            -> Pre-filled message: Attribution by
+                                       Channel (LinkedIn, CV, Site)
+    Oi, Lucas! Vim pelo post
+    do LinkedIn.                    -> Hi, Lucas! I came from your LinkedIn
+                                       post.
+    Olá! Obrigado pelo contato.
+    Como posso ajudar?              -> Hi! Thanks for reaching out. How can
+                                       I help?
+    Messagem                        -> Message
+
+  ARMADILHA DE TRADUÇÃO: "recolocação" NÃO é "relocation". Em inglês
+  relocation significa mudar de cidade ou país - recrutador entenderia que
+  você quer se mudar, não que procura emprego. O termo nativo do LinkedIn é
+  OPEN TO WORK.
+
+  DOIS TYPOS QUE A REGERAÇÃO CORRIGE DE GRAÇA: "Sits" no celular do meio (o de
+  baixo já diz "Site") e "Messagem" no campo de digitação - esse último é typo
+  até em português, o certo seria "Mensagem".
+
+  "CV" serve para EUA e Europa e é mais curto que "Resume". Mantém.
+
+  POR QUE 13H - único horário depois do meio-dia que acerta três regiões:
+    12:00  Nova York          pico do almoço
+    09:00  Costa Oeste EUA    faixa nobre da manhã
+    17:00  Lisboa / Londres   scroll de fim de expediente
+    18:00  Europa Central
+  A restrição de "depois do meio-dia" elimina a manhã europeia, que cairia às
+  4h-6h BRT. Dado isso, 13h é o melhor aproveitamento possível.
+
+  POR QUE TERÇA
+  - Sexta é o pior dia da semana no LinkedIn, e sexta à tarde nos EUA é o pior
+    horário do pior dia. Segunda é medíocre. Terça volta para a faixa forte.
+  - Dá ao post PT a semana inteira de rodagem sem competir. Dois posts do mesmo
+    autor no mesmo dia se canibalizam - o LinkedIn tende a segurar o segundo.
+  - BÔNUS: 13h BRT está FORA do pico brasileiro, então seus seguidores do
+    Brasil têm menos chance de ver o mesmo conteúdo duas vezes.
+
+REGRA GERAL DE HORÁRIO
+Terça a quinta. Para público brasileiro, 8h-10h. Para público dos EUA e Europa
+ao mesmo tempo, 13h BRT. Responder TODOS os comentários na primeira hora - é o
+que mais impulsiona a entrega, e é por isso que a hora de publicar tem que ser
+uma hora em que VOCÊ está disponível para responder.
+
+OBSERVAÇÃO SOBRE O LINK DO PRIMEIRO COMENTÁRIO
+O https://wa.me/message/... no comentário NÃO foi encurtado para lnkd.in - o
+LinkedIn trata comentário diferente do corpo do post. Mas fez uma verificação
+de segurança silenciosa, buscando a URL para checar malware e phishing. É
+esperado e inofensivo. Só não conte esse acesso como clique: quem visitou
+primeiro foi um bot.
 
 ================================================================================
