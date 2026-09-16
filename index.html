@@ -280,16 +280,23 @@
     </div>
 
     <!-- Cabeçalho -->
+    <!-- A caixa e a pontuação daqui são deliberadas, não estilo.
+         O h2 em Title Case ("Java Backend Engineer · Spring Boot") fazia o parser
+         de currículo marcar "Java Backend Engineer" e "Spring Boot" como nomes de
+         PESSOA, e o Workday da Accenture devolvia "sobrenome: React". Em caixa de
+         sentença o mesmo texto para de ser lido como nome. O separador "·" era o
+         pior deles: sozinho já quebrava "Spring Boot" numa entidade própria.
+         Não voltar para Title Case nem para "·" aqui. Ver gerar_curriculo_ptbr.py. -->
     <div class="header">
         <h1>Lucas Bueno Cesario</h1>
-        <h2>Java Backend Engineer &middot; Spring Boot &middot; Microservices &middot; Full Stack (React/Angular)</h2>
+        <h2><span class="title-pt">Engenheiro de software back-end em Java e Spring Boot, com atuação full stack em React e Angular</span><span class="title-sep"> / </span><span class="title-en">Software engineer focused on Java and Spring Boot back-end, with full stack delivery in React and Angular</span></h2>
         <div class="contact-info">
             <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/lucasbc92" target="_blank" rel="noopener">linkedin.com/in/lucasbc92</a> &nbsp;|&nbsp;
             <strong>GitHub:</strong> <a href="https://github.com/lucasbc92" target="_blank" rel="noopener">github.com/lucasbc92</a> &nbsp;|&nbsp;
             <strong>Email:</strong> <a href="mailto:lbc92@hotmail.com">lbc92@hotmail.com</a><br>
             <span class="whatsapp-pt"><strong>WhatsApp:</strong> <a href="https://wa.me/5548991224064" target="_blank" rel="noopener">48991224064</a></span><span class="whatsapp-en"><strong>WhatsApp:</strong> <a href="https://wa.me/5548991224064" target="_blank" rel="noopener">+5548991224064</a></span><br>
-            Araruama, RJ, Brazil &nbsp;&middot;&nbsp; UTC−3 &nbsp;&middot;&nbsp; <span class="title-pt">disponível para trabalho remoto — sobreposição total com os EUA, parcial com a Europa</span><span class="title-sep"> / </span><span class="title-en">available for remote work — full overlap with US time zones, partial with Europe</span><br>
-            <span class="title-pt"><strong>Pretensão salarial:</strong> R$ 9.500–11.000/mês (CLT) &nbsp;ou&nbsp; R$ 13.000–15.000/mês (PJ)</span><span class="title-sep"> / </span><span class="title-en"><strong>Rate expectation:</strong> ~US$ 12–13/h (CLT-equivalent) &nbsp;or&nbsp; ~US$ 16–18/h (PJ/contractor)</span>
+            Araruama, RJ, Brazil &nbsp;|&nbsp; UTC-3 &nbsp;|&nbsp; <span class="title-pt">disponível para trabalho remoto - sobreposição total com os EUA, parcial com a Europa</span><span class="title-sep"> / </span><span class="title-en">available for remote work - full overlap with US time zones, partial with Europe</span><br>
+            <span class="title-pt"><strong>Pretensão salarial:</strong> R$ 9.500-11.000/mês (CLT) &nbsp;ou&nbsp; R$ 13.000-15.000/mês (PJ)</span><span class="title-sep"> / </span><span class="title-en"><strong>Rate expectation:</strong> ~US$ 12-13/h (CLT-equivalent) &nbsp;or&nbsp; ~US$ 16-18/h (PJ/contractor)</span>
         </div>
     </div>
 

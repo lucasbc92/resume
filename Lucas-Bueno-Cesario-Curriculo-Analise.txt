@@ -1,0 +1,111 @@
+Lucas Bueno Cesario
+lbc92@hotmail.com
+Telefone: (48) 99122-4064
+WhatsApp: (48) 99122-4064
+LinkedIn: linkedin.com/in/lucasbc92
+GitHub: github.com/lucasbc92
+Cidade: Araruama
+Estado: RJ
+Pais: Brasil
+Cargo pretendido: Desenvolvedor Java Full Stack Senior
+Modelo de trabalho: Remoto (fuso UTC-3; sobreposicao total com os EUA, parcial com a Europa)
+
+RESUMO PROFISSIONAL
+===================
+Engenheiro de software com quase 7 anos de experiência, com foco em back-end Java/Spring Boot e atuação full stack em React e Angular (JS/TS). Projetei e entreguei arquiteturas de microsserviços processando milhões de transações diárias, com bancos SQL e NoSQL e nuvem (Azure, AWS, GCP). Adoto desenvolvimento assistido por IA com Spec Driven Development (Cursor, Claude Code).
+
+Domínios: fidelidade (Vivo Valoriza), NF-e e conformidade fiscal (InvoiceCon/Cast Group e Luizalabs, reforma tributária), agronegócio (inspeção de qualidade), segurança pública (monitoramento web) e relatórios web (Canal Telecom).
+
+COMPETÊNCIAS TÉCNICAS
+=====================
+Linguagens: Java (incluindo Java 21), TypeScript, JavaScript, Python, PHP, SQL
+Back-end: Spring Boot, Spring MVC, Hibernate, jOOQ, APIs RESTful, Microsserviços, BFF (Backend for Frontend), Nest.js, Virtual Threads, Laravel, Zend
+Front-end: React, Redux, Micro Front-ends, Angular, AngularJS, Ionic, React Native, PWA, Leaflet
+Bancos de dados: PostgreSQL, Oracle Database, Azure SQL, MySQL, MongoDB, Elasticsearch
+Cloud e DevOps: Azure, Azure DevOps (Boards, Repos, Pipelines), AWS (EC2, S3, RDS), GCP, Magalu Cloud, Docker, Kubernetes, ArgoCD, Jenkins, GitLab CI/CD, Azure Blob Storage, Linux, Git, SVN
+Dados e mensageria: Apache Spark, Apache Airflow, RabbitMQ, Machine Learning, data lake
+Testes e qualidade: JUnit, Mockito, Jest, SonarQube, Selenium, code review
+Segurança e integração: JWT, Keycloak, LDAP, Apigee / API Gateway, OpenAPI, Swagger, integração com SAP
+Desenvolvimento assistido por IA: Spec Driven Development, Cursor, Claude Code
+Gestão e observabilidade: Azure Boards, Jira, Grafana
+
+EXPERIÊNCIA PROFISSIONAL
+========================
+
+Desenvolvedor Java Full Stack Sênior
+Zukk Tecnologia
+Remoto | Contrato - cliente: Vivo/Telefónica
+Nov 2025 - Jun 2026
+- Refatorei o sistema web de administração do Vivo Valoriza (programa de benefícios do app da Vivo), modernizando uma arquitetura distribuída com microsserviços em Java, camada de BFF (Backend for Frontend) em Nest.js e micro front-ends em React.
+- Adotei Spec Driven Development com agentes de IA (Cursor e Claude Code) e o plugin Superpowers, aplicando fluxos de brainstorming, escrita e execução de planos para aumentar a previsibilidade e a qualidade das entregas.
+- Conduzi o ciclo de entrega no Azure DevOps - Boards para planejamento, Repos para versionamento e Pipelines de CI/CD - e alternava entre os ambientes da Zukk e da Vivo para extrair o legado da Vivo e refatorá-lo dentro do ambiente da Zukk.
+Tecnologias: Java, Microsserviços, APIs RESTful, React, Micro Front-ends, TypeScript, Nest.js (BFF), JUnit, Mockito, Jest, Azure, Azure DevOps, Azure SQL, Git, Spec Driven Development, Cursor, Claude Code
+
+Desenvolvedor Java Full Stack
+Cast Group
+Remoto
+Aug 2025 - Nov 2025
+- Atuei no desenvolvimento do InvoiceCon, solução de notas fiscais eletrônicas (NF-e), com Java Spring no back-end e Angular no front-end, contribuindo para a migração do sistema às novas regras da Reforma Tributária brasileira.
+- Sustentei a solução no Microsoft Azure, com Azure SQL para os dados fiscais e Blob Storage para o armazenamento dos documentos, com build e deploy automatizados via GitLab CI/CD.
+- Atuei em operações de integração com SAP e em upgrades de versão para clientes, em um sistema com controle de versionamento rigoroso.
+Tecnologias: Java, Spring, APIs RESTful, SQL, integração com SAP, Angular, TypeScript, JUnit, Mockito, SonarQube, Azure, Azure SQL, Blob Storage, GitLab CI/CD, Git
+
+Desenvolvedor Java Full Stack
+Luizalabs (Magazine Luiza)
+São Paulo, SP
+Jul 2024 - Apr 2025
+- Desenvolvi microsserviços financeiros em Java Spring Boot/MVC com autenticação JWT e Keycloak, processando milhões de transações diárias, e interfaces em React/TypeScript para declarações de pagamento (CPF, CNPJ).
+- Atuei como "bombeiro da semana", resolvendo cards de suporte N3 e bugs críticos de produção; mantive ~95% de cobertura de código com JUnit, Mockito e SonarQube.
+- Construí APIs RESTful com Apigee/API Gateway (OpenAPI) e mantive pipelines de dados com Python, Apache Spark e Apache Airflow, incluindo a repopulação do data lake a partir do Oracle EBS.
+- Otimizei o processamento em lote de faturas com Virtual Threads (Java 21), reduzindo a importação de ~100 mil registros de vários minutos para cerca de um minuto.
+- Tive contato com RabbitMQ, usado no time para reprocessamento manual de mensagens com falha na fila.
+Tecnologias: Java 21, Virtual Threads, Spring Boot, Spring MVC, Hibernate, JWT, Keycloak, Microsserviços, RabbitMQ, Apigee, React, TypeScript, JUnit, Mockito, Jest, SonarQube, Oracle Database, Python, Apache Spark, Apache Airflow, Docker, Kubernetes, ArgoCD, Grafana, GCP, Magalu Cloud
+
+Desenvolvedor Java Full Stack
+PariPassu
+Florianópolis, SC
+Aug 2022 - Apr 2024
+- Arquitetei e desenvolvi o CLICQ, sistema de inspeção de qualidade alimentar para toda a cadeia (do produtor ao varejo), com backend Spring Boot e frontend React/Redux/TypeScript, além de versões legadas em AngularJS, Angular 8/Ionic e mobile em React Native.
+- Construí uma ferramenta de predição de churn com Machine Learning (Python), acessível via bot do Discord, reduzindo o churn de clientes em 18%.
+- Atuei como "bombeiro da semana" na prevenção e correção de bugs, com apoio ao suporte N2, monitoramento via Grafana e testes manuais; não havia suíte de testes automatizados, mas mantínhamos uma política forte de code review - nenhum código ia para produção sem aprovação de dois colegas revisores.
+Tecnologias: Java, Spring Boot, jOOQ, Swagger, React, Redux, TypeScript, Angular, Ionic, React Native, PostgreSQL, Python, Machine Learning, AWS (EC2, S3, RDS), Jenkins, Grafana, Jira
+
+Desenvolvedor PHP Full Stack
+Secretaria de Segurança Pública
+Florianópolis, SC
+Oct 2020 - Jul 2022
+- Desenvolvi o PWA Bem-Te-Vi App em React e Leaflet, com mapa interativo de quase cinco mil câmeras de segurança de Santa Catarina, visualização ao vivo e download de gravações para policiais do estado.
+- Mantive sistemas legados de segurança (Bem-Te-Vi e BRAVO) em PHP com autenticação LDAP.
+- Usei RabbitMQ para processamento assíncrono de SMS de ocorrências de placas monitoradas.
+- Integrei Elasticsearch para busca de texto completo.
+Tecnologias: PHP, Laravel, LDAP, APIs REST, React, JavaScript, Leaflet, PWA, PostgreSQL, Elasticsearch, RabbitMQ, Selenium, Git
+
+Desenvolvedor PHP Full Stack Júnior
+Canal Telecom
+São José, SC
+Feb 2018 - Nov 2018
+- Desenvolvi interfaces de relatórios web em PHP/JavaScript.
+- Participei de uma migração de banco de dados de SQL para NoSQL (MongoDB).
+- Dei manutenção no sistema de backups da empresa, trabalhando com comandos Linux/Debian (rsync) para as rotinas de backup.
+Tecnologias: PHP, Zend, JavaScript, PostgreSQL, MySQL, MongoDB, Linux, rsync, SVN
+
+FORMAÇÃO ACADÊMICA
+==================
+Bacharelado em Ciência da Computação
+Universidade Federal de Santa Catarina (UFSC)
+Conclusão prevista: Dec 2026
+
+CERTIFICAÇÕES
+=============
+- DEVinHouse - Formação Full Stack React e Java (900h) - SENAI/SC, 2022
+- Competências Profissionais, Emocionais e Tecnológicas para Tempos de Mudança - PUC/RS, 2023
+
+IDIOMAS
+=======
+Português: nativo
+Inglês: proficiência profissional - leitura e escrita fluentes, conversação proficiente; uso diário em documentação e code review
+Espanhol: básico
+
+INFORMAÇÕES ADICIONAIS
+======================
+Disponibilidade: imediata, para trabalho 100% remoto
