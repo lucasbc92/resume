@@ -193,7 +193,7 @@ RESUMO = [
     "(Canal Telecom).",
 ]
 
-# Consolidacao das linhas de "Stack" de cada experiencia. Nenhuma tecnologia
+# Consolidacao das linhas de "Arquitetura" de cada experiencia. Nenhuma tecnologia
 # nova: tudo aqui aparece em pelo menos uma das vagas listadas abaixo.
 COMPETENCIAS = [
     ("Linguagens",
@@ -250,10 +250,14 @@ EXPERIENCIAS = [
             "ambientes da Zukk e da Vivo para extrair o legado da Vivo e refatorá-lo "
             "dentro do ambiente da Zukk.",
         ],
-        "stack": "Java, Microsserviços, APIs RESTful, React, Micro Front-ends, "
-                 "TypeScript, Nest.js (BFF), JUnit, Mockito, Jest, Azure, "
-                 "Azure DevOps, Azure SQL, Git, Spec Driven Development, Cursor, "
-                 "Claude Code",
+                "arquitetura": "Microsserviços em Java expostos por APIs RESTful e "
+                        "consumidos por micro front-ends em React/TypeScript "
+                        "através de uma camada de BFF em Nest.js; testes com "
+                        "JUnit, Mockito e Jest; hospedagem em Azure com Azure "
+                        "SQL, ciclo de entrega no Azure DevOps e "
+                        "versionamento em Git. Especificação e implementação "
+                        "conduzidas por Spec Driven Development com Cursor e "
+                        "Claude Code.",
     },
     {
         "cargo": "Desenvolvedor Java Full Stack",
@@ -271,9 +275,13 @@ EXPERIENCIAS = [
             "Atuei em operações de integração com SAP e em upgrades de versão para "
             "clientes, em um sistema com controle de versionamento rigoroso.",
         ],
-        "stack": "Java, Spring, APIs RESTful, SQL, integração com SAP, Angular, "
-                 "TypeScript, JUnit, Mockito, SonarQube, Azure, Azure SQL, "
-                 "Blob Storage, GitLab CI/CD, Git",
+                "arquitetura": "Back-end em Java com Spring servindo APIs RESTful "
+                        "sobre SQL, com integração com SAP; front-end em "
+                        "Angular/TypeScript. Qualidade verificada com JUnit, "
+                        "Mockito e SonarQube. Solução hospedada em Azure, com "
+                        "Azure SQL para os dados fiscais e Blob Storage para "
+                        "os documentos, entregue por GitLab CI/CD a partir do "
+                        "Git.",
     },
     {
         "cargo": "Desenvolvedor Java Full Stack",
@@ -297,11 +305,16 @@ EXPERIENCIAS = [
             "Tive contato com RabbitMQ, usado no time para reprocessamento manual de "
             "mensagens com falha na fila.",
         ],
-        "stack": "Java 21, Virtual Threads, Spring Boot, Spring MVC, Hibernate, JWT, "
-                 "Keycloak, Microsserviços, RabbitMQ, Apigee, React, TypeScript, "
-                 "JUnit, Mockito, Jest, SonarQube, Oracle Database, Python, "
-                 "Apache Spark, Apache Airflow, Docker, Kubernetes, ArgoCD, Grafana, "
-                 "GCP, Magalu Cloud",
+                "arquitetura": "Microsserviços financeiros em Java 21 e Spring "
+                        "Boot/Spring MVC, com Hibernate sobre Oracle Database "
+                        "e Virtual Threads no processamento em lote; "
+                        "autenticação JWT e Keycloak, exposição via Apigee e "
+                        "reprocessamento de fila em RabbitMQ. Front-end em "
+                        "React/TypeScript. Testes com JUnit, Mockito, Jest e "
+                        "SonarQube. Pipelines de dados em Python com Apache "
+                        "Spark e Apache Airflow. Deploy em Docker e "
+                        "Kubernetes via ArgoCD, observado no Grafana, sobre "
+                        "GCP e Magalu Cloud.",
     },
     {
         "cargo": "Desenvolvedor Java Full Stack",
@@ -322,9 +335,14 @@ EXPERIENCIAS = [
             "de code review - nenhum código ia para produção sem aprovação de dois "
             "colegas revisores.",
         ],
-        "stack": "Java, Spring Boot, jOOQ, Swagger, React, Redux, TypeScript, "
-                 "Angular, Ionic, React Native, PostgreSQL, Python, "
-                 "Machine Learning, AWS (EC2, S3, RDS), Jenkins, Grafana, Jira",
+                "arquitetura": "Back-end em Java com Spring Boot e jOOQ sobre "
+                        "PostgreSQL, documentado em Swagger; front-end em "
+                        "React/Redux/TypeScript, com versões legadas em "
+                        "Angular e Ionic e mobile em React Native. Predição "
+                        "de churn em Python com Machine Learning. "
+                        "Infraestrutura na AWS (EC2, S3, RDS), com build em "
+                        "Jenkins, monitoramento no Grafana e planejamento no "
+                        "Jira.",
     },
     {
         "cargo": "Desenvolvedor PHP Full Stack",
@@ -341,8 +359,12 @@ EXPERIENCIAS = [
             "placas monitoradas.",
             "Integrei Elasticsearch para busca de texto completo.",
         ],
-        "stack": "PHP, Laravel, LDAP, APIs REST, React, JavaScript, Leaflet, PWA, "
-                 "PostgreSQL, Elasticsearch, RabbitMQ, Selenium, Git",
+                "arquitetura": "Sistemas legados em PHP e Laravel com autenticação "
+                        "LDAP, expondo APIs REST sobre PostgreSQL; PWA em "
+                        "React e JavaScript com mapas em Leaflet. Busca de "
+                        "texto completo em Elasticsearch e processamento "
+                        "assíncrono de SMS em RabbitMQ. Automação de testes "
+                        "com Selenium e versionamento em Git.",
     },
     {
         "cargo": "Desenvolvedor PHP Full Stack Júnior",
@@ -356,8 +378,10 @@ EXPERIENCIAS = [
             "Dei manutenção no sistema de backups da empresa, trabalhando com "
             "comandos Linux/Debian (rsync) para as rotinas de backup.",
         ],
-        "stack": "PHP, Zend, JavaScript, PostgreSQL, MySQL, MongoDB, Linux, rsync, "
-                 "SVN",
+                "arquitetura": "Relatórios web em PHP sobre Zend e JavaScript, com "
+                        "dados em PostgreSQL e MySQL e uma migração para "
+                        "MongoDB. Rotinas de backup em Linux com rsync e "
+                        "versionamento em SVN.",
     },
 ]
 
@@ -533,7 +557,7 @@ def gerar_docx(caminho: Path, perfil: str) -> Path:
         _p(doc, formatar_periodo(vaga, cfg["datas"]), espaco_depois=3)
         for bullet in vaga["bullets"]:
             _bullet(doc, bullet)
-        _p_rotulado(doc, "Tecnologias", vaga["stack"], tamanho=9.5)
+        _p_rotulado(doc, "Arquitetura", vaga["arquitetura"], tamanho=9.5)
 
     _secao(doc, "Formação acadêmica")
     for curso in FORMACAO:
@@ -594,7 +618,7 @@ def gerar_txt(caminho: Path, perfil: str) -> Path:
                        formatar_periodo(vaga, cfg["datas"])])
         for bullet in vaga["bullets"]:
             linhas.append("- " + bullet)
-        linhas.append("Tecnologias: " + vaga["stack"])
+        linhas.append("Arquitetura: " + vaga["arquitetura"])
 
     secao("Formação acadêmica")
     for curso in FORMACAO:
@@ -638,11 +662,11 @@ def main():
 
     saidas = []
     for perfil in PERFIS:
-        saidas.append(gerar_docx(raiz / "{}-{}.docx".format(BASE, perfil), perfil))
+        saidas.append(gerar_docx(raiz / "{}-{}_narrative.docx".format(BASE, perfil), perfil))
         if PERFIS[perfil]["txt"]:
-            saidas.append(gerar_txt(raiz / "{}-{}.txt".format(BASE, perfil), perfil))
+            saidas.append(gerar_txt(raiz / "{}-{}_narrative.txt".format(BASE, perfil), perfil))
 
-    datado = "resume_lucas-bueno-cesario_ptbr_{:%Y-%m-%d}_{}.docx".format(
+    datado = "resume_lucas-bueno-cesario_ptbr_{:%Y-%m-%d}_{}_narrative.docx".format(
         hoje, MESES_ABREV[hoje.month - 1])
     saidas.append(gerar_docx(raiz / datado, PERFIL_ARQUIVO))
 
