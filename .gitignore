@@ -10,3 +10,7 @@ personal_branding/freela_*.md
 
 # Generated knowledge-graph output
 graphify-out/
+
+# Caches de Python e pytest (gerador do curriculo)
+__pycache__/
+.pytest_cache/
