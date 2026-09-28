@@ -114,7 +114,8 @@ def render_html(idiomas, hoje, web):
 
 def chrome():
     """Caminho do Chrome: variavel CHROME, senao os caminhos padrao do Windows."""
-    definido = os.environ.get("CHROME")
+    # strip: "Copiar como caminho" do Windows cola o caminho entre aspas.
+    definido = os.environ.get("CHROME", "").strip().strip('"')
     candidatos = [definido] if definido else list(CHROME_PADRAO)
     for candidato in candidatos:
         if Path(candidato).is_file():
@@ -132,11 +133,17 @@ def imprimir_pdf(html, destino):
     with tempfile.TemporaryDirectory(ignore_cleanup_errors=True) as tmp:
         fonte = Path(tmp) / "curriculo.html"
         fonte.write_text(html, encoding="utf-8")
-        resultado = subprocess.run(
-            [chrome(), "--headless=new", "--disable-gpu", "--no-pdf-header-footer",
-             "--user-data-dir=" + str(Path(tmp) / "perfil"),
-             "--print-to-pdf=" + str(destino), fonte.as_uri()],
-            stdin=subprocess.DEVNULL, capture_output=True, text=True, timeout=120)
+        executavel = chrome()
+        try:
+            resultado = subprocess.run(
+                [executavel, "--headless=new", "--disable-gpu", "--no-pdf-header-footer",
+                 "--user-data-dir=" + str(Path(tmp) / "perfil"),
+                 "--print-to-pdf=" + str(destino), fonte.as_uri()],
+                stdin=subprocess.DEVNULL, capture_output=True, text=True, timeout=120)
+        except (OSError, subprocess.TimeoutExpired) as erro:
+            raise RuntimeError(
+                "Chrome em {} nao executou ({}). Ajuste a variavel CHROME para o "
+                "caminho do chrome.exe.".format(executavel, erro)) from erro
     if resultado.returncode != 0 or not destino.is_file():
         raise RuntimeError("Chrome falhou ao gerar {}: {}".format(
             destino.name, (resultado.stderr or "").strip()[-500:]))

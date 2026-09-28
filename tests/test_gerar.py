@@ -23,3 +23,11 @@ def test_gerar_tudo_produz_saidas_que_passam_na_verificacao(tmp_path):
                      "resume_lucas-bueno-cesario_en_2026-09-28_sep.docx"):
         assert esperado in nomes, esperado
     assert verificar.verificar_tudo(tmp_path, HOJE) == []
+
+
+def test_main_mostra_erro_sem_traceback(monkeypatch, capsys):
+    def falha(raiz, hoje):
+        raise RuntimeError("Chrome nao encontrado. Defina a variavel CHROME")
+    monkeypatch.setattr(gerar, "gerar_tudo", falha)
+    assert gerar.main() == 1
+    assert "CHROME" in capsys.readouterr().err

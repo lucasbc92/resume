@@ -75,3 +75,28 @@ def test_pdf_real_ate_duas_paginas_com_java_na_primeira(tmp_path, idioma):
     assert paginas[0].lstrip().startswith(c.NOME)
     for empresa in ("Zukk", "Cast Group", "Luizalabs", "PariPassu"):
         assert empresa in paginas[0], empresa
+
+
+def test_chrome_que_nao_executa_da_erro_claro(tmp_path, monkeypatch):
+    falso = tmp_path / "chrome.txt"
+    falso.write_text("nao sou um executavel", encoding="utf-8")
+    monkeypatch.setenv("CHROME", str(falso))
+    with pytest.raises(RuntimeError, match="CHROME"):
+        humano.imprimir_pdf("<p>x</p>", tmp_path / "x.pdf")
+
+
+def test_chrome_com_aspas_em_volta_funciona(monkeypatch):
+    monkeypatch.setenv("CHROME", '"' + humano.CHROME_PADRAO[0] + '"')
+    assert humano.chrome() == humano.CHROME_PADRAO[0]
+
+
+@pytest.mark.parametrize("idioma", ["pt", "en"])
+def test_competencias_extraem_rotulo_junto_do_valor(tmp_path, idioma):
+    # O PDF humano muitas vezes e subido no ATS do recrutador: cada linha de
+    # competencia tem que sair com o rotulo colado ao proprio valor.
+    pdf = humano.imprimir_pdf(humano.render_html((idioma,), HOJE, web=False),
+                              tmp_path / "cv.pdf")
+    texto = " ".join(" ".join(_paginas(pdf)).split())
+    for rotulo, valor in c.COMPETENCIAS_HUMANO:
+        esperado = "{}: {}".format(rotulo.em(idioma), valor.em(idioma).split(",")[0])
+        assert esperado in texto, esperado

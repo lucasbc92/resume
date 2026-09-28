@@ -67,7 +67,12 @@ def gerar_tudo(raiz, hoje):
 
 def main():
     hoje = date.today()
-    saidas = gerar_tudo(RAIZ, hoje)
+    try:
+        saidas = gerar_tudo(RAIZ, hoje)
+    except RuntimeError as erro:
+        # Erro de ambiente (Chrome, pdftotext): a mensagem ja diz o que fazer.
+        print("ERRO: {}".format(erro), file=sys.stderr)
+        return 1
     largura = max(len(s.name) for s in saidas)
     for caminho in saidas:
         print("{:<{w}}  {:>9,} bytes".format(caminho.name, caminho.stat().st_size, w=largura))
