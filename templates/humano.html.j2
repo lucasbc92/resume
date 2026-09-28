@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+{# Layout A da versao humana. Renderizado por humano.py a partir de conteudo.py. #}
+<html lang="{{ cvs[0].lang }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- ARQUIVO GERADO por gerar.py a partir de conteudo.py. Nao edite a mao: a proxima geracao apaga a mudanca. -->
+<title>{{ titulo }}</title>
+{% if web %}
+<meta property="og:title" content="{{ og.titulo }}">
+<meta property="og:description" content="{{ og.descricao }}">
+<meta property="og:image" content="{{ og.imagem }}">
+<meta property="og:url" content="{{ og.url }}">
+<meta property="og:type" content="profile">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ og.titulo }}">
+<meta name="twitter:description" content="{{ og.descricao }}">
+<meta name="twitter:image" content="{{ og.imagem }}">
+{% endif %}
+<style>
+  @page { size: A4; margin: 1.6cm 1.9cm; }
+  body { font-family: Arial, Helvetica, sans-serif; font-size: 10pt; line-height: 1.3;
+         color: #111; background: #fff; margin: 0; }
+  .cv { max-width: 17.2cm; margin: 0 auto; }
+  h1 { font-size: 21pt; margin: 0 0 2px; }
+  .cargo { font-size: 12pt; margin: 0 0 5px; color: #222; }
+  .contato { font-size: 9pt; color: #444; margin: 0 0 6px; }
+  .contato a { color: inherit; text-decoration: none; }
+  h2 { font-size: 10pt; text-transform: uppercase; letter-spacing: .06em;
+       margin: 10px 0 4px; padding-bottom: 2px; border-bottom: 1.5px solid #111; }
+  p { margin: 0 0 4px; }
+  ul { margin: 2px 0 2px 16px; padding: 0; }
+  li { margin: 0 0 1px; }
+  .vaga { margin-bottom: 6px; break-inside: avoid; }
+  .vaga-titulo { font-weight: bold; font-size: 10.5pt; }
+  .vaga-meta { color: #444; font-size: 9pt; }
+  .contexto { font-style: italic; color: #444; margin: 1px 0; }
+  .stack { color: #666; font-size: 8.5pt; }
+  .competencias b { display: inline-block; min-width: 92px; }
+{% if web %}
+  @media screen { body { padding: 24px 16px; } }
+  .idiomas { position: fixed; top: 10px; right: 14px; font: bold 9pt Arial, sans-serif; }
+  .idiomas button { background: none; border: 1px solid transparent; border-radius: 3px;
+                    padding: 2px 6px; cursor: pointer; opacity: .5; }
+  .idiomas button[aria-pressed="true"] { opacity: 1; border-color: #888; }
+  body.ver-pt .cv-en, body.ver-en .cv-pt { display: none; }
+  @media print { .idiomas { display: none; } }
+{% endif %}
+</style>
+</head>
+<body{% if web %} class="ver-pt"{% endif %}>
+{% if web %}
+<div class="idiomas" role="group" aria-label="Idioma / Language">
+  <button type="button" id="btn-pt" aria-pressed="true">PT</button>
+  <button type="button" id="btn-en" aria-pressed="false">EN</button>
+</div>
+{% endif %}
+{% for cv in cvs %}
+<article class="cv cv-{{ cv.idioma }}" lang="{{ cv.lang }}">
+  <h1>{{ cv.nome }}</h1>
+  <p class="cargo">{{ cv.cargo }}</p>
+  <p class="contato">{% for texto, href in cv.contato %}{% if not loop.first %} &middot; {% endif %}{% if href %}<a href="{{ href }}">{{ texto }}</a>{% else %}{{ texto }}{% endif %}{% endfor %}</p>
+
+  <h2>{{ cv.secoes.resumo }}</h2>
+  <p>{{ cv.resumo }}</p>
+
+  <h2>{{ cv.secoes.destaques }}</h2>
+  <ul>{% for d in cv.destaques %}<li>{{ d|safe }}</li>{% endfor %}</ul>
+
+  <h2>{{ cv.secoes.experiencia }}</h2>
+  {% for v in cv.vagas %}
+  <div class="vaga">
+    <div class="vaga-titulo">{{ v.titulo }}</div>
+    <div class="vaga-meta">{{ v.meta }}</div>
+    {% if v.contexto %}<div class="contexto">{{ v.contexto }}</div>{% endif %}
+    <ul>{% for b in v.bullets %}<li>{{ b }}</li>{% endfor %}</ul>
+    {% if v.stack %}<div class="stack">{{ v.stack }}</div>{% endif %}
+  </div>
+  {% endfor %}
+
+  <h2>{{ cv.secoes.competencias }}</h2>
+  <div class="competencias">{% for rot, val in cv.competencias %}<div><b>{{ rot }}</b> {{ val }}</div>{% endfor %}</div>
+
+  <h2>{{ cv.secoes.formacao }}</h2>
+  {% for f in cv.formacao %}<p>{{ f|safe }}</p>{% endfor %}
+
+  <h2>{{ cv.secoes.idiomas }}</h2>
+  <p>{{ cv.idiomas }}</p>
+</article>
+{% endfor %}
+{% if web %}
+<script>
+  (function () {
+    var CHAVE = 'curriculo-idioma';
+    var titulos = {{ titulos|tojson }};
+    function mostrar(idioma, guardar) {
+      document.body.className = 'ver-' + idioma;
+      document.documentElement.lang = idioma === 'en' ? 'en' : 'pt-BR';
+      document.title = titulos[idioma];
+      document.getElementById('btn-pt').setAttribute('aria-pressed', String(idioma === 'pt'));
+      document.getElementById('btn-en').setAttribute('aria-pressed', String(idioma === 'en'));
+      if (guardar) { try { localStorage.setItem(CHAVE, idioma); } catch (e) {} }
+    }
+    document.getElementById('btn-pt').addEventListener('click', function () { mostrar('pt', true); });
+    document.getElementById('btn-en').addEventListener('click', function () { mostrar('en', true); });
+    var salvo = null;
+    try { salvo = localStorage.getItem(CHAVE); } catch (e) {}
+    mostrar(salvo === 'en' ? 'en' : 'pt', false);
+  })();
+</script>
+{% endif %}
+</body>
+</html>
