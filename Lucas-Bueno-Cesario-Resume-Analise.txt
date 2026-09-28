@@ -23,7 +23,7 @@ Back-end: Spring Boot, Spring MVC, Spring Data JPA, Hibernate, jOOQ, Maven, Micr
 Front-end: Angular 8, AngularJS, React, Redux, Micro Front-ends, React Native, Ionic, PWA, Leaflet
 Databases: Oracle Database, PostgreSQL, Azure SQL, MySQL, MongoDB, Elasticsearch
 Messaging and data: RabbitMQ, Apache Spark, Apache Airflow, Machine Learning
-Cloud and DevOps: Docker, Kubernetes, ArgoCD, Azure, Azure DevOps, Azure Blob Storage, AWS (EC2, S3, RDS), GCP, Magalu Cloud, GitLab CI/CD, Jenkins, Git, Git flow, Linux, rsync, SVN
+Cloud and DevOps: Docker, Kubernetes, ArgoCD, Azure DevOps, Azure Blob Storage, Azure, AWS (EC2, S3, RDS), GCP, Magalu Cloud, GitLab CI/CD, Jenkins, Git flow, Git, Linux, rsync, SVN
 Testing and quality: JUnit, Mockito, Jest, SonarQube, Selenium
 Security and integration: JWT, Keycloak, OAuth2, LDAP, Apigee (API Gateway), SAP integration
 Methodologies: Agile (Scrum, Kanban)
@@ -57,7 +57,7 @@ São Paulo, Brazil
 Jul 2024 - Apr 2025
 - Upgraded the JVM from 17 to 21 and rewrote the batch import of ~100k invoices with Virtual Threads: from over 10 minutes to about 1 minute.
 - Developed financial microservices in Java, Spring Boot and Spring MVC with Spring Data JPA/Hibernate over Oracle and JWT and Keycloak authentication, processing millions of daily financial transactions, plus React/TypeScript interfaces for payment declarations (CPF, CNPJ).
-- Owned the weekly on-call rotation, resolving critical production incidents and N3 support tickets with observability in Grafana; sustained ~95% code coverage with JUnit, Mockito and SonarQube.
+- Owned the weekly on-call rotation, resolving critical production incidents and L3 (N3) support tickets with observability in Grafana; sustained ~95% code coverage with JUnit, Mockito and SonarQube.
 - Built RESTful APIs published on Apigee (API Gateway) with OpenAPI contracts and maintained data pipelines with Python, Apache Spark and Apache Airflow, including repopulating the data lake from Oracle EBS.
 Technologies: Java 21, Virtual Threads, Spring Boot, Spring MVC, Spring Data JPA, Hibernate, Maven, Microservices, RESTful APIs, JWT, Keycloak, RabbitMQ, Apigee, OpenAPI, React, TypeScript, JUnit, Mockito, Jest, SonarQube, Oracle Database, Python, Apache Spark, Apache Airflow, Docker, Kubernetes, ArgoCD, Grafana, GCP, Magalu Cloud, Git, Git flow, Scrum, Kanban
 
@@ -67,7 +67,7 @@ Florianópolis, Brazil
 Aug 2022 - Apr 2024
 - Architected and developed CLICQ, a food quality inspection system covering the entire supply chain (from producers to retail), with a Java 8 and Spring Boot back-end and a React/Redux/TypeScript front-end, plus legacy versions in AngularJS and Angular 8/Ionic and a React Native mobile app with OAuth2 authentication.
 - Built a churn prediction tool with Machine Learning (Python), accessible through a Discord bot, reducing customer churn by 18%.
-- Owned the weekly on-call rotation, preventing and fixing defects with N2 support, Grafana monitoring and manual testing; there was no automated test suite, but the team followed Git flow with mandatory code review: no code shipped to production without approval from two reviewers.
+- Owned the weekly on-call rotation, preventing and fixing defects with L2 (N2) support, Grafana monitoring and manual testing; there was no automated test suite, but the team followed Git flow with mandatory code review: no code shipped to production without approval from two reviewers.
 Technologies: Java 8, Spring Boot, Spring Data JPA, jOOQ, Maven, Swagger, OAuth2, React, Redux, TypeScript, Angular 8, AngularJS, Ionic, React Native, PostgreSQL, Python, Machine Learning, Docker, AWS (EC2, S3, RDS), Jenkins, Grafana, Jira, Git, Git flow, Scrum, Kanban
 
 Full Stack PHP Developer
@@ -75,8 +75,9 @@ Santa Catarina Department of Public Safety
 Florianópolis, Brazil
 Oct 2020 - Jul 2022
 - Developed the Bem-Te-Vi App PWA in React and Leaflet, featuring an interactive map of nearly five thousand security cameras across Santa Catarina, with live viewing and recording downloads for state police officers.
-- Maintained legacy public safety systems (Bem-Te-Vi and BRAVO) in PHP and Laravel with LDAP authentication and REST APIs over PostgreSQL.
-- Used RabbitMQ for asynchronous messaging in SMS processing of monitored license-plate events and integrated Elasticsearch for full-text search.
+- Maintained legacy public safety systems (Bem-Te-Vi and BRAVO) in PHP with LDAP authentication.
+- Used RabbitMQ for asynchronous SMS processing of monitored license-plate events.
+- Integrated Elasticsearch for full-text search.
 Technologies: PHP, Laravel, LDAP, REST APIs, React, JavaScript, Leaflet, PWA, PostgreSQL, Elasticsearch, RabbitMQ, Selenium, Git
 
 Junior Full Stack PHP Developer

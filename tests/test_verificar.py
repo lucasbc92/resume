@@ -1,6 +1,7 @@
 from datetime import date
 
 import ats
+import humano
 import verificar as v
 
 HOJE = date(2026, 9, 28)
@@ -28,26 +29,40 @@ def test_checar_docx_acusa_data_fora_do_formato(tmp_path):
     assert any("Cast Group" in e for e in v.checar_docx(pars, "Workday", "pt"))
 
 
+TITULOS = [vaga["titulo"] for vaga in humano.dados("pt")["vagas"]]
+
+
 def test_checar_pdf_humano_aceita_o_esperado():
     paginas = ["Lucas Bueno Cesario\nRESUMO\nDESTAQUES\nEXPERIÊNCIA\n"
-               "Zukk Cast Group Luizalabs PariPassu",
-               "COMPETÊNCIAS\nFORMAÇÃO\nIDIOMAS"]
+               + "\n".join(TITULOS[:4]),
+               "\n".join(TITULOS[4:]) + "\nCOMPETÊNCIAS\nFORMAÇÃO\nIDIOMAS"]
     assert v.checar_pdf_humano(paginas, "pt") == []
 
 
 def test_checar_pdf_humano_acusa_tres_paginas_e_vaga_java_na_pagina_2():
     paginas = ["Lucas Bueno Cesario\nRESUMO\nDESTAQUES\nEXPERIÊNCIA\n"
-               "Zukk Cast Group Luizalabs",
-               "PariPassu\nCOMPETÊNCIAS",
+               + "\n".join(TITULOS[:3]),
+               TITULOS[3] + "\nCOMPETÊNCIAS",
                "FORMAÇÃO\nIDIOMAS"]
     erros = v.checar_pdf_humano(paginas, "pt")
     assert any("3 paginas" in e for e in erros)
     assert any("PariPassu" in e for e in erros)
 
 
+def test_checar_pdf_humano_nao_se_engana_com_empresa_citada_no_resumo():
+    # O resumo cita Cast Group e Luizalabs: isso nao pode contar como a vaga
+    # estar na pagina 1.
+    paginas = ["Lucas Bueno Cesario\nRESUMO\nnotas fiscais na Cast Group, transações "
+               "na Luizalabs\nDESTAQUES\nEXPERIÊNCIA\n" + TITULOS[0] + "\n" + TITULOS[3],
+               TITULOS[1] + "\n" + TITULOS[2] + "\nCOMPETÊNCIAS\nFORMAÇÃO\nIDIOMAS"]
+    erros = v.checar_pdf_humano(paginas, "pt")
+    assert any("Cast Group" in e for e in erros)
+    assert any("Luizalabs" in e for e in erros)
+
+
 def test_checar_pdf_humano_acusa_secao_fora_de_ordem():
     paginas = ["Lucas Bueno Cesario\nDESTAQUES\nRESUMO\nEXPERIÊNCIA\n"
-               "Zukk Cast Group Luizalabs PariPassu\nCOMPETÊNCIAS\nFORMAÇÃO\nIDIOMAS"]
+               + "\n".join(TITULOS) + "\nCOMPETÊNCIAS\nFORMAÇÃO\nIDIOMAS"]
     assert v.checar_pdf_humano(paginas, "pt") != []
 
 

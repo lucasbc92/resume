@@ -106,3 +106,17 @@ def test_metadados_do_docx(tmp_path):
     props = Document(str(_docx(tmp_path, "Workday", "en"))).core_properties
     assert props.author == c.NOME
     assert props.subject == c.CARGO_ALVO.en
+
+
+def test_docx_sem_pontuacao_tipografica(tmp_path):
+    texto = "\n".join(_pars(_docx(tmp_path, "Workday", "pt")))
+    for simbolo in "\u2014\u2013\u2212\u201c\u201d\u2018\u2019\u00b7\u00a0":
+        assert simbolo not in texto, repr(simbolo)
+    assert "Sênior" in texto and "Telefónica" in texto
+
+
+def test_contato_em_portugues_com_acentos(tmp_path):
+    pars = _pars(_docx(tmp_path, "Workday", "pt"))
+    assert "País: Brasil" in pars
+    assert any(p.startswith("Modelo de trabalho: Remoto (fuso UTC-3; sobreposição total")
+               for p in pars)

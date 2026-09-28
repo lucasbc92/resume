@@ -6,9 +6,9 @@ LinkedIn: linkedin.com/in/lucasbc92
 GitHub: github.com/lucasbc92
 Cidade: Araruama
 Estado: RJ
-Pais: Brasil
+País: Brasil
 Cargo pretendido: Desenvolvedor Java Full Stack Pleno/Sênior
-Modelo de trabalho: Remoto (fuso UTC-3; sobreposicao total com os EUA, parcial com a Europa)
+Modelo de trabalho: Remoto (fuso UTC-3; sobreposição total com os EUA, parcial com a Europa)
 
 RESUMO PROFISSIONAL
 ===================
@@ -23,7 +23,7 @@ Back-end: Spring Boot, Spring MVC, Spring Data JPA, Hibernate, jOOQ, Maven, Micr
 Front-end: Angular 8, AngularJS, React, Redux, Micro Front-ends, React Native, Ionic, PWA, Leaflet
 Bancos de dados: Oracle Database, PostgreSQL, Azure SQL, MySQL, MongoDB, Elasticsearch
 Mensageria e dados: RabbitMQ, Apache Spark, Apache Airflow, Machine Learning
-Cloud e DevOps: Docker, Kubernetes, ArgoCD, Azure, Azure DevOps, Azure Blob Storage, AWS (EC2, S3, RDS), GCP, Magalu Cloud, GitLab CI/CD, Jenkins, Git, Git flow, Linux, rsync, SVN
+Cloud e DevOps: Docker, Kubernetes, ArgoCD, Azure DevOps, Azure Blob Storage, Azure, AWS (EC2, S3, RDS), GCP, Magalu Cloud, GitLab CI/CD, Jenkins, Git flow, Git, Linux, rsync, SVN
 Testes e qualidade: JUnit, Mockito, Jest, SonarQube, Selenium
 Segurança e integração: JWT, Keycloak, OAuth2, LDAP, Apigee (API Gateway), integração com SAP
 Metodologias: Metodologias ágeis (Scrum, Kanban)
@@ -75,8 +75,9 @@ Secretaria de Segurança Pública de SC
 Florianópolis, SC
 Oct 2020 - Jul 2022
 - Desenvolvi o PWA Bem-Te-Vi App em React e Leaflet, com mapa interativo de quase cinco mil câmeras de segurança de Santa Catarina, visualização ao vivo e download de gravações para policiais do estado.
-- Mantive sistemas legados de segurança (Bem-Te-Vi e BRAVO) em PHP e Laravel com autenticação LDAP e APIs REST sobre PostgreSQL.
-- Usei RabbitMQ para mensageria assíncrona no processamento de SMS de ocorrências de placas monitoradas e integrei Elasticsearch para busca de texto completo.
+- Mantive sistemas legados de segurança (Bem-Te-Vi e BRAVO) em PHP com autenticação LDAP.
+- Usei RabbitMQ para processamento assíncrono de SMS de ocorrências de placas monitoradas.
+- Integrei Elasticsearch para busca de texto completo.
 Tecnologias: PHP, Laravel, LDAP, APIs REST, React, JavaScript, Leaflet, PWA, PostgreSQL, Elasticsearch, RabbitMQ, Selenium, Git
 
 Desenvolvedor PHP Full Stack Júnior

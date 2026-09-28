@@ -1,7 +1,9 @@
 import dataclasses
 
+import pytest
+
 import conteudo as c
-from modelo import T, competencias
+from modelo import T, competencias, item_stack
 
 
 def _textos():
@@ -36,7 +38,8 @@ def test_stack_humano_so_usa_tecnologias_da_propria_vaga():
     for vaga in c.EXPERIENCIAS:
         if vaga.stack_humano:
             assert len(vaga.stack_humano) <= 8, vaga.empresa.pt
-            assert set(vaga.stack_humano) <= set(vaga.tecnologias), vaga.empresa.pt
+            chaves = {item_stack(i, "pt", c.ROTULOS)[0] for i in vaga.stack_humano}
+            assert chaves <= set(vaga.tecnologias), vaga.empresa.pt
 
 
 def test_competencias_derivam_nos_dois_idiomas():
@@ -79,3 +82,34 @@ def test_vagas_em_ordem_cronologica_reversa():
 def test_quatro_vagas_java_primeiro():
     assert [v.empresa.pt for v in c.EXPERIENCIAS[:4]] == [
         "Zukk Tecnologia", "Cast Group", "Luizalabs (Magazine Luiza)", "PariPassu"]
+
+
+@pytest.mark.parametrize("especifico, generico", [
+    ("Git flow", "Git"), ("Azure DevOps", "Azure"), ("Azure Blob Storage", "Azure")])
+def test_especifica_antes_da_generica_na_mesma_categoria(especifico, generico):
+    for _, entradas in c.CATEGORIAS:
+        rotulos = [rot.pt for rot, _ in entradas]
+        if especifico in rotulos and generico in rotulos:
+            assert rotulos.index(especifico) < rotulos.index(generico)
+
+
+def test_ingles_traduz_nivel_de_suporte():
+    textos = []
+    for vaga in c.EXPERIENCIAS:
+        for b in vaga.bullets:
+            textos += [t.en for t in (b.ats, b.texto_humano()) if t is not None]
+    for texto in textos:
+        for nivel in ("N2", "N3"):
+            if nivel in texto:
+                assert "L{} ({})".format(nivel[1], nivel) in texto, texto
+
+
+def test_ssp_mantem_os_bullets_ats_originais():
+    ssp = c.EXPERIENCIAS[4]
+    ats = [b.ats.pt for b in ssp.bullets if b.ats]
+    assert len(ats) == 4
+    assert ats[3] == "Integrei Elasticsearch para busca de texto completo."
+
+
+def test_destaque_do_churn_sem_negativo_duplo():
+    assert c.DESTAQUES[2].pt.startswith("Churn de clientes reduzido em <b>18%</b>")

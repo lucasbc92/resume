@@ -101,6 +101,8 @@ MES_PT = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun",
 def formatar_data(ano_mes, formato):
     """"mm/aaaa" -> 08/2025 | "mmm-en" -> Aug 2025 | "mmm-pt" -> Ago 2025"""
     ano, mes = ano_mes
+    if not 1 <= mes <= 12:
+        raise ValueError("mes invalido: {!r}".format(mes))
     if formato == "mm/aaaa":
         return "{:02d}/{}".format(mes, ano)
     if formato == "mmm-en":
@@ -118,6 +120,15 @@ def rotulo(chave, idioma, rotulos):
     """Nome de uma tecnologia no idioma pedido. Sem traducao, a chave vale nos dois."""
     traducao = rotulos.get(chave)
     return traducao.em(idioma) if traducao else chave
+
+
+def item_stack(item, idioma, rotulos):
+    """Item de stack_humano: a chave da tecnologia, ou (chave, nome exibido)
+    quando a linha humana usa um nome mais curto ("Oracle" para "Oracle Database").
+    Devolve (chave, nome exibido)."""
+    if isinstance(item, tuple):
+        return item
+    return item, rotulo(item, idioma, rotulos)
 
 
 def competencias(vagas, categorias, idioma):

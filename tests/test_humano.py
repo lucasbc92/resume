@@ -73,8 +73,9 @@ def test_pdf_real_ate_duas_paginas_com_java_na_primeira(tmp_path, idioma):
     paginas = _paginas(pdf)
     assert len(paginas) <= 2
     assert paginas[0].lstrip().startswith(c.NOME)
-    for empresa in ("Zukk", "Cast Group", "Luizalabs", "PariPassu"):
-        assert empresa in paginas[0], empresa
+    primeira = " ".join(paginas[0].split())
+    for vaga in humano.dados(idioma)["vagas"][:4]:
+        assert vaga["titulo"] in primeira, vaga["titulo"]
 
 
 def test_chrome_que_nao_executa_da_erro_claro(tmp_path, monkeypatch):
@@ -100,3 +101,11 @@ def test_competencias_extraem_rotulo_junto_do_valor(tmp_path, idioma):
     for rotulo, valor in c.COMPETENCIAS_HUMANO:
         esperado = "{}: {}".format(rotulo.em(idioma), valor.em(idioma).split(",")[0])
         assert esperado in texto, esperado
+
+
+def test_stack_humano_usa_nomes_curtos_e_rotulo():
+    vagas = humano.dados("pt")["vagas"]
+    assert vagas[2]["stack"].endswith("Oracle \u00b7 React \u00b7 TypeScript \u00b7 Kubernetes \u00b7 GCP")
+    assert vagas[3]["stack"].endswith("React \u00b7 Angular \u00b7 React Native \u00b7 AWS")
+    html = humano.render_html(("pt",), HOJE, web=False)
+    assert "Stack: Java \u00b7 Spring Boot \u00b7 NestJS" in html

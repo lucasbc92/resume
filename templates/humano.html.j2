@@ -73,7 +73,7 @@
     <div class="vaga-meta">{{ v.meta }}</div>
     {% if v.contexto %}<div class="contexto">{{ v.contexto }}</div>{% endif %}
     <ul>{% for b in v.bullets %}<li>{{ b }}</li>{% endfor %}</ul>
-    {% if v.stack %}<div class="stack">{{ v.stack }}</div>{% endif %}
+    {% if v.stack %}<div class="stack">Stack: {{ v.stack }}</div>{% endif %}
   </div>
   {% endfor %}
 

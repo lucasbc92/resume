@@ -14,7 +14,7 @@ from docx import Document
 import ats
 import conteudo as c
 import humano
-from modelo import formatar_periodo, limpar
+from modelo import formatar_periodo, item_stack, limpar
 
 # Afirmacoes que ja apareceram em material antigo e sao falsas, ou habilidades
 # que o Lucas nao tem. Busca literal, sem diferenciar maiusculas. Editavel.
@@ -36,7 +36,6 @@ VOCABULARIO = {
 
 SALARIO = {"pt": "R$ 8.500", "en": "US$ 25-35"}
 ANOS = {"pt": ("7 anos", "4 deles"), "en": ("7 years", "4 of them")}
-EMPRESAS_JAVA = ("Zukk", "Cast Group", "Luizalabs", "PariPassu")
 
 
 def _plano(texto):
@@ -94,10 +93,12 @@ def checar_pdf_humano(paginas, idioma):
             erros.append("secao ausente ou fora de ordem: " + secao.em(idioma))
         else:
             posicao = achou
-    primeira = paginas[0] if paginas else ""
-    for empresa in EMPRESAS_JAVA:
-        if empresa not in primeira:
-            erros.append("vaga Java fora da pagina 1: " + empresa)
+    # Pelo titulo da vaga, nao pelo nome da empresa: o resumo tambem cita
+    # Cast Group e Luizalabs, e isso nao prova que a vaga esta na pagina 1.
+    primeira = _plano(paginas[0]) if paginas else ""
+    for vaga, dados_vaga in zip(c.EXPERIENCIAS, humano.dados(idioma)["vagas"]):
+        if "Java" in vaga.cargo.pt and _plano(dados_vaga["titulo"]) not in primeira:
+            erros.append("vaga Java fora da pagina 1: " + dados_vaga["titulo"])
     return erros
 
 
@@ -176,7 +177,8 @@ def verificar_tudo(raiz, hoje):
     # propria vaga. (Tecnologia sem categoria ja quebra a geracao em
     # modelo.competencias.)
     for vaga in c.EXPERIENCIAS:
-        fora = set(vaga.stack_humano or ()) - set(vaga.tecnologias)
+        chaves = {item_stack(i, "pt", c.ROTULOS)[0] for i in (vaga.stack_humano or ())}
+        fora = chaves - set(vaga.tecnologias)
         if fora:
             erros.append("stack_humano de {} fora de tecnologias: {}".format(
                 vaga.empresa.pt, ", ".join(sorted(fora))))

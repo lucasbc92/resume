@@ -18,7 +18,7 @@ from pathlib import Path
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 import conteudo as c
-from modelo import MES_EN, MES_PT, T, formatar_periodo, rotulo
+from modelo import MES_EN, MES_PT, T, formatar_periodo, item_stack
 
 RAIZ = Path(__file__).resolve().parent
 
@@ -69,7 +69,8 @@ def dados(idioma):
         textos = [b.texto_humano() for b in vaga.bullets]
         stack = None
         if vaga.stack_humano:
-            stack = " \u00b7 ".join(rotulo(k, idioma, c.ROTULOS) for k in vaga.stack_humano)
+            stack = " \u00b7 ".join(item_stack(i, idioma, c.ROTULOS)[1]
+                                    for i in vaga.stack_humano)
         vagas.append({
             "titulo": cabecalho,
             "meta": (formatar_periodo(vaga.inicio, vaga.fim, formato, " \u2013 ")

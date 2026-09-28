@@ -1,7 +1,7 @@
 import pytest
 
 from modelo import (B, IGUAL, T, Vaga, competencias, formatar_data,
-                    formatar_periodo, limpar, rotulo)
+                    formatar_periodo, item_stack, limpar, rotulo)
 
 
 def test_t_devolve_o_idioma_pedido():
@@ -89,3 +89,15 @@ def test_competencias_mostra_so_o_que_as_vagas_usam_na_ordem_das_categorias():
 def test_competencias_rejeita_tecnologia_sem_categoria():
     with pytest.raises(ValueError, match="Kotlin"):
         competencias([_vaga("Kotlin")], CATEGORIAS, "pt")
+
+
+@pytest.mark.parametrize("mes", [0, 13])
+def test_formatar_data_rejeita_mes_invalido(mes):
+    with pytest.raises(ValueError):
+        formatar_data((2025, mes), "mmm-en")
+
+
+def test_item_stack_aceita_chave_ou_par_com_nome_exibido():
+    rotulos = {"Microsserviços": T("Microsserviços", "Microservices")}
+    assert item_stack("Microsserviços", "en", rotulos) == ("Microsserviços", "Microservices")
+    assert item_stack(("Oracle Database", "Oracle"), "en", rotulos) == ("Oracle Database", "Oracle")

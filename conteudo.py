@@ -14,6 +14,10 @@ Regras de conteudo:
   * Carreira: 7 anos (desde fev/2018). Java: 4 anos (desde ago/2022).
   * Toda tecnologia de uma vaga precisa ter entrada em CATEGORIAS.
   * stack_humano: ate 8 itens, todos presentes em tecnologias da mesma vaga.
+    Item = chave, ou (chave, nome exibido) para encurtar so na versao humana.
+  * A pagina 1 do PDF em PT esta a poucos pixels do limite: uma linha a mais
+    nas vagas Java empurra a PariPassu para a pagina 2 e o verificador falha.
+    Nesse caso, enxugue texto ou o espacamento em templates/humano.html.j2.
 """
 
 from modelo import B, IGUAL, Formacao, T, Vaga
@@ -37,10 +41,10 @@ CONTATO_ATS = (
     (T("GitHub", "GitHub"), T(GITHUB, GITHUB)),
     (T("Cidade", "City"), T("Araruama", "Araruama")),
     (T("Estado", "State"), T("RJ", "RJ")),
-    (T("Pais", "Country"), T("Brasil", "Brazil")),
+    (T("País", "Country"), T("Brasil", "Brazil")),
     (T("Cargo pretendido", "Target role"), CARGO_ALVO),
     (T("Modelo de trabalho", "Work model"),
-     T("Remoto (fuso UTC-3; sobreposicao total com os EUA, parcial com a Europa)",
+     T("Remoto (fuso UTC-3; sobreposição total com os EUA, parcial com a Europa)",
        "Remote (UTC-3; full overlap with US time zones, partial with Europe)")),
 )
 
@@ -107,7 +111,7 @@ DESTAQUES = (
       "<b>~95% de cobertura</b> de testes",
       "Financial microservices handling <b>millions of transactions a day</b> with "
       "<b>~95% test coverage</b>"),
-    T("Churn de clientes <b>\u221218%</b> com modelo preditivo em Python",
+    T("Churn de clientes reduzido em <b>18%</b> com modelo preditivo em Python",
       "Customer churn cut by <b>18%</b> with a predictive model in Python"),
 )
 
@@ -246,12 +250,12 @@ EXPERIENCIAS = (
                     "produção e cards de suporte N3 com observabilidade no Grafana; mantive "
                     "~95% de cobertura de código com JUnit, Mockito e SonarQube.",
                     "Owned the weekly on-call rotation, resolving critical production "
-                    "incidents and N3 support tickets with observability in Grafana; "
+                    "incidents and L3 (N3) support tickets with observability in Grafana; "
                     "sustained ~95% code coverage with JUnit, Mockito and SonarQube."),
               humano=T("\u201cBombeiro da semana\u201d: incidentes críticos de produção e "
                        "suporte N3, com ~95% de cobertura de testes (JUnit, Mockito, "
                        "SonarQube).",
-                       "Weekly on-call rotation: critical production incidents and N3 "
+                       "Weekly on-call rotation: critical production incidents and L3 (N3) "
                        "support, with ~95% test coverage (JUnit, Mockito, SonarQube).")),
             B(ats=T("Construí APIs RESTful publicadas no Apigee (API Gateway) com contrato "
                     "OpenAPI e mantive pipelines de dados com Python, Apache Spark e Apache "
@@ -267,8 +271,8 @@ EXPERIENCIAS = (
                      "Oracle Database", "Python", "Apache Spark", "Apache Airflow", "Docker",
                      "Kubernetes", "ArgoCD", "Grafana", "GCP", "Magalu Cloud", "Git",
                      "Git flow", "Scrum", "Kanban"),
-        stack_humano=("Java 21", "Spring Boot", "Spring Data JPA", "Oracle Database", "React",
-                      "TypeScript", "Kubernetes", "GCP"),
+        stack_humano=("Java 21", "Spring Boot", "Spring Data JPA", ("Oracle Database", "Oracle"),
+                      "React", "TypeScript", "Kubernetes", "GCP"),
     ),
     Vaga(
         cargo=T("Desenvolvedor Java Full Stack", "Full Stack Java Developer"),
@@ -310,13 +314,13 @@ EXPERIENCIAS = (
                     "code review obrigatório: nenhum código ia para produção sem aprovação "
                     "de dois colegas revisores.",
                     "Owned the weekly on-call rotation, preventing and fixing defects with "
-                    "N2 support, Grafana monitoring and manual testing; there was no "
+                    "L2 (N2) support, Grafana monitoring and manual testing; there was no "
                     "automated test suite, but the team followed Git flow with mandatory "
                     "code review: no code shipped to production without approval from two "
                     "reviewers."),
               humano=T("Plantão de bugs e suporte N2 com monitoramento no Grafana; code "
                        "review obrigatório com dois aprovadores antes de produção.",
-                       "Bug on-call and N2 support with Grafana monitoring; mandatory code "
+                       "Bug on-call and L2 (N2) support with Grafana monitoring; mandatory code "
                        "review with two approvers before production.")),
         ),
         tecnologias=("Java 8", "Spring Boot", "Spring Data JPA", "jOOQ", "Maven", "Swagger",
@@ -324,8 +328,8 @@ EXPERIENCIAS = (
                      "Ionic", "React Native", "PostgreSQL", "Python", "Machine Learning",
                      "Docker", "AWS (EC2, S3, RDS)", "Jenkins", "Grafana", "Jira", "Git",
                      "Git flow", "Scrum", "Kanban"),
-        stack_humano=("Java 8", "Spring Boot", "jOOQ", "PostgreSQL", "React", "Angular 8",
-                      "React Native", "AWS (EC2, S3, RDS)"),
+        stack_humano=("Java 8", "Spring Boot", "jOOQ", "PostgreSQL", "React",
+                      ("Angular 8", "Angular"), "React Native", ("AWS (EC2, S3, RDS)", "AWS")),
     ),
     Vaga(
         cargo=T("Desenvolvedor PHP Full Stack", "Full Stack PHP Developer"),
@@ -348,20 +352,20 @@ EXPERIENCIAS = (
                        "Built the Bem-Te-Vi App, a React PWA mapping nearly 5,000 state "
                        "security cameras, with live video and recording downloads for the "
                        "police.")),
-            B(ats=T("Mantive sistemas legados de segurança (Bem-Te-Vi e BRAVO) em PHP e "
-                    "Laravel com autenticação LDAP e APIs REST sobre PostgreSQL.",
+            B(ats=T("Mantive sistemas legados de segurança (Bem-Te-Vi e BRAVO) em PHP com "
+                    "autenticação LDAP.",
                     "Maintained legacy public safety systems (Bem-Te-Vi and BRAVO) in PHP "
-                    "and Laravel with LDAP authentication and REST APIs over PostgreSQL."),
+                    "with LDAP authentication."),
               humano=T("Mantive sistemas legados em PHP/Laravel com LDAP, mensageria em "
                        "RabbitMQ e busca em Elasticsearch.",
                        "Maintained legacy PHP/Laravel systems with LDAP, RabbitMQ messaging "
                        "and Elasticsearch search.")),
-            B(ats=T("Usei RabbitMQ para mensageria assíncrona no processamento de SMS de "
-                    "ocorrências de placas monitoradas e integrei Elasticsearch para busca "
-                    "de texto completo.",
-                    "Used RabbitMQ for asynchronous messaging in SMS processing of monitored "
-                    "license-plate events and integrated Elasticsearch for full-text "
-                    "search.")),
+            B(ats=T("Usei RabbitMQ para processamento assíncrono de SMS de ocorrências de "
+                    "placas monitoradas.",
+                    "Used RabbitMQ for asynchronous SMS processing of monitored license-plate "
+                    "events.")),
+            B(ats=T("Integrei Elasticsearch para busca de texto completo.",
+                    "Integrated Elasticsearch for full-text search.")),
         ),
         tecnologias=("PHP", "Laravel", "LDAP", "APIs REST", "React", "JavaScript", "Leaflet",
                      "PWA", "PostgreSQL", "Elasticsearch", "RabbitMQ", "Selenium", "Git"),
@@ -433,10 +437,10 @@ CATEGORIAS = (
         _e("RabbitMQ"), _e("Apache Spark"), _e("Apache Airflow"), _e("Machine Learning"),
     )),
     (T("Cloud e DevOps", "Cloud and DevOps"), (
-        _e("Docker"), _e("Kubernetes"), _e("ArgoCD"), _e("Azure"), _e("Azure DevOps"),
-        _e("Blob Storage", T("Azure Blob Storage", "Azure Blob Storage")),
+        _e("Docker"), _e("Kubernetes"), _e("ArgoCD"), _e("Azure DevOps"),
+        _e("Blob Storage", T("Azure Blob Storage", "Azure Blob Storage")), _e("Azure"),
         _e("AWS (EC2, S3, RDS)"), _e("GCP"), _e("Magalu Cloud"), _e("GitLab CI/CD"),
-        _e("Jenkins"), _e("Git"), _e("Git flow"), _e("Linux"), _e("rsync"), _e("SVN"),
+        _e("Jenkins"), _e("Git flow"), _e("Git"), _e("Linux"), _e("rsync"), _e("SVN"),
     )),
     (T("Testes e qualidade", "Testing and quality"), (
         _e("JUnit"), _e("Mockito"), _e("Jest"), _e("SonarQube"), _e("Selenium"),
