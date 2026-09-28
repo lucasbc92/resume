@@ -1,0 +1,111 @@
+Lucas Bueno Cesario
+lbc92@hotmail.com
+Phone: +55 48 99122-4064
+WhatsApp: +55 48 99122-4064
+LinkedIn: linkedin.com/in/lucasbc92
+GitHub: github.com/lucasbc92
+City: Araruama
+State: RJ
+Country: Brazil
+Target role: Full Stack Java Developer
+Work model: Remote (UTC-3; full overlap with US time zones, partial with Europe)
+
+PROFESSIONAL SUMMARY
+====================
+Full Stack Java Developer with 7 years of experience, 4 of them in Java (8 to 21) with Spring Boot, Spring Data JPA/Hibernate and Maven. Microservices and REST APIs for critical systems: millions of daily financial transactions at Luizalabs (Magazine Luiza), electronic invoicing (NF-e) at Cast Group and Vivo's loyalty program. Front-end in Angular and React with TypeScript; SQL with Oracle, PostgreSQL and Azure SQL; Docker, Kubernetes and CI/CD (Azure DevOps, GitLab CI/CD, Jenkins); Azure, AWS and GCP cloud; testing with JUnit and Mockito; Scrum and Kanban. AI-assisted development with Spec Driven Development (Cursor, Claude Code).
+
+Domains: loyalty programs (Vivo Valoriza), e-invoicing and tax compliance (InvoiceCon/Cast Group and Luizalabs, Brazilian tax reform), agribusiness quality inspection, public safety monitoring, and web reporting (Canal Telecom).
+
+TECHNICAL SKILLS
+================
+Languages: Java (8 to 21), TypeScript, JavaScript, Python, PHP, SQL
+Back-end: Spring Boot, Spring MVC, Spring Data JPA, Hibernate, jOOQ, Maven, Microservices, REST APIs (RESTful), OpenAPI, Swagger, BFF (Backend for Frontend), NestJS, Node.js, Virtual Threads, Laravel, Zend
+Front-end: Angular 8, AngularJS, React, Redux, Micro Front-ends, React Native, Ionic, PWA, Leaflet
+Databases: Oracle Database, PostgreSQL, Azure SQL, MySQL, MongoDB, Elasticsearch
+Messaging and data: RabbitMQ, Apache Spark, Apache Airflow, Machine Learning
+Cloud and DevOps: Docker, Kubernetes, ArgoCD, Azure, Azure DevOps, Azure Blob Storage, AWS (EC2, S3, RDS), GCP, Magalu Cloud, GitLab CI/CD, Jenkins, Git, Git flow, Linux, rsync, SVN
+Testing and quality: JUnit, Mockito, Jest, SonarQube, Selenium
+Security and integration: JWT, Keycloak, OAuth2, LDAP, Apigee (API Gateway), SAP integration
+Methodologies: Agile (Scrum, Kanban)
+AI-assisted development: Spec Driven Development, Cursor, Claude Code
+Management and observability: Jira, Grafana
+
+PROFESSIONAL EXPERIENCE
+=======================
+
+Senior Full Stack Java Developer
+Zukk Tecnologia
+Remote | Contract - client: Vivo/Telefónica
+Nov 2025 - Jun 2026
+- Refactored the Vivo Valoriza web administration system (the benefits program inside Vivo's app), modernizing a distributed architecture with Java and Spring Boot microservices, a BFF (Backend for Frontend) layer in NestJS (Node.js), React micro front-ends, and RabbitMQ messaging.
+- Adopted Spec Driven Development with AI agents (Cursor and Claude Code), with specification, plan and execution reviewed at each step to increase delivery predictability and quality.
+- Drove the delivery cycle on Azure DevOps: Boards for planning, Repos for version control with Git flow and code review, and CI/CD Pipelines.
+Technologies: Java, Spring Boot, Spring Data JPA, Maven, Microservices, RESTful APIs, RabbitMQ, NestJS, Node.js, BFF (Backend for Frontend), React, Micro Front-ends, TypeScript, JUnit, Mockito, Jest, Docker, Azure, Azure DevOps, Azure SQL, Git, Git flow, Scrum, Kanban, Spec Driven Development, Cursor, Claude Code
+
+Full Stack Java Developer
+Cast Group
+Remote
+Aug 2025 - Nov 2025
+- Worked on InvoiceCon, an electronic invoicing (NF-e) solution, with Java and Spring Boot on the back-end and Angular 8 on the front-end, contributing to the system's migration to the new rules of the Brazilian Tax Reform.
+- Ran the solution on Microsoft Azure, using Azure SQL for fiscal data and Blob Storage for invoice documents, with build and deployment automated through GitLab CI/CD.
+- Worked on SAP integration operations and client version upgrades, in a system with rigorous version control.
+Technologies: Java, Spring Boot, Spring Data JPA, Maven, RESTful APIs, SQL, SAP, Angular 8, TypeScript, JUnit, Mockito, SonarQube, Docker, Azure, Azure SQL, Blob Storage, GitLab CI/CD, Git, Git flow, Scrum, Kanban
+
+Full Stack Java Developer
+Luizalabs (Magazine Luiza)
+São Paulo, Brazil
+Jul 2024 - Apr 2025
+- Upgraded the JVM from 17 to 21 and rewrote the batch import of ~100k invoices with Virtual Threads: from over 10 minutes to about 1 minute.
+- Developed financial microservices in Java, Spring Boot and Spring MVC with Spring Data JPA/Hibernate over Oracle and JWT and Keycloak authentication, processing millions of daily financial transactions, plus React/TypeScript interfaces for payment declarations (CPF, CNPJ).
+- Owned the weekly on-call rotation, resolving critical production incidents and N3 support tickets with observability in Grafana; sustained ~95% code coverage with JUnit, Mockito and SonarQube.
+- Built RESTful APIs published on Apigee (API Gateway) with OpenAPI contracts and maintained data pipelines with Python, Apache Spark and Apache Airflow, including repopulating the data lake from Oracle EBS.
+Technologies: Java 21, Virtual Threads, Spring Boot, Spring MVC, Spring Data JPA, Hibernate, Maven, Microservices, RESTful APIs, JWT, Keycloak, RabbitMQ, Apigee, OpenAPI, React, TypeScript, JUnit, Mockito, Jest, SonarQube, Oracle Database, Python, Apache Spark, Apache Airflow, Docker, Kubernetes, ArgoCD, Grafana, GCP, Magalu Cloud, Git, Git flow, Scrum, Kanban
+
+Full Stack Java Developer
+PariPassu
+Florianópolis, Brazil
+Aug 2022 - Apr 2024
+- Architected and developed CLICQ, a food quality inspection system covering the entire supply chain (from producers to retail), with a Java 8 and Spring Boot back-end and a React/Redux/TypeScript front-end, plus legacy versions in AngularJS and Angular 8/Ionic and a React Native mobile app with OAuth2 authentication.
+- Built a churn prediction tool with Machine Learning (Python), accessible through a Discord bot, reducing customer churn by 18%.
+- Owned the weekly on-call rotation, preventing and fixing defects with N2 support, Grafana monitoring and manual testing; there was no automated test suite, but the team followed Git flow with mandatory code review: no code shipped to production without approval from two reviewers.
+Technologies: Java 8, Spring Boot, Spring Data JPA, jOOQ, Maven, Swagger, OAuth2, React, Redux, TypeScript, Angular 8, AngularJS, Ionic, React Native, PostgreSQL, Python, Machine Learning, Docker, AWS (EC2, S3, RDS), Jenkins, Grafana, Jira, Git, Git flow, Scrum, Kanban
+
+Full Stack PHP Developer
+Santa Catarina Department of Public Safety
+Florianópolis, Brazil
+Oct 2020 - Jul 2022
+- Developed the Bem-Te-Vi App PWA in React and Leaflet, featuring an interactive map of nearly five thousand security cameras across Santa Catarina, with live viewing and recording downloads for state police officers.
+- Maintained legacy public safety systems (Bem-Te-Vi and BRAVO) in PHP and Laravel with LDAP authentication and REST APIs over PostgreSQL.
+- Used RabbitMQ for asynchronous messaging in SMS processing of monitored license-plate events and integrated Elasticsearch for full-text search.
+Technologies: PHP, Laravel, LDAP, REST APIs, React, JavaScript, Leaflet, PWA, PostgreSQL, Elasticsearch, RabbitMQ, Selenium, Git
+
+Junior Full Stack PHP Developer
+Canal Telecom
+São José, Brazil
+Feb 2018 - Nov 2018
+- Developed web reporting interfaces in PHP/JavaScript.
+- Took part in a database migration from SQL to NoSQL (MongoDB).
+- Maintained the company's backup system, working with Linux/Debian commands (rsync) for backup routines.
+Technologies: PHP, Zend, JavaScript, PostgreSQL, MySQL, MongoDB, Linux, rsync, SVN
+
+EDUCATION
+=========
+
+Bachelor's Degree in Computer Science
+Federal University of Santa Catarina (UFSC)
+Expected completion: Dec 2026
+
+CERTIFICATIONS
+==============
+- DEVinHouse - Full Stack React & Java program (900h) - SENAI/SC, 2022
+- Professional, Emotional, and Technological Skills for Times of Change - PUC/RS, 2023
+
+LANGUAGES
+=========
+Portuguese: native
+English: professional working proficiency - fluent reading and writing, proficient spoken conversation; used daily for documentation and code review
+Spanish: basic
+
+ADDITIONAL INFORMATION
+======================
+Availability: immediate, for 100% remote work
