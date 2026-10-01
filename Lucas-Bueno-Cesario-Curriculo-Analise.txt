@@ -33,7 +33,7 @@ Gestão e observabilidade: Jira, Grafana
 EXPERIÊNCIA PROFISSIONAL
 ========================
 
-Desenvolvedor Java Full Stack Sênior
+Desenvolvedor Java Full Stack
 Zukk Tecnologia
 Remoto | Contrato - cliente: Vivo/Telefónica
 Nov 2025 - Jun 2026

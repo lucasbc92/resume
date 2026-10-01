@@ -33,7 +33,7 @@ Management and observability: Jira, Grafana
 PROFESSIONAL EXPERIENCE
 =======================
 
-Senior Full Stack Java Developer
+Full Stack Java Developer
 Zukk Tecnologia
 Remote | Contract - client: Vivo/Telefónica
 Nov 2025 - Jun 2026
@@ -109,5 +109,4 @@ Spanish: basic
 
 ADDITIONAL INFORMATION
 ======================
-Rate expectation: US$ 25-35/h (contractor, PJ/CNPJ)
 Availability: immediate, for 100% remote work

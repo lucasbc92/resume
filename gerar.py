@@ -9,9 +9,11 @@ resultado. E o unico comando que se roda:
 Saidas (nesta pasta):
   * ATS, PT e EN: Lucas-Bueno-Cesario-{Curriculo,Resume}-<Perfil>.docx (+ .txt)
   * Humana: resume_ptbr.pdf e resume_en.pdf (nomes estaveis) e index.html
-  * Snapshots do dia, com data e tipo:
-      resume_lucas-bueno-cesario_{ptbr,en}_<data>_<mes>_{humano,human}.pdf
-      resume_lucas-bueno-cesario_{ptbr,en}_<data>_<mes>_ats.docx
+  * Snapshots do mes, com idioma e tipo no comeco:
+      {ptbr,en}_human_<aaaa-mm>_<mes>_lucas-bueno-cesario.pdf
+      {ptbr,en}_ats_<aaaa-mm>_<mes>_lucas-bueno-cesario.{docx,pdf}
+
+Para fechar o snapshot de outro mes, passe uma data: python gerar.py 2026-10-01
 
 Sai com codigo 1 se a verificacao falhar - nesse caso NAO publique.
 """
@@ -35,17 +37,11 @@ MES_ARQUIVO = {
 }
 
 
-# Tipo no fim do nome: da para saber o que e cada snapshot sem abrir o arquivo.
-SUFIXO_TIPO = {
-    ("humano", "pt"): "humano", ("humano", "en"): "human",
-    ("ats", "pt"): "ats", ("ats", "en"): "ats",
-}
-
-
 def nome_snapshot(idioma, hoje, tipo, ext):
-    return "resume_lucas-bueno-cesario_{}_{:%Y-%m-%d}_{}_{}.{}".format(
-        "ptbr" if idioma == "pt" else "en", hoje, MES_ARQUIVO[idioma][hoje.month - 1],
-        SUFIXO_TIPO[(tipo, idioma)], ext)
+    """Idioma e tipo no comeco: da para saber o que e cada snapshot sem abrir."""
+    return "{}_{}_{:%Y-%m}_{}_lucas-bueno-cesario.{}".format(
+        "ptbr" if idioma == "pt" else "en", tipo, hoje,
+        MES_ARQUIVO[idioma][hoje.month - 1], ext)
 
 
 def gerar_tudo(raiz, hoje):
@@ -62,12 +58,14 @@ def gerar_tudo(raiz, hoje):
     for idioma, arquivo in humano.PDFS.items():
         pdf = humano.imprimir_pdf(humano.render_html((idioma,), hoje, web=False),
                                   raiz / arquivo)
-        snapshot = raiz / nome_snapshot(idioma, hoje, "humano", "pdf")
+        snapshot = raiz / nome_snapshot(idioma, hoje, "human", "pdf")
         shutil.copyfile(pdf, snapshot)
         saidas += [pdf, snapshot]
         # Snapshot ATS: o perfil Workday e o de referencia, como no gerador antigo.
         saidas.append(ats.gerar_docx(raiz / nome_snapshot(idioma, hoje, "ats", "docx"),
                                      "Workday", idioma))
+        saidas.append(ats.gerar_pdf(raiz / nome_snapshot(idioma, hoje, "ats", "pdf"),
+                                    "Workday", idioma))
 
     index = raiz / "index.html"
     index.write_text(humano.render_html(("pt", "en"), hoje, web=True), encoding="utf-8")
@@ -75,8 +73,8 @@ def gerar_tudo(raiz, hoje):
     return saidas
 
 
-def main():
-    hoje = date.today()
+def main(hoje=None):
+    hoje = hoje or date.today()
     try:
         saidas = gerar_tudo(RAIZ, hoje)
         largura = max(len(s.name) for s in saidas)
@@ -98,4 +96,4 @@ def main():
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    sys.exit(main(date.fromisoformat(sys.argv[1]) if len(sys.argv) > 1 else None))

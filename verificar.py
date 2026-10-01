@@ -214,6 +214,15 @@ def verificar_tudo(raiz, hoje):
         erros += checar_salario(texto, idioma, arquivo, False)
         erros += checar_titulo(titulo_pdf(pdf), idioma, hoje, arquivo)
 
+    for pdf in sorted(raiz.glob("*_ats_*_lucas-bueno-cesario.pdf")):
+        idioma = "pt" if pdf.name.startswith("ptbr_") else "en"
+        texto = "\n".join(paginas_pdf(pdf))
+        if not texto.lstrip().startswith(c.NOME):
+            erros.append("{}: o texto extraido nao comeca pelo nome".format(pdf.name))
+        erros += checar_proibidos(texto, pdf.name)
+        erros += checar_anos(texto, idioma, pdf.name)
+        erros += checar_salario(texto, idioma, pdf.name, False)
+
     index = raiz / "index.html"
     if not index.is_file():
         erros.append("faltando: index.html")

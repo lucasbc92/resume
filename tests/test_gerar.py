@@ -8,12 +8,12 @@ HOJE = date(2026, 9, 28)
 
 
 def test_nome_do_snapshot_leva_data_e_tipo():
-    assert (gerar.nome_snapshot("pt", HOJE, "humano", "pdf")
-            == "resume_lucas-bueno-cesario_ptbr_2026-09-28_set_humano.pdf")
-    assert (gerar.nome_snapshot("en", HOJE, "humano", "pdf")
-            == "resume_lucas-bueno-cesario_en_2026-09-28_sep_human.pdf")
+    assert (gerar.nome_snapshot("pt", HOJE, "human", "pdf")
+            == "ptbr_human_2026-09_set_lucas-bueno-cesario.pdf")
+    assert (gerar.nome_snapshot("en", HOJE, "human", "pdf")
+            == "en_human_2026-09_sep_lucas-bueno-cesario.pdf")
     assert (gerar.nome_snapshot("pt", HOJE, "ats", "docx")
-            == "resume_lucas-bueno-cesario_ptbr_2026-09-28_set_ats.docx")
+            == "ptbr_ats_2026-09_set_lucas-bueno-cesario.docx")
 
 
 def test_gerar_tudo_produz_saidas_que_passam_na_verificacao(tmp_path):
@@ -22,8 +22,9 @@ def test_gerar_tudo_produz_saidas_que_passam_na_verificacao(tmp_path):
                      "Lucas-Bueno-Cesario-Curriculo-Gupy.docx",
                      "Lucas-Bueno-Cesario-Curriculo-Workday.txt",
                      "Lucas-Bueno-Cesario-Resume-Workday.txt",
-                     "resume_lucas-bueno-cesario_ptbr_2026-09-28_set_humano.pdf",
-                     "resume_lucas-bueno-cesario_en_2026-09-28_sep_ats.docx"):
+                     "ptbr_human_2026-09_set_lucas-bueno-cesario.pdf",
+                     "en_ats_2026-09_sep_lucas-bueno-cesario.docx",
+                     "en_ats_2026-09_sep_lucas-bueno-cesario.pdf"):
         assert esperado in nomes, esperado
     assert verificar.verificar_tudo(tmp_path, HOJE) == []
 

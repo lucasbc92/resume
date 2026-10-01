@@ -48,7 +48,7 @@ def test_secoes_sao_heading_1_e_cargos_nao(tmp_path):
     doc = Document(str(_docx(tmp_path, "Workday", "pt")))
     estilos = {p.text: p.style.name for p in doc.paragraphs}
     assert estilos["EXPERIÊNCIA PROFISSIONAL"] == "Heading 1"
-    assert estilos["Desenvolvedor Java Full Stack Sênior"] == "Normal"
+    assert estilos["Desenvolvedor Java Full Stack"] == "Normal"
 
 
 @pytest.mark.parametrize("perfil, idioma, esperado", [
@@ -61,10 +61,10 @@ def test_datas_no_formato_do_perfil(tmp_path, perfil, idioma, esperado):
 
 
 @pytest.mark.parametrize("perfil, idioma, tem", [
-    ("Workday", "pt", True), ("Gupy", "pt", True), ("LinkedIn", "pt", False),
-    ("Analise", "pt", False), ("Workday", "en", True), ("LinkedIn", "en", False),
+    ("Workday", "pt", False), ("Gupy", "pt", False), ("LinkedIn", "pt", False),
+    ("Analise", "pt", False), ("Workday", "en", False), ("LinkedIn", "en", False),
 ])
-def test_pretensao_so_nos_perfis_com_salario(tmp_path, perfil, idioma, tem):
+def test_pretensao_fora_de_todos_os_perfis(tmp_path, perfil, idioma, tem):
     texto = "\n".join(_pars(_docx(tmp_path, perfil, idioma)))
     marca = "R$ 8.500" if idioma == "pt" else "US$ 25-35"
     assert (marca in texto) is tem

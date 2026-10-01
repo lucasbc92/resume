@@ -119,7 +119,7 @@ DESTAQUES = (
 
 EXPERIENCIAS = (
     Vaga(
-        cargo=T("Desenvolvedor Java Full Stack Sênior", "Senior Full Stack Java Developer"),
+        cargo=T("Desenvolvedor Java Full Stack", "Full Stack Java Developer"),
         empresa=T("Zukk Tecnologia", "Zukk Tecnologia"),
         cliente=T("alocado na Vivo/Telefónica", "placed at Vivo/Telefónica"),
         inicio=(2025, 11), fim=(2026, 6),

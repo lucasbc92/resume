@@ -16,7 +16,7 @@ def test_titulo_tem_o_mes_da_geracao():
 
 def test_vaga_alocada_leva_o_cliente_no_titulo():
     assert humano.dados("pt")["vagas"][0]["titulo"] == (
-        "Desenvolvedor Java Full Stack Sênior \u2014 Zukk Tecnologia, "
+        "Desenvolvedor Java Full Stack \u2014 Zukk Tecnologia, "
         "alocado na Vivo/Telefónica")
 
 

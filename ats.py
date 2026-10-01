@@ -38,6 +38,7 @@ sobrenome "Bueno Cesario".
 """
 
 import re
+from html import escape
 from pathlib import Path
 
 from docx import Document
@@ -57,7 +58,7 @@ from modelo import T, competencias, formatar_data, formatar_periodo, limpar, rot
 
 PERFIS = {
     "Workday": {
-        "datas": "mmm-en", "salario": True, "txt": True, "idiomas": ("pt", "en"),
+        "datas": "mmm-en", "salario": False, "txt": True, "idiomas": ("pt", "en"),
         "nota": "Nome validado na Accenture em 15/09/2026; experiencia NAO foi "
                 "extraida com datas em mm/aaaa. A documentacao do Workday usa "
                 "'Jun 2022 - Present', entao aqui e mmm-en. PENDENTE DE RETESTE.",
@@ -65,11 +66,11 @@ PERFIS = {
     # Candidata B do reteste: identica a de Workday, so muda a abreviacao do mes
     # para portugues. Apagar a perdedora depois do reteste.
     "Workday-mesPT": {
-        "datas": "mmm-pt", "salario": True, "txt": False, "idiomas": ("pt",),
+        "datas": "mmm-pt", "salario": False, "txt": False, "idiomas": ("pt",),
         "nota": "Candidata B do reteste no Workday. PENDENTE.",
     },
     "Gupy": {
-        "datas": "mm/aaaa", "salario": True, "txt": False, "idiomas": ("pt",),
+        "datas": "mm/aaaa", "salario": False, "txt": False, "idiomas": ("pt",),
         "nota": "DOCX e mais confiavel que PDF no parser Gaia.",
     },
     "LinkedIn": {
@@ -312,6 +313,56 @@ def gerar_docx(caminho, perfil, idioma):
     caminho = Path(caminho)
     doc.save(str(caminho))
     return caminho
+
+
+# ----------------------------------------------------------------- pdf -----
+
+def gerar_pdf(caminho, perfil, idioma):
+    """PDF do mesmo conteudo do DOCX (mesma ordem, coluna unica, sem tabela),
+    impresso pelo Chrome. Texto real, nao imagem: o parser continua lendo."""
+    import humano  # so aqui: humano nao precisa do ats para o resto
+
+    corpo = []
+    em_lista = False
+    for tipo, valor in blocos(perfil, idioma):
+        if tipo != "bullet" and em_lista:
+            corpo.append("</ul>")
+            em_lista = False
+        if tipo == "bullet":
+            if not em_lista:
+                corpo.append("<ul>")
+                em_lista = True
+            corpo.append("<li>{}</li>".format(escape(limpar(valor))))
+        elif tipo == "nome":
+            corpo.append("<h1>{}</h1>".format(escape(limpar(valor))))
+        elif tipo == "secao":
+            corpo.append("<h2>{}</h2>".format(escape(limpar(valor).upper())))
+        elif tipo == "cargo":
+            corpo.append('<p class="cargo">{}</p>'.format(escape(limpar(valor))))
+        elif tipo in ("rotulado", "tecnologias"):
+            corpo.append("<p><b>{}:</b> {}</p>".format(escape(limpar(valor[0])),
+                                                        escape(limpar(valor[1]))))
+        else:  # linha, data, paragrafo
+            corpo.append("<p>{}</p>".format(escape(limpar(valor))))
+    if em_lista:
+        corpo.append("</ul>")
+
+    html = (
+        '<!doctype html><html lang="{lang}"><head><meta charset="utf-8">'
+        "<title>{titulo}</title><style>"
+        "@page{{size:Letter;margin:1.6cm 1.9cm}}"
+        "body{{font:10pt/1.25 Arial,sans-serif;color:#000;margin:0}}"
+        "h1{{font-size:20pt;margin:0 0 4pt}}"
+        "h2{{font-size:11.5pt;margin:12pt 0 4pt;border-bottom:1px solid #000;"
+        "padding-bottom:1pt;break-after:avoid}}"
+        "p{{margin:0 0 2pt}} p.cargo{{font-size:11pt;font-weight:bold;margin-top:8pt;"
+        "break-after:avoid}}"
+        "ul{{margin:0 0 2pt;padding-left:0.63cm}} li{{margin-bottom:2pt}}"
+        "</style></head><body>{corpo}</body></html>"
+    ).format(lang="pt-BR" if idioma == "pt" else "en-US",
+             titulo=escape(c.NOME + (" - Curriculo" if idioma == "pt" else " - Resume")),
+             corpo="\n".join(corpo))
+    return humano.imprimir_pdf(html, caminho)
 
 
 # ----------------------------------------------------------------- txt -----
